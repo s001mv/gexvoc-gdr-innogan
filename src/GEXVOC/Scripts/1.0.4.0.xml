@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.4.0"
+  Fecha="01/09/2008"
+  Descripcion=" 
+  - Se han corregido los errores detectados en la ficha del animal.
+  - Se ha habilitado la configuración según especie.
+  - Se ha mejorado el tratamiento de partos y abortos añadiendo su configuración a la ficha del animal."
+  Script=""
+/>

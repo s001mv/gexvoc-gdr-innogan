@@ -1,0 +1,25 @@
+# Archivo de proyecto de Microsoft Developer Studio - Proyecto de base de datos
+Begin DataProject = "GEXVOC.BD"
+   MSDTVersion = "80"
+   DefDBRef = "sav700760008.gexvoc.dbo"
+   SccProjectName = "SAK"
+   SccLocalPath = "SAK"
+   SccAuxPath = "SAK"
+   SccProvider = "SAK"
+   Begin Folder = "Backup"
+      Script = "1-ShrinkGexVOCLog.sql"
+      Script = "2-BackupGEXVOC.sql"
+   End
+   Begin Folder = "CargaInicial"
+      Script = "01_Modulos.sql"
+      Script = "02_Procesos.sql"
+      Script = "03_Menu.sql"
+   End
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "sav700760008.gexvoc.dbo"
+         ConnectStr = "Data Source=192.168.20.207;Initial Catalog=gexvoc;Persist Security Info=True;User ID=sa"
+         Provider = "{91510608-8809-4020-8897-FBA057E22D54}"
+         Colorizer = 6
+      End
+   End
+End

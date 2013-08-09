@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.7.0"
+  Fecha="16/09/2008"
+  Descripcion=" 
+  - Creación del Script de inicialización de Módulos y Subsistemas.
+  - Configuración de los menús de ayuda para ser mostrados de forma independiente de los subsistemas.
+  - Realizado el proceso de importación de Controles de Leche, que nos permite registrar masivamente 
+    controles de leche a partir de un fichero de texto convenientemente estructurado.
+  - Se han creado las herramientas necesarias para el sistema de alertas.
+  - Correción de la duplicación del Estado de Sistema 'SEMENTAL'."  
+  Script="
+  
+USE [gexvoc]
+GO
+-----------------------------------------------------------------------------
+----------------------------01_Modulos.sql-----------------------------------
+-----------------------------------------------------------------------------
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='_BÁSICO')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (null,'_BÁSICO')	
+
+
+--INSERTAR ELEMENTOS DEPENDIENTES DE (BÁSICO)
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO BÁSICO PARA PODER SEGUIR HACIENDO LAS INSERCIONES.
+declare @IdBasico int;
+SELECT @IdBasico=Id FROM Modulo WHERE Descripcion='_BÁSICO';
+
+
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA ALIMENTACIÓN')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA ALIMENTACIÓN')	
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA SANIDAD')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA SANIDAD')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA ECONOMÍA')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA ECONOMÍA')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA FINCAS')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA FINCAS')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA VADEMÉCUM')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA VADEMÉCUM')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA GENÉTICA')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA GENÉTICA')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA GENEALOGÍA')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA GENEALOGÍA')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA AGENDA')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA AGENDA')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA ALERTAS')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA ALERTAS')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA REPRODUCCIÓN')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA REPRODUCCIÓN')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA TRAZABILIDAD')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdBasico,'SUBSISTEMA TRAZABILIDAD')
+
+--INSERTAR ELEMENTOS DEPENDIENTES DE (TRAZABILIDAD)
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO TRAZABILIDAD PARA PODER INSERTAR EL MÓDULO APPCC (DEPENDIENTE).
+declare @IdTrazabilidad int;
+SELECT @IdTrazabilidad=Id FROM Modulo WHERE Descripcion='SUBSISTEMA TRAZABILIDAD';
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA APPCC')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdTrazabilidad,'SUBSISTEMA APPCC')
+
+--INSERTAR ELEMENTOS DEPENDIENTES DE (REPRODUCCIÓN)
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO REPRODUCCION PARA PODER INSERTAR SUS MÓDULOS DEPENDIENTES: PROD. CARNE Y LECHE
+declare @IdReproduccion int;
+SELECT @IdReproduccion=Id FROM Modulo WHERE Descripcion='SUBSISTEMA REPRODUCCIÓN';
+
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN LECHE')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdReproduccion,'SUBSISTEMA PRODUCCIÓN LECHE')
+IF NOT EXISTS (SELECT * FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN CARNE')	
+	INSERT INTO [Modulo] ([IdPrincipal],[Descripcion]) VALUES (@IdReproduccion,'SUBSISTEMA PRODUCCIÓN CARNE') 
+  
+GO
+
+
+ 
+-----------------------------------------------------------------------------
+----------------------------02_Procesos.sql----------------------------------
+-----------------------------------------------------------------------------
+
+
+declare @IdModulo int;
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='_BÁSICO';----OBTENGO EL IDENTIFICADOR DEL MÓDULO BÁSICO.
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Basico' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Basico','Principal',null) 
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ECONOMÍA';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA ECONOMÍA
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Economia' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Economia','ArbolInfomes',null)            
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Economia' AND Formulario='EditTratEnfermedad' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Economia','EditTratEnfermedad',null) 	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Economia' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Economia','Principal',null) 
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA SANIDAD';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA SANIDAD
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Sanidad' AND Formulario='EditAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Sanidad','EditAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Sanidad' AND Formulario='EditExplotaciones' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Sanidad','EditExplotaciones',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Sanidad' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Sanidad','ArbolInfomes',null) 	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Sanidad' AND Formulario='InfFichaAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Sanidad','InfFichaAnimal',null) 
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA AGENDA';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA AGENDA
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Agenda' AND Formulario='FindExplotaciones' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Agenda','FindExplotaciones',null) 	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Agenda' AND Formulario='EditExplotaciones' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Agenda','EditExplotaciones',null) 
+	
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ALIMENTACIÓN';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA ALIMENTACIÓN
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Alimentacion' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Alimentacion','ArbolInfomes',null) 	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Alimentacion' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Alimentacion','Principal',null) 	
+	
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA FINCAS';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA FINCAS
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Fincas' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Fincas','Principal',null) 	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Fincas' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Fincas','ArbolInfomes',null) 
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA GENEALOGÍA';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA GENEALOGÍA
+	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Genealogia' AND Formulario='EditAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Genealogia','EditAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Genealogia' AND Formulario='FindAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Genealogia','FindAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Genealogia' AND Formulario='InfFichaAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Genealogia','InfFichaAnimal',null) 
+	
+	
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN CARNE';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA PRODUCCIÓN CARNE
+	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionCarne' AND Formulario='InfEvolucionAnual' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionCarne','InfEvolucionAnual',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionCarne' AND Formulario='InfFichaAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionCarne','InfFichaAnimal',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionCarne' AND Formulario='EditAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionCarne','EditAnimales',null) 
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN LECHE';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA PRODUCCIÓN LECHE
+	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='InfFichaAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','InfFichaAnimal',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='EditAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','EditAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','ArbolInfomes',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='FindAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','FindAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','Principal',null) 
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA REPRODUCCIÓN';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA REPRODUCCIÓN
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='EditAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','EditAnimales',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','ArbolInfomes',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='InfFichaAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','InfFichaAnimal',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='FindLoteAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','FindLoteAnimal',null)
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','Principal',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='EditLoteAnimal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','EditLoteAnimal',null) 
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Reproduccion' AND Formulario='FindAnimales' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Reproduccion','FindAnimales',null) 
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA TRAZABILIDAD';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA TRAZABILIDAD
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Trazabilidad' AND Formulario='ArbolInfomes' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Trazabilidad','ArbolInfomes',null) 
+
+GO
+
+-----------------------------------------------------------------------------
+----------------------------03_Menu.sql--------------------------------------
+-----------------------------------------------------------------------------
+
+declare @IdModulo int;
+declare @IdMenuSuperior int;
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA AGENDA';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA AGENDA
+set @IdMenuSuperior=null;
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSExplotaciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+           
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSExplotaciones';----OBTENGO EL IDENTIFICADOR DEL Menú MSExplotaciones
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador0',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MContactos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTareas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCitas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador3',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProximaCita',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR DEL Menú MSMantenimientos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposDeContactos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL Menú MSHerramientas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSincronizarContactos',0)
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA APPCC';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA APPCC
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAPPCC',0)
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ECONOMÍA';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA ECONOMÍA
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGestionFinanciera',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGestionFinanciera';----OBTENGO EL IDENTIFICADOR DEL Menú MSGestionFinanciera
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MVentas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCompras',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MGastos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR DEL Menú MSGestionFinanciera
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MGFinanciera',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MGFinanciera';----OBTENGO EL IDENTIFICADOR DEL Menú MSGestionFinanciera
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MClientes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProveedores',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MNaturalezaGasto',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL Menú MSGestionFinanciera
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRegularizarStock',0)
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA FINCAS';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA FINCAS
+set @IdMenuSuperior=null;
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSFincas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSFincas';----OBTENGO EL IDENTIFICADOR DEL Menú MSFincas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFincas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador14',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAbono',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSiembra',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRecolecta',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamiento',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSProductos';----OBTENGO EL IDENTIFICADOR DEL Menú MSFincas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFamiliasProductos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProductos';----OBTENGO EL IDENTIFICADOR DEL Menú MProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPTratamiento parcela',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR DEL Menú MSMantenimientos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MGFincas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCVeterinario',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSsanidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonalPrincipal',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MGFincas';----OBTENGO EL IDENTIFICADOR DEL Menú MGFincas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAbonos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSemillas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPlagas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFamiliaTratParcelas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProductoTratParcelas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR DEL Menú MSInformes
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoFincas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoFincas';----OBTENGO EL IDENTIFICADOR DEL Menú MPNodoFincas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndSembrados',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndAbonados',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndTratamientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndCortesHierba',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL Menú MSInformes
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRegularizarStock',0)
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA SANIDAD';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA SANIDAD
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSControl',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSanidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSControl';----OBTENGO EL IDENTIFICADOR DEL Menú MSControl
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSVeterinario',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSVeterinario';----OBTENGO EL IDENTIFICADOR DEL Menú MSVeterinario
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDiagnosticos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador13',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MHistoricoMedicamentos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSProductos';----OBTENGO EL IDENTIFICADOR DEL Menú MSVeterinario
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFamiliasProductos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProductos';----OBTENGO EL IDENTIFICADOR DEL Menú MProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPHigiene',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPSanidad',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MFamiliasProductos';----OBTENGO EL IDENTIFICADOR DEL Menú MFamiliasProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFHigiene',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFSanidad',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSanidad';----OBTENGO EL IDENTIFICADOR DEL Menú MSanidad
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientosHigiene',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientosProfilaxis',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MCVeterinario';----OBTENGO EL IDENTIFICADOR DEL MCVeterinario
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MEnfermedades',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMedicamentos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposEnfermedades',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSsanidad';----OBTENGO EL IDENTIFICADOR DEL MSsanidad
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPlanHigiene',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProgramasProfilaxis',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPersonalPrincipal';----OBTENGO EL IDENTIFICADOR DEL  MPersonalPrincipal
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTipoPersonal',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR DEL  MSInformes
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoAnimales',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoSanidad',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoAnimales';----OBTENGO EL IDENTIFICADOR DEL  MPNodoAnimales
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndHistorialEnfermedades',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoSanidad';----OBTENGO EL IDENTIFICADOR DEL  MPNodoSanidad
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndPrevalenciaEnfermedades',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndConsultaMorbilidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndConsultaMortalidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndAnimalesEnTratamiento',0)
+
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='_BÁSICO';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA _BÁSICO
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSExplotaciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGanado',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSVentana',0)
+--INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSAyuda',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSExplotaciones';----OBTENGO EL IDENTIFICADOR DEL  MSExplotaciones
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDatosExplotacion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTitulares',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador4',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MLibro',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGanado';----OBTENGO EL IDENTIFICADOR DEL  MSGanado
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAnimales',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MLotesAnimales',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSProductos';----OBTENGO EL IDENTIFICADOR DEL  MSProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFamiliasProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador2',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MExploradorProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador2',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposProductos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MExploradorProductos',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProductos';----OBTENGO EL IDENTIFICADOR DEL  MSProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPProducción',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MFamiliasProductos';----OBTENGO EL IDENTIFICADOR DEL  MFamiliasProductos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFProducción',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR DEL MSMantenimientos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAnimal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MBancos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MLocalizaciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCondicionesJuridicas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposLotes',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MAnimal';----OBTENGO EL IDENTIFICADOR DEL MSMantenimientos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRazas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MEstadosAnimal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTamanosCria',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MConformacionCria',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'toolStripSeparator2',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposAltas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposBajas',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MBancos';----OBTENGO EL IDENTIFICADOR DEL MSBancos
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCuentas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MLocalizaciones';----OBTENGO EL IDENTIFICADOR DEL MLocalizaciones
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProvincias',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMunicipios',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR 
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MINFArbol',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparadorInformes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoExplotacion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoAnimales',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoExplotacion';----OBTENGO EL IDENTIFICADOR 
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndLibroExplotacion',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoAnimales';----OBTENGO EL IDENTIFICADOR 
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndFichaAnimal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndListadoAnimales',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL MLocalizaciones
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MBackups',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MOpciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAdministrativas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MAdministrativas';----OBTENGO EL IDENTIFICADOR DEL MAdministrativas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonalizarMenus',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonalizarProcesos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MModulos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDatosSistema',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSVentana';----OBTENGO EL IDENTIFICADOR DEL MSVentana
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCascada',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMinimizar',0)
+
+--SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSAyuda';----OBTENGO EL IDENTIFICADOR DEL MSAyuda
+--INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAcerca',0)
+--INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmVersion',0)
+--INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'toolStripSeparator3',0)
+
+
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ALIMENTACIÓN';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA ALIMENTACIÓN
+set @IdMenuSuperior=null;
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGanado',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSControl',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSFincas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGanado';----OBTENGO EL IDENTIFICADOR DEL MSGanado
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPesos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSControl';----OBTENGO EL IDENTIFICADOR DEL MSGanado
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSAlimentacion',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSAlimentacion';----OBTENGO EL IDENTIFICADOR DEL MSGanado
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAsignaciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPastoreo',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MFincas';----OBTENGO EL IDENTIFICADOR DEL MFincas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFincas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR 
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCAlimentario',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProduccionCarne',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MCAlimentario';----OBTENGO EL IDENTIFICADOR 
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAlimentos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFamiliasAlimentos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRaciones',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProduccionCarne';----OBTENGO EL IDENTIFICADOR MProduccionCarne
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMomentoPeso',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRegularizarStock',0)
+
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA GENÉTICA';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA GENÉTICA
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGenetica',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGenetica';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAnalisisGenetico',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MResena',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MGenetica',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MGenetica';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTipoAnalisis',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMarcador',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCombinacion',0)
+
+
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA PRODUCCIÓN CARNE
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN CARNE';
+set @IdMenuSuperior=null;
+
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGanado',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSControl',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGanado';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador12',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPesos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCondicionesCorporales',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDesteteMultiple',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSControl';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'controlCarneToolStripMenuItem',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='controlCarneToolStripMenuItem';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MEngrasamientoCanal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTipificacionCanal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRendimientoCanal',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProduccionCarne',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProduccionCarne';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMomentoPeso',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposDeCondiciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'toolStripSeparator4',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCategoria',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTipoEngrasamiento',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MConformacionCanal',0)
+
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoProduccionLeche',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoProduccionLeche';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndProduccionCarne',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPndProduccionCarne';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndIndicesConversion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodo3',0)
+
+
+
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA SUBSISTEMA PRODUCCIÓN LECHE
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN LECHE';
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSControl',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSControl';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MLechero',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MLechero';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MControles',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAnalisis',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSecados',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MProduccionLeche',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MProduccionLeches';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposSecado',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MLaboratorios',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MMetodos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MMetodos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MEstadoOrdeno',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MEstadoControl',0)
+
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoProduccionLeche',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoProduccionLeche';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndProduccionLeche',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPndProduccionLeche';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndRecuentoCelulasSomaticas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndRecuentoCelSomGraf',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndResumenProduccionLeche',0)
+
+
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA SUBSISTEMA TRAZABILIDAD
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA TRAZABILIDAD';
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSTrazabilidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAPPCC',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSTrazabilidad';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'TProcesos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTrazabilidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonalPrincipal',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MTrazabilidad';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'Maquinaria',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'Zonas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPersonalPrincipal';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPersonal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTipoPersonal',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoTrazabilidad',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoTrazabilidad';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoTrazaProductos',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MRegularizarStock',0)
+
+
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA SUBSISTEMA VADEMÉCUM
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA VADEMÉCUM';
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSanidad',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSanidad';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientosHigiene',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientosProfilaxis',0)
+
+
+----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA REPRODUCCIÓN
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA REPRODUCCIÓN';
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSReproduccion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSGanado',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSControl',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSMantenimientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSReproduccion';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSincronizacionCelos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCelos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador6',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MInseminaciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MCubriciones',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador11',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDiagGestacion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'toolStripSeparator1',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MAbortos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPartosMultiples',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSGanado';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSeparador12',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDesteteMultiple',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSControl';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSVeterinario',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSVeterinario';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDiagnosticos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTratamientos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MHistoricoMedicamentos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSMantenimientos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MReproduccion',0)
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MReproduccion';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposInseminacion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposCubricion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposDiagnostico',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MIPartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTiposAbortos',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MIPartos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MTParto',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MDificultad',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoSanidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoReproduccion',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoSanidad';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndPrevalenciaEnfermedades',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndConsultaMorbilidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndConsultaMortalidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndAnimalesEnTratamiento',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoReproduccion';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndProlificidad',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndNacidosGenealogia',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndDestetados',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndAnimalesMuertos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndCapacidadMaternal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPnPartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndEstaFertilidaLeche',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndEvolucionAnual',0)
+
+
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPndAnimalesMuertos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndGeneral',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndNacidosMuertos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndMuertePerinatal',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndMuerteHastaDestete',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndMuertePostDestete',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPnPartos';----OBTENGO EL IDENTIFICADOR
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndIntervaloPartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndDistribucionpartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndTasaPartos',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndTasaAbortos',0)
+  
+
+GO
+---------------------------------------------------------------------------------------
+--CORRECCIÓN DE CREACION DEL ESTADO DE SISTEMA DUPLICADO SEMENTAL 
+--(El script inicial no marca semental como sistema=true), de esta manera lo corregimos
+---------------------------------------------------------------------------------------
+
+UPDATE [Estado] SET [Sistema] = 1 WHERE [Descripcion] = 'SEMENTAL'
+
+GO
+
+ "
+  
+/>

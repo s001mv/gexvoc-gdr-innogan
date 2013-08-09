@@ -1,0 +1,230 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51F58979-E248-4E0E-AC38-4D6FC6154713}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEXVOC.Core</RootNamespace>
+    <AssemblyName>GEXVOC.Core</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>GEXVOC.Core</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadenas.cs" />
+    <Compile Include="CoreException.cs" />
+    <Compile Include="Data\AbortosTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\AltaTa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\AniLotTa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\AnimalTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\BajaTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\CondicionCorporalTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\ConformacionActualTAcs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\CubricionTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\DiagnosticoInseminacionTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\DiagnosticosEnfermedades.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\EnfermedadesTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\EspecieTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\EstadoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\ExplotacionesTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\FacilidadTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\GexvocDataSet.cs">
+      <DependentUpon>GexvocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GexvocDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GexvocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\InseminacionesTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\LactacionTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\LechesTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\LotesTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\MomentoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\MotivoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\MovimientoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Parametrizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\PartosTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\PesosTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\RazaTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\SecadosTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\SqlCeHelper.cs" />
+    <Compile Include="Data\StatusControlTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\StatusOrdenoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TallaTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoAltaTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoBaja.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoCubricionTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoDiagnosticoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoInseminacionTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoPartoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TiposCondicionesCorporales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TipoSecadoTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TratEnfermedadTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\VeterinarioTA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\Configurador.cs" />
+    <Compile Include="Logic\LogicException.cs" />
+    <Compile Include="Logic\Traza.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gexvocce.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\GexvocDataSet.xsc">
+      <DependentUpon>GexvocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\GexvocDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GexvocDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\GexvocDataSet.xss">
+      <DependentUpon>GexvocDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

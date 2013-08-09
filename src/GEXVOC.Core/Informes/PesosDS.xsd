@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PesosDS" targetNamespace="http://tempuri.org/PesosDS.xsd" xmlns:mstns="http://tempuri.org/PesosDS.xsd" xmlns="http://tempuri.org/PesosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PesosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PesosDS" msprop:Generator_DataSetName="PesosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Peso" msprop:Generator_UserTableName="Peso" msprop:Generator_RowDeletedName="PesoRowDeleted" msprop:Generator_RowChangedName="PesoRowChanged" msprop:Generator_RowClassName="PesoRow" msprop:Generator_RowChangingName="PesoRowChanging" msprop:Generator_RowEvArgName="PesoRowChangeEvent" msprop:Generator_RowEvHandlerName="PesoRowChangeEventHandler" msprop:Generator_TableClassName="PesoDataTable" msprop:Generator_TableVarName="tablePeso" msprop:Generator_RowDeletingName="PesoRowDeleting" msprop:Generator_TablePropName="Peso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdMomento" msprop:Generator_UserColumnName="IdMomento" msprop:Generator_ColumnPropNameInRow="IdMomento" msprop:Generator_ColumnVarNameInTable="columnIdMomento" msprop:Generator_ColumnPropNameInTable="IdMomentoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdAnimal" msprop:Generator_UserColumnName="IdAnimal" msprop:Generator_ColumnPropNameInRow="IdAnimal" msprop:Generator_ColumnVarNameInTable="columnIdAnimal" msprop:Generator_ColumnPropNameInTable="IdAnimalColumn" type="xs:int" />
+              <xs:element name="Peso1" msprop:Generator_UserColumnName="Peso1" msprop:Generator_ColumnPropNameInRow="Peso1" msprop:Generator_ColumnVarNameInTable="columnPeso1" msprop:Generator_ColumnPropNameInTable="Peso1Column" type="xs:decimal" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescMomentoPeso" msprop:Generator_UserColumnName="DescMomentoPeso" msprop:Generator_ColumnPropNameInRow="DescMomentoPeso" msprop:Generator_ColumnVarNameInTable="columnDescMomentoPeso" msprop:Generator_ColumnPropNameInTable="DescMomentoPesoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Peso" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

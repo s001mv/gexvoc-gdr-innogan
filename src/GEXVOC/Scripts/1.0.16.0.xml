@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.16.0"
+  Fecha="15/10/2008"
+  Descripcion="   
+  - Adaptación de la aplicación de Escritorio a la estructura de la aplicación de Pocket."
+  Script="
+  -------------------------------------------------------------
+  ---AÑADIMOS EL CAMPO MODIFICABLE A LA TABLA ALTAS------------
+  -------------------------------------------------------------
+  /* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Alta ADD
+	Modificable bit NULL
+GO
+COMMIT
+GO
+
+
+UPDATE [Alta] SET [Modificable] = 0
+GO
+
+/* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Alta
+	DROP CONSTRAINT FK_Alta_Animal
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Alta
+	DROP CONSTRAINT FK_Alta_TipoAlta
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.Tmp_Alta
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdTipo int NOT NULL,
+	IdAnimal int NOT NULL,
+	Detalle varchar(150) NULL,
+	Importe numeric(10, 2) NULL,
+	Fecha datetime NOT NULL,
+	Modificable bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Alta ON
+GO
+IF EXISTS(SELECT * FROM dbo.Alta)
+	 EXEC('INSERT INTO dbo.Tmp_Alta (Id, IdTipo, IdAnimal, Detalle, Importe, Fecha, Modificable)
+		SELECT Id, IdTipo, IdAnimal, Detalle, Importe, Fecha, Modificable FROM dbo.Alta WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Alta OFF
+GO
+DROP TABLE dbo.Alta
+GO
+EXECUTE sp_rename N'dbo.Tmp_Alta', N'Alta', 'OBJECT' 
+GO
+ALTER TABLE dbo.Alta ADD CONSTRAINT
+	PK_Alta_1 PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Alta ADD CONSTRAINT
+	FK_Alta_TipoAlta FOREIGN KEY
+	(
+	IdTipo
+	) REFERENCES dbo.TipoAlta
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Alta ADD CONSTRAINT
+	FK_Alta_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+GO
+
+  
+  -------------------------------------------------------------
+  ---AÑADIMOS EL CAMPO MODIFICABLE A LA TABLA BAJA------------
+  -------------------------------------------------------------
+  
+  /* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Baja ADD
+	Modificable bit NULL
+GO
+COMMIT
+GO
+
+
+UPDATE [Baja] SET [Modificable] = 0
+GO
+
+/* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Baja
+	DROP CONSTRAINT FK_Baja_Animal
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Baja
+	DROP CONSTRAINT FK_Baja_TipoBaja
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.Tmp_Baja
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdTipo int NOT NULL,
+	IdAnimal int NOT NULL,
+	Detalle varchar(150) NULL,
+	Importe numeric(10, 2) NULL,
+	Fecha datetime NOT NULL,
+	Modificable bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Baja ON
+GO
+IF EXISTS(SELECT * FROM dbo.Baja)
+	 EXEC('INSERT INTO dbo.Tmp_Baja (Id, IdTipo, IdAnimal, Detalle, Importe, Fecha, Modificable)
+		SELECT Id, IdTipo, IdAnimal, Detalle, Importe, Fecha, Modificable FROM dbo.Baja WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Baja OFF
+GO
+DROP TABLE dbo.Baja
+GO
+EXECUTE sp_rename N'dbo.Tmp_Baja', N'Baja', 'OBJECT' 
+GO
+ALTER TABLE dbo.Baja ADD CONSTRAINT
+	PK_Baja PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Baja ADD CONSTRAINT
+	FK_Baja_TipoBaja FOREIGN KEY
+	(
+	IdTipo
+	) REFERENCES dbo.TipoBaja
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Baja ADD CONSTRAINT
+	FK_Baja_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+GO
+
+  ---------------------------------------------------------------------------
+  ---AÑADIMOS EL CAMPO MODIFICABLE A LA TABLA CONDIFICÓN CORPORAL------------
+  ---------------------------------------------------------------------------
+  
+  
+  
+  /* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CondicionCorporal ADD
+	Modificable bit NULL
+GO
+COMMIT
+GO
+
+
+UPDATE CondicionCorporal SET [Modificable] = 0
+GO
+
+/* Para evitar posibles problemas de pérdida de datos, debe revisar esta secuencia de comandos detalladamente antes de ejecutarla fuera del contexto del diseñador de base de datos.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CondicionCorporal
+	DROP CONSTRAINT FK_CondicionCorporal_TipoCondicion
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CondicionCorporal
+	DROP CONSTRAINT FK_CondicionCorporal_Animal
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.Tmp_CondicionCorporal
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdTipo int NOT NULL,
+	IdHembra int NOT NULL,
+	Fecha datetime NOT NULL,
+	Modificable bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_CondicionCorporal ON
+GO
+IF EXISTS(SELECT * FROM dbo.CondicionCorporal)
+	 EXEC('INSERT INTO dbo.Tmp_CondicionCorporal (Id, IdTipo, IdHembra, Fecha, Modificable)
+		SELECT Id, IdTipo, IdHembra, Fecha, Modificable FROM dbo.CondicionCorporal WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_CondicionCorporal OFF
+GO
+DROP TABLE dbo.CondicionCorporal
+GO
+EXECUTE sp_rename N'dbo.Tmp_CondicionCorporal', N'CondicionCorporal', 'OBJECT' 
+GO
+ALTER TABLE dbo.CondicionCorporal ADD CONSTRAINT
+	PK_CondicionCorporal PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.CondicionCorporal ADD CONSTRAINT
+	FK_CondicionCorporal_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.CondicionCorporal ADD CONSTRAINT
+	FK_CondicionCorporal_TipoCondicion FOREIGN KEY
+	(
+	IdTipo
+	) REFERENCES dbo.TipoCondicion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+GO
+
+
+   
+
+
+
+
+
+
+  
+  "
+/>

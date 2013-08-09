@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.17.0"
+  Fecha="10/12/2008"
+  Descripcion="  - Modificaciones propuestas en el archivo SCBSFAP081120_AF0052_v2_GEXVOC.doc
+  - Adicción del lote sistema paridera.
+  - Correción de la importación de fichero ovino-caprino (Se ha cambiado la estructura del fichero, consultar en el manual).
+  - Corregido el informe listado de animales para la presentación de los campos externo e identificado (a pesar de contener valores nulos).
+  - Se han añadido los campos Nº Guia Entrada y Nº Guía Salida.
+  - Se han añadido numerosos campos de filtro al informe libro de explotación.
+  - Se ha actualizado el informe Listado de animales añadiendo campos: Nº Guia Entrada y Nº Guia Salida.
+  - Se ha incluido el campo tatuaje para la especie bovina.
+  - Se ha ampliado el campo tatuaje de 7 a 8 caracteres.
+  - Se ha ampliado el campo crotal de 4 a 12 caracteres. (Nota: para la especie Bovina sigue restringido a 4)
+  - Se ha habilitado la inserción de CIB extranjeros.
+  - Se ha habilitado el filtro 'externo' en el listado de animales."
+  Script="
+  ---------------------------------------------------------------------------
+  ---AÑADIMOS EL LOTE DE SISTEMA (PARIDERA) en caso de no existir------------
+  ---------------------------------------------------------------------------
+  
+IF NOT EXISTS (SELECT * FROM [TipoLote] WHERE Descripcion='LOTE DE PARIDERA' AND SISTEMA=1)	
+  INSERT INTO [TipoLote]([Descripcion],[Sistema]) VALUES ('LOTE DE PARIDERA',1)    
+GO
+  -------------------------------------------------------------
+  ---AÑADIMOS EL CAMPO Número Guía A LA TABLA ALTAS------------
+  -------------------------------------------------------------
+--BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+--COMMIT
+--BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Alta ADD
+	NumeroGuia varchar(14) NULL
+GO
+
+
+
+  -------------------------------------------------------------
+  ---AÑADIMOS EL CAMPO Número Guía A LA TABLA   BAJAS------------
+  -------------------------------------------------------------
+
+
+
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+
+GO
+ALTER TABLE dbo.Baja ADD
+	NumeroGuia varchar(14) NULL
+GO
+
+
+  -----------------------------------------------------------------------------
+  ---MODIFICAMOS LOS CAMPOS CROTAL(8) Y TATUAJE(12) DE A LA TABLA ANIMALES------------
+  -----------------------------------------------------------------------------
+--BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+
+GO
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Fotografia
+GO
+
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Raza
+GO
+
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Estado
+GO
+
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Conformacion
+GO
+
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Talla
+GO
+
+ALTER TABLE dbo.Animal
+	DROP CONSTRAINT FK_Animal_Explotacion
+GO
+
+CREATE TABLE dbo.Tmp_Animal
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdExplotacion int NOT NULL,
+	IdRaza int NOT NULL,
+	IdEstado int NULL,
+	IdTalla int NULL,
+	IdConformacion int NULL,
+	IdFotografia int NULL,
+	DIB varchar(14) NULL,
+	Crotal varchar(12) NULL,
+	Tatuaje varchar(8) NULL,
+	Genotipo varchar(7) NULL,
+	RegistroGenealogico varchar(14) NULL,
+	Nombre varchar(50) NOT NULL,
+	FechaNacimiento datetime NOT NULL,
+	FechaDestete datetime NULL,
+	Sexo varchar(1) NOT NULL,
+	Morfologia int NULL,
+	Testaje bit NULL,
+	AptoNovillas bit NULL,
+	Externo bit NULL,
+	Identificado bit NULL,
+	Modificable bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Animal ON
+GO
+IF EXISTS(SELECT * FROM dbo.Animal)
+	 EXEC('INSERT INTO dbo.Tmp_Animal (Id, IdExplotacion, IdRaza, IdEstado, IdTalla, IdConformacion, IdFotografia, DIB, Crotal, Tatuaje, Genotipo, RegistroGenealogico, Nombre, FechaNacimiento, FechaDestete, Sexo, Morfologia, Testaje, AptoNovillas, Externo, Identificado, Modificable)
+		SELECT Id, IdExplotacion, IdRaza, IdEstado, IdTalla, IdConformacion, IdFotografia, DIB, Crotal, Tatuaje, Genotipo, RegistroGenealogico, Nombre, FechaNacimiento, FechaDestete, Sexo, Morfologia, Testaje, AptoNovillas, Externo, Identificado, Modificable FROM dbo.Animal WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Animal OFF
+GO
+ALTER TABLE dbo.Parto
+	DROP CONSTRAINT FK_Parto_Animal
+GO
+ALTER TABLE dbo.EngrasamientoCanal
+	DROP CONSTRAINT FK_EngrasamientoCanal_Animal
+GO
+ALTER TABLE dbo.TipificacionCanal
+	DROP CONSTRAINT FK_TipificacionCanal_Animal
+GO
+ALTER TABLE dbo.RendimientoCanal
+	DROP CONSTRAINT FK_RendimientoCanal_Animal
+GO
+ALTER TABLE dbo.Peso
+	DROP CONSTRAINT FK_Peso_Animal
+GO
+ALTER TABLE dbo.SincronizacionCelo
+	DROP CONSTRAINT FK_SincronizacionCelo_Animal
+GO
+ALTER TABLE dbo.Asignacion
+	DROP CONSTRAINT FK_Asignacion_Animal
+GO
+ALTER TABLE dbo.Celo
+	DROP CONSTRAINT FK_Celo_Animal
+GO
+ALTER TABLE dbo.Secado
+	DROP CONSTRAINT FK_Secado_Animal
+GO
+ALTER TABLE dbo.LibroGenealogico
+	DROP CONSTRAINT FK_LibroGenealogico_Animal
+GO
+ALTER TABLE dbo.AniLot
+	DROP CONSTRAINT FK_AniLot_Animal
+GO
+ALTER TABLE dbo.Estancia
+	DROP CONSTRAINT FK_Estancia_Animal
+GO
+ALTER TABLE dbo.Stock
+	DROP CONSTRAINT FK_Stock_Animal
+GO
+ALTER TABLE dbo.Gasto
+	DROP CONSTRAINT FK_Gasto_Animal
+GO
+ALTER TABLE dbo.Movimiento
+	DROP CONSTRAINT FK_Movimiento_Animal
+GO
+ALTER TABLE dbo.Analisis
+	DROP CONSTRAINT FK_Analisis_Animal
+GO
+ALTER TABLE dbo.Aborto
+	DROP CONSTRAINT FK_Aborto_Animal
+GO
+ALTER TABLE dbo.Inseminacion
+	DROP CONSTRAINT FK_Inseminacion_Macho
+GO
+ALTER TABLE dbo.Inseminacion
+	DROP CONSTRAINT FK_Inseminacion_Hembra
+GO
+ALTER TABLE dbo.Inseminacion
+	DROP CONSTRAINT FK_Inseminacion_Embrion
+GO
+ALTER TABLE dbo.Lactacion
+	DROP CONSTRAINT FK_Lactacion_Animal
+GO
+ALTER TABLE dbo.Resena
+	DROP CONSTRAINT FK_Resena_Animal
+GO
+ALTER TABLE dbo.DiagInseminacion
+	DROP CONSTRAINT FK_DiagInseminacion_Animal
+GO
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_Animal
+GO
+ALTER TABLE dbo.AniPro
+	DROP CONSTRAINT FK_AniPro_Animal
+GO
+ALTER TABLE dbo.DiagAnimal
+	DROP CONSTRAINT FK_DiagAnimal_Animal
+GO
+ALTER TABLE dbo.Alta
+	DROP CONSTRAINT FK_Alta_Animal
+GO
+ALTER TABLE dbo.Baja
+	DROP CONSTRAINT FK_Baja_Animal
+GO
+ALTER TABLE dbo.CondicionCorporal
+	DROP CONSTRAINT FK_CondicionCorporal_Animal
+GO
+DROP TABLE dbo.Animal
+GO
+EXECUTE sp_rename N'dbo.Tmp_Animal', N'Animal', 'OBJECT' 
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	PK_Animal PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Explotacion FOREIGN KEY
+	(
+	IdExplotacion
+	) REFERENCES dbo.Explotacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Talla FOREIGN KEY
+	(
+	IdTalla
+	) REFERENCES dbo.Talla
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Conformacion FOREIGN KEY
+	(
+	IdConformacion
+	) REFERENCES dbo.Conformacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Estado FOREIGN KEY
+	(
+	IdEstado
+	) REFERENCES dbo.Estado
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Raza FOREIGN KEY
+	(
+	IdRaza
+	) REFERENCES dbo.Raza
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Animal ADD CONSTRAINT
+	FK_Animal_Fotografia FOREIGN KEY
+	(
+	IdFotografia
+	) REFERENCES dbo.Fotografia
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.CondicionCorporal ADD CONSTRAINT
+	FK_CondicionCorporal_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Baja ADD CONSTRAINT
+	FK_Baja_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Alta ADD CONSTRAINT
+	FK_Alta_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.DiagAnimal ADD CONSTRAINT
+	FK_DiagAnimal_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.AniPro ADD CONSTRAINT
+	FK_AniPro_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.DiagInseminacion ADD CONSTRAINT
+	FK_DiagInseminacion_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Resena ADD CONSTRAINT
+	FK_Resena_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Lactacion ADD CONSTRAINT
+	FK_Lactacion_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Inseminacion ADD CONSTRAINT
+	FK_Inseminacion_Macho FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Inseminacion ADD CONSTRAINT
+	FK_Inseminacion_Hembra FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Inseminacion ADD CONSTRAINT
+	FK_Inseminacion_Embrion FOREIGN KEY
+	(
+	IdEmbrion
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Aborto ADD CONSTRAINT
+	FK_Aborto_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Analisis ADD CONSTRAINT
+	FK_Analisis_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Movimiento ADD CONSTRAINT
+	FK_Movimiento_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Gasto ADD CONSTRAINT
+	FK_Gasto_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Stock ADD CONSTRAINT
+	FK_Stock_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Estancia ADD CONSTRAINT
+	FK_Estancia_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.AniLot ADD CONSTRAINT
+	FK_AniLot_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.LibroGenealogico ADD CONSTRAINT
+	FK_LibroGenealogico_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Secado ADD CONSTRAINT
+	FK_Secado_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Celo ADD CONSTRAINT
+	FK_Celo_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Asignacion ADD CONSTRAINT
+	FK_Asignacion_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.SincronizacionCelo ADD CONSTRAINT
+	FK_SincronizacionCelo_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Peso ADD CONSTRAINT
+	FK_Peso_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.RendimientoCanal ADD CONSTRAINT
+	FK_RendimientoCanal_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.TipificacionCanal ADD CONSTRAINT
+	FK_TipificacionCanal_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.EngrasamientoCanal ADD CONSTRAINT
+	FK_EngrasamientoCanal_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+ALTER TABLE dbo.Parto ADD CONSTRAINT
+	FK_Parto_Animal FOREIGN KEY
+	(
+	IdHembra
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+  
+  ---------------------------------------------------------------------------------------
+  ---MODIFICAMOS LOS CAMPOS cantidad(10,2) Y precio(10,2) DE A LA TABLA STOCK------------
+  ---------------------------------------------------------------------------------------
+  --BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+--COMMIT
+--BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Stock
+	DROP CONSTRAINT FK_Stock_Explotacion
+GO
+
+ALTER TABLE dbo.Stock
+	DROP CONSTRAINT FK_Stock_Producto
+GO
+
+ALTER TABLE dbo.Stock
+	DROP CONSTRAINT FK_Stock_Animal
+GO
+
+CREATE TABLE dbo.Tmp_Stock
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdExplotacion int NOT NULL,
+	IdProducto int NOT NULL,
+	IdMacho int NULL,
+	Cantidad numeric(10, 2) NOT NULL,
+	Precio numeric(10, 2) NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Stock ON
+GO
+IF EXISTS(SELECT * FROM dbo.Stock)
+	 EXEC('INSERT INTO dbo.Tmp_Stock (Id, IdExplotacion, IdProducto, IdMacho, Cantidad, Precio)
+		SELECT Id, IdExplotacion, IdProducto, IdMacho, Cantidad, Precio FROM dbo.Stock WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Stock OFF
+GO
+DROP TABLE dbo.Stock
+GO
+EXECUTE sp_rename N'dbo.Tmp_Stock', N'Stock', 'OBJECT' 
+GO
+ALTER TABLE dbo.Stock ADD CONSTRAINT
+	PK_Stock PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Stock ADD CONSTRAINT
+	FK_Stock_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Stock ADD CONSTRAINT
+	FK_Stock_Producto FOREIGN KEY
+	(
+	IdProducto
+	) REFERENCES dbo.Producto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Stock ADD CONSTRAINT
+	FK_Stock_Explotacion FOREIGN KEY
+	(
+	IdExplotacion
+	) REFERENCES dbo.Explotacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+
+  -----------------------------------------------------------------------------
+  ---MODIFICAMOS LOS CAMPOS cantidad(10,2) Y importe(10,2) DE A LA TABLA MOVIMIENTO------------
+  -----------------------------------------------------------------------------
+  
+--BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+--COMMIT
+--BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Movimiento
+	DROP CONSTRAINT FK_Movimiento_Animal
+GO
+
+ALTER TABLE dbo.Movimiento
+	DROP CONSTRAINT FK_Movimiento_Producto
+GO
+
+ALTER TABLE dbo.Movimiento
+	DROP CONSTRAINT FK_Movimiento_Explotacion
+GO
+
+CREATE TABLE dbo.Tmp_Movimiento
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdExplotacion int NOT NULL,
+	IdProducto int NOT NULL,
+	IdMacho int NULL,
+	Origen varchar(20) NULL,
+	Identificacion varchar(20) NULL,
+	Fecha datetime NOT NULL,
+	FechaEfecto datetime NULL,
+	Cantidad numeric(10, 2) NOT NULL,
+	Precio numeric(10, 2) NULL
+	)  ON [PRIMARY]
+GO
+DECLARE @v sql_variant 
+SET @v = N'Identificador.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'Id'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Explotación.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'IdExplotacion'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Producto.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'IdProducto'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Macho (aplicable en caso de stock de pajuela de semen para el control por semental).'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'IdMacho'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Fecha de entrada en stock.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'Fecha'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Cantidad.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'Cantidad'
+GO
+DECLARE @v sql_variant 
+SET @v = N'Precio.'
+EXECUTE sp_addextendedproperty N'MS_Description', @v, N'SCHEMA', N'dbo', N'TABLE', N'Tmp_Movimiento', N'COLUMN', N'Precio'
+GO
+SET IDENTITY_INSERT dbo.Tmp_Movimiento ON
+GO
+IF EXISTS(SELECT * FROM dbo.Movimiento)
+	 EXEC('INSERT INTO dbo.Tmp_Movimiento (Id, IdExplotacion, IdProducto, IdMacho, Origen, Identificacion, Fecha, FechaEfecto, Cantidad, Precio)
+		SELECT Id, IdExplotacion, IdProducto, IdMacho, Origen, Identificacion, Fecha, FechaEfecto, Cantidad, Precio FROM dbo.Movimiento WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Movimiento OFF
+GO
+DROP TABLE dbo.Movimiento
+GO
+EXECUTE sp_rename N'dbo.Tmp_Movimiento', N'Movimiento', 'OBJECT' 
+GO
+ALTER TABLE dbo.Movimiento ADD CONSTRAINT
+	PK_Movimiento PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Movimiento ADD CONSTRAINT
+	FK_Movimiento_Explotacion FOREIGN KEY
+	(
+	IdExplotacion
+	) REFERENCES dbo.Explotacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Movimiento ADD CONSTRAINT
+	FK_Movimiento_Producto FOREIGN KEY
+	(
+	IdProducto
+	) REFERENCES dbo.Producto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Movimiento ADD CONSTRAINT
+	FK_Movimiento_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+
+  ------------------------------------------------------
+  --BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+GO
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_TipoProducto
+GO
+
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_TipoCompra
+GO
+
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_Animal
+GO
+
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_Explotacion
+GO
+
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_Proveedor
+GO
+
+ALTER TABLE dbo.Compra
+	DROP CONSTRAINT FK_Compra_Producto
+GO
+
+CREATE TABLE dbo.Tmp_Compra
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdExplotacion int NOT NULL,
+	IdClasificacion int NULL,
+	IdTipo int NOT NULL,
+	IdProducto int NULL,
+	IdMacho int NULL,
+	IdProveedor int NULL,
+	Concepto varchar(255) NULL,
+	Cantidad numeric(10, 2) NULL,
+	Fecha datetime NOT NULL,
+	Importe numeric(10, 2) NOT NULL,
+	Pagada bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Compra ON
+GO
+IF EXISTS(SELECT * FROM dbo.Compra)
+	 EXEC('INSERT INTO dbo.Tmp_Compra (Id, IdExplotacion, IdClasificacion, IdTipo, IdProducto, IdMacho, IdProveedor, Concepto, Cantidad, Fecha, Importe, Pagada)
+		SELECT Id, IdExplotacion, IdClasificacion, IdTipo, IdProducto, IdMacho, IdProveedor, Concepto, Cantidad, Fecha, Importe, Pagada FROM dbo.Compra WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Compra OFF
+GO
+DROP TABLE dbo.Compra
+GO
+EXECUTE sp_rename N'dbo.Tmp_Compra', N'Compra', 'OBJECT' 
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	PK_Gasto PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_Producto FOREIGN KEY
+	(
+	IdProducto
+	) REFERENCES dbo.Producto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_Proveedor FOREIGN KEY
+	(
+	IdProveedor
+	) REFERENCES dbo.Proveedor
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_Explotacion FOREIGN KEY
+	(
+	IdExplotacion
+	) REFERENCES dbo.Explotacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_Animal FOREIGN KEY
+	(
+	IdMacho
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_TipoCompra FOREIGN KEY
+	(
+	IdClasificacion
+	) REFERENCES dbo.TipoCompra
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Compra ADD CONSTRAINT
+	FK_Compra_TipoProducto FOREIGN KEY
+	(
+	IdTipo
+	) REFERENCES dbo.TipoProducto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+
+
+  ----------------------------------------------------------------
+  --BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+--COMMIT
+--BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Venta
+	DROP CONSTRAINT FK_Venta_TipoVenta
+GO
+
+ALTER TABLE dbo.Venta
+	DROP CONSTRAINT FK_Venta_TipoProducto
+GO
+
+ALTER TABLE dbo.Venta
+	DROP CONSTRAINT FK_Venta_Cliente
+GO
+
+ALTER TABLE dbo.Venta
+	DROP CONSTRAINT FK_Venta_Producto
+GO
+
+ALTER TABLE dbo.Venta
+	DROP CONSTRAINT FK_Venta_Explotacion
+GO
+
+CREATE TABLE dbo.Tmp_Venta
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdExplotacion int NOT NULL,
+	IdClasificacion int NULL,
+	IdTipo int NOT NULL,
+	IdProducto int NULL,
+	IdCliente int NULL,
+	Concepto varchar(255) NULL,
+	Cantidad numeric(10, 2) NULL,
+	Fecha datetime NOT NULL,
+	Importe numeric(10, 2) NOT NULL,
+	Cobrada bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_Venta ON
+GO
+IF EXISTS(SELECT * FROM dbo.Venta)
+	 EXEC('INSERT INTO dbo.Tmp_Venta (Id, IdExplotacion, IdClasificacion, IdTipo, IdProducto, IdCliente, Concepto, Cantidad, Fecha, Importe, Cobrada)
+		SELECT Id, IdExplotacion, IdClasificacion, IdTipo, IdProducto, IdCliente, Concepto, Cantidad, Fecha, Importe, Cobrada FROM dbo.Venta WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_Venta OFF
+GO
+DROP TABLE dbo.Venta
+GO
+EXECUTE sp_rename N'dbo.Tmp_Venta', N'Venta', 'OBJECT' 
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	PK_Ingreso PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	FK_Venta_Explotacion FOREIGN KEY
+	(
+	IdExplotacion
+	) REFERENCES dbo.Explotacion
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	FK_Venta_Producto FOREIGN KEY
+	(
+	IdProducto
+	) REFERENCES dbo.Producto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	FK_Venta_Cliente FOREIGN KEY
+	(
+	IdCliente
+	) REFERENCES dbo.Cliente
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	FK_Venta_TipoProducto FOREIGN KEY
+	(
+	IdTipo
+	) REFERENCES dbo.TipoProducto
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.Venta ADD CONSTRAINT
+	FK_Venta_TipoVenta FOREIGN KEY
+	(
+	IdClasificacion
+	) REFERENCES dbo.TipoVenta
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+"
+/>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="BD" value="gexvocce.sdf"/>
+    <add key="WM5" value="169.254.2.2"/>
+    <add key="REG" value="true"/>
+    <add key="LOG" value="gexvoclog.log"/>
+  </appSettings>
+</configuration>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.13.0"
+  Fecha="07/10/2008"
+  Descripcion=" 
+  - Adición del valor de configuración PermitirRegistrosFuturos. Por defecto configurado para no permitir registros futuros.
+    Dicho valor afecta principalmente al registro de inseminaciones y partos. Impide que se registren si su fecha es mayor que la fecha del sistema.
+  - Formulario Importador de Animales, compatible con la exportacion del listado de animales a csv de ficheros con formato PIGAN.
+  - Video '21 - Importar Animales (Bovino)' que explica el proceso para importar animales a partir de un fichero excel con formato PIGAN."
+  Script="
+----------------------------------------------------------------
+--ADICION AL PERFIL BÁSICO LOS MENÚS DE IMPORTACION EXISTENTES--
+----------------------------------------------------------------
+declare @IdModulo int;
+declare @IdMenuSuperior int;
+
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='_BÁSICO';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA _BÁSICO
+set @IdMenuSuperior=null;
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL  MSHerramientas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MImportacion',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MImportacion';----OBTENGO EL IDENTIFICADOR DEL  MImportacion
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MFicherosCLechero',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MImportacionDatos',0)
+GO
+
+"
+/>

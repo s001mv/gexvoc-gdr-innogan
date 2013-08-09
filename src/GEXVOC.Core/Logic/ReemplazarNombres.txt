@@ -1,0 +1,4 @@
+﻿Configuracions;Configuraciones
+Explotacions;Explotaciones
+condicionjuridicas;CondicionesJuridicas
+Titulars;Titulares

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.8.0"
+  Fecha="22/09/2008"
+  Descripcion=" 
+  - Añadida la funcionalidad de alertas.
+  - Añadidos en configuración 2 valores para la gestión de alertas del tipo diagnóstico de gestación.
+  - Creación de scripts necesarios para gestión de alertas.
+  - Se ha cambiado el tipo de datos DiagnósticoAnimal.Diagnostico para su compatibilidad con pocket (se ha reducido a 2000). 
+    Nota: esta reducción, puede probocar la perdida de parte de los detalles de los diagnósticos ya registrados que superen los 2000 caracteres."  
+  Script="
+USE [gexvoc]
+GO
+
+---ESTABLEZCO LOS PERMISOS PARA LOS PROCESOS DE SUBSISTEMA ALERTAS----
+
+declare @IdModulo int;
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ALERTAS';----OBTENGO EL IDENTIFICADOR DEL MÓDULO BÁSICO.
+
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='Alertas' AND Formulario='Principal' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'Alertas','Principal',null) 
+
+GO
+  
+---ESTABLEZO LOS PERMISOS DE LOS MENÚS PARA EL SUBSISTEMA ALERTAS-----
+
+declare @IdModulo int;
+declare @IdMenuSuperior int;
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ALERTAS';
+set @IdMenuSuperior=null;
+
+--Añado el permiso para el menú herramientas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSHerramientas',0)
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSHerramientas';----OBTENGO EL IDENTIFICADOR DEL Menú MSHerramientas
+
+--Añado el permiso para el menú herramientas->tsmAlertas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmAlertas',0)
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='tsmAlertas';----OBTENGO EL IDENTIFICADOR DEL Menú tsmAlertas
+
+--Añado los permisos para los menús: herramientas->tsmAlertas->tsmMostrarAlertas
+--                                   herramientas->tsmAlertas->tsmRecargarAlertas
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmMostrarAlertas',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmRecargarAlertas',0)  
+  
+GO
+  
+---AÑADO LOS VALORES ADICIONALES A LA CONFIGURACIÓN QUE REQUIERE EL SUBSISTEMA ALERTAS
+
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoInicio_BOVINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoInicio_BOVINA','40')
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoFin_BOVINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoFin_BOVINA','60')
+
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoInicio_OVINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoInicio_OVINA','20')
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoFin_OVINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoFin_OVINA','10')
+  
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoInicio_CAPRINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoInicio_CAPRINA','20')
+IF NOT EXISTS (SELECT * FROM [Configuracion] WHERE Clave='DiasAlertaDiagnosticoFin_CAPRINA')	
+  INSERT INTO [Configuracion]([Clave],[Valor])VALUES('DiasAlertaDiagnosticoFin_CAPRINA','40')
+
+GO
+
+----------------------------------------------------------------
+--CAMBIAMOS EL TIPO DE DATO DIAGANIMAL.Diagnostico de Text por varchar(2000)
+--Para que no de problemas con el pocket
+----------------------------------------------------------------
+
+  
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.DiagAnimal
+	DROP CONSTRAINT FK_DiagAnimal_Veterinario
+GO
+COMMIT
+select Has_Perms_By_Name(N'dbo.Veterinario', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Veterinario', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Veterinario', 'Object', 'CONTROL') as Contr_Per BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.DiagAnimal
+	DROP CONSTRAINT FK_DiagAnimal_Enfermedad
+GO
+COMMIT
+select Has_Perms_By_Name(N'dbo.Enfermedad', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Enfermedad', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Enfermedad', 'Object', 'CONTROL') as Contr_Per BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.DiagAnimal
+	DROP CONSTRAINT FK_DiagAnimal_Animal
+GO
+COMMIT
+select Has_Perms_By_Name(N'dbo.Animal', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.Animal', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.Animal', 'Object', 'CONTROL') as Contr_Per BEGIN TRANSACTION
+GO
+CREATE TABLE dbo.Tmp_DiagAnimal
+	(
+	Id int NOT NULL IDENTITY (1, 1),
+	IdAnimal int NOT NULL,
+	IdEnfermedad int NULL,
+	IdVeterinario int NULL,
+	Diagnostico varchar(2000) NULL,
+	Fecha datetime NOT NULL,
+	Modificable bit NOT NULL
+	)  ON [PRIMARY]
+GO
+SET IDENTITY_INSERT dbo.Tmp_DiagAnimal ON
+GO
+IF EXISTS(SELECT * FROM dbo.DiagAnimal)
+	 EXEC('INSERT INTO dbo.Tmp_DiagAnimal (Id, IdAnimal, IdEnfermedad, IdVeterinario, Diagnostico, Fecha, Modificable)
+		SELECT Id, IdAnimal, IdEnfermedad, IdVeterinario, CONVERT(varchar(2000), Diagnostico), Fecha, Modificable FROM dbo.DiagAnimal WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_DiagAnimal OFF
+GO
+ALTER TABLE dbo.TratEnfermedad
+	DROP CONSTRAINT FK_TratEnfermedad_DiagAnimal
+GO
+DROP TABLE dbo.DiagAnimal
+GO
+EXECUTE sp_rename N'dbo.Tmp_DiagAnimal', N'DiagAnimal', 'OBJECT' 
+GO
+ALTER TABLE dbo.DiagAnimal ADD CONSTRAINT
+	PK_DiagAnimal PRIMARY KEY CLUSTERED 
+	(
+	Id
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.DiagAnimal ADD CONSTRAINT
+	FK_DiagAnimal_Animal FOREIGN KEY
+	(
+	IdAnimal
+	) REFERENCES dbo.Animal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.DiagAnimal ADD CONSTRAINT
+	FK_DiagAnimal_Enfermedad FOREIGN KEY
+	(
+	IdEnfermedad
+	) REFERENCES dbo.Enfermedad
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+ALTER TABLE dbo.DiagAnimal ADD CONSTRAINT
+	FK_DiagAnimal_Veterinario FOREIGN KEY
+	(
+	IdVeterinario
+	) REFERENCES dbo.Veterinario
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+select Has_Perms_By_Name(N'dbo.DiagAnimal', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.DiagAnimal', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.DiagAnimal', 'Object', 'CONTROL') as Contr_Per BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.TratEnfermedad ADD CONSTRAINT
+	FK_TratEnfermedad_DiagAnimal FOREIGN KEY
+	(
+	IdDiagnostico
+	) REFERENCES dbo.DiagAnimal
+	(
+	Id
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+select Has_Perms_By_Name(N'dbo.TratEnfermedad', 'Object', 'ALTER') as ALT_Per, Has_Perms_By_Name(N'dbo.TratEnfermedad', 'Object', 'VIEW DEFINITION') as View_def_Per, Has_Perms_By_Name(N'dbo.TratEnfermedad', 'Object', 'CONTROL') as Contr_Per 
+GO
+"
+
+/>

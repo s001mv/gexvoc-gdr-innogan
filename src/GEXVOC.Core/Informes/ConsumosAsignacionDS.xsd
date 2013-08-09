@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConsumosAsignacionDS" targetNamespace="http://tempuri.org/ConsumosAsignacionDS.xsd" xmlns:mstns="http://tempuri.org/ConsumosAsignacionDS.xsd" xmlns="http://tempuri.org/ConsumosAsignacionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConsumosAsignacionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ConsumosAsignacionDS" msprop:Generator_UserDSName="ConsumosAsignacionDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Asignacion" msprop:Generator_UserTableName="Asignacion" msprop:Generator_RowDeletedName="AsignacionRowDeleted" msprop:Generator_TableClassName="AsignacionDataTable" msprop:Generator_RowChangedName="AsignacionRowChanged" msprop:Generator_RowClassName="AsignacionRow" msprop:Generator_RowChangingName="AsignacionRowChanging" msprop:Generator_RowEvArgName="AsignacionRowChangeEvent" msprop:Generator_RowEvHandlerName="AsignacionRowChangeEventHandler" msprop:Generator_TablePropName="Asignacion" msprop:Generator_TableVarName="tableAsignacion" msprop:Generator_RowDeletingName="AsignacionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdRacion" msprop:Generator_UserColumnName="IdRacion" msprop:Generator_ColumnPropNameInRow="IdRacion" msprop:Generator_ColumnVarNameInTable="columnIdRacion" msprop:Generator_ColumnPropNameInTable="IdRacionColumn" type="xs:int" />
+              <xs:element name="IdAnimal" msprop:Generator_UserColumnName="IdAnimal" msprop:Generator_ColumnPropNameInRow="IdAnimal" msprop:Generator_ColumnVarNameInTable="columnIdAnimal" msprop:Generator_ColumnPropNameInTable="IdAnimalColumn" type="xs:int" />
+              <xs:element name="Porcentaje" msprop:Generator_UserColumnName="Porcentaje" msprop:Generator_ColumnPropNameInRow="Porcentaje" msprop:Generator_ColumnVarNameInTable="columnPorcentaje" msprop:Generator_ColumnPropNameInTable="PorcentajeColumn" type="xs:decimal" />
+              <xs:element name="FechaInicio" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" type="xs:dateTime" />
+              <xs:element name="FechaFin" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DescRacion" msprop:Generator_UserColumnName="DescRacion" msprop:Generator_ColumnPropNameInRow="DescRacion" msprop:Generator_ColumnVarNameInTable="columnDescRacion" msprop:Generator_ColumnPropNameInTable="DescRacionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Asignacion" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

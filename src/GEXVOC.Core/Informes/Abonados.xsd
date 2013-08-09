@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Abonados" targetNamespace="http://tempuri.org/Abonados.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/Abonados.xsd" xmlns:mstns="http://tempuri.org/Abonados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Fincas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdFinca" type="xs:integer" />
+        <xs:element name="Finca" type="xs:string" />
+        <xs:element name="Poligono" type="xs:string" />
+        <xs:element name="Parcela" type="xs:string" />
+        <xs:element name="Tamaño" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="key1">
+      <xs:selector xpath="." />
+      <xs:field xpath="mstns:IdFinca" />
+    </xs:key>
+  </xs:element>
+  <xs:element name="Abonados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdFinca" type="xs:integer" />
+        <xs:element name="Abono" type="xs:string" />
+        <xs:element name="Cantidad" type="xs:decimal" />
+        <xs:element name="Fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+    <xs:keyref name="FincasAbonados" refer="key1">
+      <xs:selector xpath="." />
+      <xs:field xpath="mstns:IdFinca" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="Cabecera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Titular" type="xs:string" />
+        <xs:element name="DNI" type="xs:string" />
+        <xs:element name="FInicio" type="xs:dateTime" />
+        <xs:element name="Ffin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

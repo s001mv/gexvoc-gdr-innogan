@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEXVOC.UI", "GEXVOC.UI\GEXVOC.UI.csproj", "{85B454AF-D607-456E-B0A2-A5A53C558787}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEXVOC.Core", "GEXVOC.Core\GEXVOC.Core.csproj", "{51F58979-E248-4E0E-AC38-4D6FC6154713}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "CAB_GEXVOC_CE", "CAB_GEXVOC_CE\setup.vddproj", "{E6590831-DAA4-4D00-BA80-DA6F173BDAB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Instalador", "Instalador", "{18284AC1-C1AA-463A-8AC0-81758BA3D54D}"
+	ProjectSection(SolutionItems) = preProject
+		INSTALADOR_CAB\app.ico = INSTALADOR_CAB\app.ico
+		INSTALADOR_CAB\arrow.bmp = INSTALADOR_CAB\arrow.bmp
+		INSTALADOR_CAB\CAB_GEXVOC_CE.CAB = INSTALADOR_CAB\CAB_GEXVOC_CE.CAB
+		INSTALADOR_CAB\CAB_GEXVOC_CE.inf = INSTALADOR_CAB\CAB_GEXVOC_CE.inf
+		INSTALADOR_CAB\CabWiz.log = INSTALADOR_CAB\CabWiz.log
+		INSTALADOR_CAB\GEXVOC.ini = INSTALADOR_CAB\GEXVOC.ini
+		INSTALADOR_CAB\Instalador.nsi = INSTALADOR_CAB\Instalador.nsi
+		INSTALADOR_CAB\Instalador_GEXVOC_CE.exe = INSTALADOR_CAB\Instalador_GEXVOC_CE.exe
+		INSTALADOR_CAB\netcf20.ini = INSTALADOR_CAB\netcf20.ini
+		INSTALADOR_CAB\NETCFv2.wce5.armv4i.cab = INSTALADOR_CAB\NETCFv2.wce5.armv4i.cab
+		INSTALADOR_CAB\readme.html = INSTALADOR_CAB\readme.html
+		INSTALADOR_CAB\sqlce.dev.ES.ppc.wce5.armv4i.CAB = INSTALADOR_CAB\sqlce.dev.ES.ppc.wce5.armv4i.CAB
+		INSTALADOR_CAB\sqlce.ppc.wce5.armv4i.CAB = INSTALADOR_CAB\sqlce.ppc.wce5.armv4i.CAB
+		INSTALADOR_CAB\sqlce.repl.ppc.wce5.armv4i.CAB = INSTALADOR_CAB\sqlce.repl.ppc.wce5.armv4i.CAB
+		INSTALADOR_CAB\sqlClient.ini = INSTALADOR_CAB\sqlClient.ini
+		INSTALADOR_CAB\sqlMobile.ini = INSTALADOR_CAB\sqlMobile.ini
+		INSTALADOR_CAB\sqlMobileRepl.ini = INSTALADOR_CAB\sqlMobileRepl.ini
+		INSTALADOR_CAB\system.ini = INSTALADOR_CAB\system.ini
+		INSTALADOR_CAB\win.bmp = INSTALADOR_CAB\win.bmp
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GEXVOC.Core\\GEXVOC.Core.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = GEXVOC.Core\\
+		SccProjectUniqueName2 = GEXVOC.UI\\GEXVOC.UI.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = GEXVOC.UI\\
+		SccProjectUniqueName3 = CAB_GEXVOC_CE\\setup.vddproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = CAB_GEXVOC_CE\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B454AF-D607-456E-B0A2-A5A53C558787}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{51F58979-E248-4E0E-AC38-4D6FC6154713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F58979-E248-4E0E-AC38-4D6FC6154713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F58979-E248-4E0E-AC38-4D6FC6154713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F58979-E248-4E0E-AC38-4D6FC6154713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6590831-DAA4-4D00-BA80-DA6F173BDAB1}.Debug|Any CPU.ActiveCfg = Debug
+		{E6590831-DAA4-4D00-BA80-DA6F173BDAB1}.Debug|Any CPU.Build.0 = Debug
+		{E6590831-DAA4-4D00-BA80-DA6F173BDAB1}.Release|Any CPU.ActiveCfg = Release
+		{E6590831-DAA4-4D00-BA80-DA6F173BDAB1}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

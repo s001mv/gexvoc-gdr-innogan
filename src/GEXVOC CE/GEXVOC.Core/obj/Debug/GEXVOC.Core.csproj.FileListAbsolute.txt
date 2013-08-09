@@ -1,0 +1,6 @@
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\bin\Debug\gexvocce.sdf
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\bin\Debug\GEXVOC.Core.dll
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\bin\Debug\GEXVOC.Core.pdb
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\obj\Debug\GEXVOC.Core.dll
+C:\Coremain\Proyectos\fuentes\GEXVOC CE\GEXVOC.Core\obj\Debug\GEXVOC.Core.pdb

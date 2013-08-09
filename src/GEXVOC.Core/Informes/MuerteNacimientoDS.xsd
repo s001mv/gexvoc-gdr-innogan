@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MuerteNacimientoDS" targetNamespace="http://tempuri.org/MuerteNacimientoDS.xsd" xmlns:mstns="http://tempuri.org/MuerteNacimientoDS.xsd" xmlns="http://tempuri.org/MuerteNacimientoDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MuerteNacimientoDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="MuerteNacimientoDS" msprop:Generator_UserDSName="MuerteNacimientoDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Parto" msprop:Generator_UserTableName="Parto" msprop:Generator_RowDeletedName="PartoRowDeleted" msprop:Generator_TableClassName="PartoDataTable" msprop:Generator_RowChangedName="PartoRowChanged" msprop:Generator_RowClassName="PartoRow" msprop:Generator_RowChangingName="PartoRowChanging" msprop:Generator_RowEvArgName="PartoRowChangeEvent" msprop:Generator_RowEvHandlerName="PartoRowChangeEventHandler" msprop:Generator_TablePropName="Parto" msprop:Generator_TableVarName="tableParto" msprop:Generator_RowDeletingName="PartoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="IdTipo" msprop:Generator_UserColumnName="IdTipo" msprop:Generator_ColumnPropNameInRow="IdTipo" msprop:Generator_ColumnVarNameInTable="columnIdTipo" msprop:Generator_ColumnPropNameInTable="IdTipoColumn" type="xs:int" />
+              <xs:element name="IdFacilidad" msprop:Generator_UserColumnName="IdFacilidad" msprop:Generator_ColumnPropNameInRow="IdFacilidad" msprop:Generator_ColumnVarNameInTable="columnIdFacilidad" msprop:Generator_ColumnPropNameInTable="IdFacilidadColumn" type="xs:int" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="Vivos" msprop:Generator_UserColumnName="Vivos" msprop:Generator_ColumnPropNameInRow="Vivos" msprop:Generator_ColumnVarNameInTable="columnVivos" msprop:Generator_ColumnPropNameInTable="VivosColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Muertos" msprop:Generator_UserColumnName="Muertos" msprop:Generator_ColumnPropNameInRow="Muertos" msprop:Generator_ColumnVarNameInTable="columnMuertos" msprop:Generator_ColumnPropNameInTable="MuertosColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CausaMuerte" msprop:Generator_UserColumnName="CausaMuerte" msprop:Generator_ColumnPropNameInRow="CausaMuerte" msprop:Generator_ColumnVarNameInTable="columnCausaMuerte" msprop:Generator_ColumnPropNameInTable="CausaMuerteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescHembra" msprop:Generator_UserColumnName="DescHembra" msprop:Generator_ColumnPropNameInRow="DescHembra" msprop:Generator_ColumnVarNameInTable="columnDescHembra" msprop:Generator_ColumnPropNameInTable="DescHembraColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescTipo" msprop:Generator_UserColumnName="DescTipo" msprop:Generator_ColumnPropNameInRow="DescTipo" msprop:Generator_ColumnVarNameInTable="columnDescTipo" msprop:Generator_ColumnPropNameInTable="DescTipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescFacilidad" msprop:Generator_UserColumnName="DescFacilidad" msprop:Generator_ColumnPropNameInRow="DescFacilidad" msprop:Generator_ColumnVarNameInTable="columnDescFacilidad" msprop:Generator_ColumnPropNameInTable="DescFacilidadColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescEspecie" msprop:Generator_UserColumnName="DescEspecie" msprop:Generator_ColumnPropNameInRow="DescEspecie" msprop:Generator_ColumnVarNameInTable="columnDescEspecie" msprop:Generator_ColumnPropNameInTable="DescEspecieColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Parto" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AbortosDS" targetNamespace="http://tempuri.org/AbortosDS.xsd" xmlns:mstns="http://tempuri.org/AbortosDS.xsd" xmlns="http://tempuri.org/AbortosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AbortosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="AbortosDS" msprop:Generator_UserDSName="AbortosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Aborto" msprop:Generator_UserTableName="Aborto" msprop:Generator_RowDeletedName="AbortoRowDeleted" msprop:Generator_TableClassName="AbortoDataTable" msprop:Generator_RowChangedName="AbortoRowChanged" msprop:Generator_RowClassName="AbortoRow" msprop:Generator_RowChangingName="AbortoRowChanging" msprop:Generator_RowEvArgName="AbortoRowChangeEvent" msprop:Generator_RowEvHandlerName="AbortoRowChangeEventHandler" msprop:Generator_TablePropName="Aborto" msprop:Generator_TableVarName="tableAborto" msprop:Generator_RowDeletingName="AbortoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="IdTipo" msprop:Generator_UserColumnName="IdTipo" msprop:Generator_ColumnPropNameInRow="IdTipo" msprop:Generator_ColumnVarNameInTable="columnIdTipo" msprop:Generator_ColumnPropNameInTable="IdTipoColumn" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescTipo" msprop:Generator_UserColumnName="DescTipo" msprop:Generator_ColumnPropNameInRow="DescTipo" msprop:Generator_ColumnVarNameInTable="columnDescTipo" msprop:Generator_ColumnPropNameInTable="DescTipoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Aborto" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

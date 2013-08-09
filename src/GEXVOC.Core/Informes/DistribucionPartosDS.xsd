@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DistribucionPartosDS" targetNamespace="http://tempuri.org/DistribucionPartosDS.xsd" xmlns:mstns="http://tempuri.org/DistribucionPartosDS.xsd" xmlns="http://tempuri.org/DistribucionPartosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DistribucionPartosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DistribucionPartosDS" msprop:Generator_DataSetName="DistribucionPartosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Distribucion" msprop:Generator_UserTableName="Distribucion" msprop:Generator_RowDeletedName="DistribucionRowDeleted" msprop:Generator_TableClassName="DistribucionDataTable" msprop:Generator_RowChangedName="DistribucionRowChanged" msprop:Generator_RowClassName="DistribucionRow" msprop:Generator_RowChangingName="DistribucionRowChanging" msprop:Generator_RowEvArgName="DistribucionRowChangeEvent" msprop:Generator_RowEvHandlerName="DistribucionRowChangeEventHandler" msprop:Generator_TablePropName="Distribucion" msprop:Generator_TableVarName="tableDistribucion" msprop:Generator_RowDeletingName="DistribucionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Primero" msprop:Generator_UserColumnName="Primero" msprop:Generator_ColumnPropNameInRow="Primero" msprop:Generator_ColumnVarNameInTable="columnPrimero" msprop:Generator_ColumnPropNameInTable="PrimeroColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Segundo" msprop:Generator_UserColumnName="Segundo" msprop:Generator_ColumnPropNameInRow="Segundo" msprop:Generator_ColumnVarNameInTable="columnSegundo" msprop:Generator_ColumnPropNameInTable="SegundoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Tercero" msprop:Generator_UserColumnName="Tercero" msprop:Generator_ColumnPropNameInRow="Tercero" msprop:Generator_ColumnVarNameInTable="columnTercero" msprop:Generator_ColumnPropNameInTable="TerceroColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Mas" msprop:Generator_UserColumnName="Mas" msprop:Generator_ColumnPropNameInRow="Mas" msprop:Generator_ColumnVarNameInTable="columnMas" msprop:Generator_ColumnPropNameInTable="MasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Primavera" msprop:Generator_UserColumnName="Primavera" msprop:Generator_ColumnPropNameInRow="Primavera" msprop:Generator_ColumnVarNameInTable="columnPrimavera" msprop:Generator_ColumnPropNameInTable="PrimaveraColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Verano" msprop:Generator_UserColumnName="Verano" msprop:Generator_ColumnPropNameInRow="Verano" msprop:Generator_ColumnVarNameInTable="columnVerano" msprop:Generator_ColumnPropNameInTable="VeranoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Otoño" msprop:Generator_UserColumnName="Otoño" msprop:Generator_ColumnPropNameInRow="Otoño" msprop:Generator_ColumnVarNameInTable="columnOtoño" msprop:Generator_ColumnPropNameInTable="OtoñoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Invierno" msprop:Generator_UserColumnName="Invierno" msprop:Generator_ColumnPropNameInRow="Invierno" msprop:Generator_ColumnVarNameInTable="columnInvierno" msprop:Generator_ColumnPropNameInTable="InviernoColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

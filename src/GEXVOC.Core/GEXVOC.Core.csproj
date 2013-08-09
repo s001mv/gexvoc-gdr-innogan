@@ -1,0 +1,1930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8B06393-4B26-4E3F-9E3E-3FA022153D28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEXVOC.Core</RootNamespace>
+    <AssemblyName>GEXVOC.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Informes\Consumos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consumos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsumosAsignacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumosAsignacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsumosAsignacionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumosAsignacionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ConsumosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ConsumosProduccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumosProduccion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsumosProduccionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsumosProduccionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\IndiceConversionReducido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndiceConversionReducido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\Alertas.cs" />
+    <Compile Include="Clases\Cadenas.cs" />
+    <Compile Include="Controles\Asistente\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Asistente\HeaderDesigner.cs" />
+    <Compile Include="Controles\Asistente\InfoContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Asistente\InfoContainerDesigner.cs" />
+    <Compile Include="Controles\Asistente\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Asistente\InfoPageDesigner.cs" />
+    <Compile Include="Controles\Asistente\PageCollection.cs" />
+    <Compile Include="Controles\Asistente\PageEventHandler.cs" />
+    <Compile Include="Controles\Asistente\Wizard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Asistente\WizardDesigner.cs" />
+    <Compile Include="Controles\Asistente\WizardPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Asistente\WizardPageDesigner.cs" />
+    <Compile Include="Controles\ctlBuscarObjeto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlBuscarObjeto.Designer.cs">
+      <DependentUpon>ctlBuscarObjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlBuscarObjetoEventArgs.cs" />
+    <Compile Include="Controles\ctlComboCollections.cs" />
+    <Compile Include="Controles\ctlCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlCombo.Designer.cs">
+      <DependentUpon>ctlCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlFecha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlFecha.Designer.cs">
+      <DependentUpon>ctlFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlInforme.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlInforme.Designer.cs">
+      <DependentUpon>ctlInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlTexto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlTexto.Designer.cs">
+      <DependentUpon>ctlTexto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlTreeObjeto.cs">
+    </Compile>
+    <Compile Include="Controles\ctlTreeObjeto.Designer.cs">
+      <DependentUpon>ctlTreeObjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlNotificador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlNotificador.Designer.cs">
+      <DependentUpon>ctlNotificador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AbonadoData.cs" />
+    <Compile Include="Data\AbortoData.cs" />
+    <Compile Include="Data\AltaData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\AnalisisData.cs" />
+    <Compile Include="Data\AniLotData.cs" />
+    <Compile Include="Data\AnimalData.cs" />
+    <Compile Include="Data\AniProData.cs" />
+    <Compile Include="Data\APPCCData.cs" />
+    <Compile Include="Data\AsignacionData.cs" />
+    <Compile Include="Data\BajaData.cs" />
+    <Compile Include="Data\BDController.cs" />
+    <Compile Include="Data\CategoriaData.cs" />
+    <Compile Include="Data\CeloData.cs" />
+    <Compile Include="Data\CitaData.cs" />
+    <Compile Include="Data\ClienteData.cs" />
+    <Compile Include="Data\CombinacionData.cs" />
+    <Compile Include="Data\ComposicionData.cs" />
+    <Compile Include="Data\CompraData.cs" />
+    <Compile Include="Data\CondicionCorporalData.cs" />
+    <Compile Include="Data\CondicionJuridicaData.cs" />
+    <Compile Include="Data\ConformacionCanalData.cs" />
+    <Compile Include="Data\ConformacionData.cs" />
+    <Compile Include="Data\ContactoData.cs" />
+    <Compile Include="Data\ControlLecheData.cs" />
+    <Compile Include="Data\Informes\DatosInformesData.cs" />
+    <Compile Include="Data\ExpProData.cs" />
+    <Compile Include="Data\ExpCliData.cs" />
+    <Compile Include="Data\CubricionData.cs" />
+    <Compile Include="Data\CuentaData.cs" />
+    <Compile Include="Data\DiagAnimalData.cs" />
+    <Compile Include="Data\DiagInseminacionData.cs" />
+    <Compile Include="Data\EjecucionData.cs" />
+    <Compile Include="Data\EnfermedadData.cs" />
+    <Compile Include="Data\EngrasamientoCanalData.cs" />
+    <Compile Include="Data\EspecieData.cs" />
+    <Compile Include="Data\EstadoData.cs" />
+    <Compile Include="Data\EstanciaData.cs" />
+    <Compile Include="Data\ExpEspData.cs" />
+    <Compile Include="Data\ExpModData.cs" />
+    <Compile Include="Data\ExpTitData.cs" />
+    <Compile Include="Data\ExtendidaData.cs" />
+    <Compile Include="Data\FacilidadData.cs" />
+    <Compile Include="Data\FotografiaData.cs" />
+    <Compile Include="Data\Funciones.cs" />
+    <Compile Include="Data\GastoData.cs" />
+    <Compile Include="Data\HistMedicamentoData.cs" />
+    <Compile Include="Data\InseminacionData.cs" />
+    <Compile Include="Data\InsParData.cs" />
+    <Compile Include="Data\LaboratorioData.cs" />
+    <Compile Include="Data\LactacionData.cs" />
+    <Compile Include="Data\LibroGenealogicoData.cs" />
+    <Compile Include="Data\LoteAnimalData.cs" />
+    <Compile Include="Data\MaquinariaData.cs" />
+    <Compile Include="Data\MarcadorData.cs" />
+    <Compile Include="Data\MenuData.cs" />
+    <Compile Include="Data\ModuloData.cs" />
+    <Compile Include="Data\MomentoData.cs" />
+    <Compile Include="Data\MotivoData.cs" />
+    <Compile Include="Data\MovimientoData.cs" />
+    <Compile Include="Data\NaturalezaData.cs" />
+    <Compile Include="Data\MuestraControlData.cs" />
+    <Compile Include="Data\ParcelaData.cs" />
+    <Compile Include="Data\PartoData.cs" />
+    <Compile Include="Data\PastoreoData.cs" />
+    <Compile Include="Data\PesoData.cs" />
+    <Compile Include="Data\PlagaData.cs" />
+    <Compile Include="Data\PlaMaqData.cs" />
+    <Compile Include="Data\PlanHigieneData.cs" />
+    <Compile Include="Data\PlantillaData.cs" />
+    <Compile Include="Data\PlaVetData.cs" />
+    <Compile Include="Data\PlaZonData.cs" />
+    <Compile Include="Data\ProcesoData.cs" />
+    <Compile Include="Data\ProductoData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ProgramaData.cs" />
+    <Compile Include="Data\ProHigData.cs" />
+    <Compile Include="Data\ProProData.cs" />
+    <Compile Include="Data\ProveedorData.cs" />
+    <Compile Include="Data\ProvinciaData.cs" />
+    <Compile Include="Data\RazaData.cs" />
+    <Compile Include="Data\RecetaData.cs" />
+    <Compile Include="Data\RecolectaData.cs" />
+    <Compile Include="Data\RendimientoCanalData.cs" />
+    <Compile Include="Data\ResenaData.cs" />
+    <Compile Include="Data\SecadoData.cs" />
+    <Compile Include="Data\SiembraData.cs" />
+    <Compile Include="Data\SincronizacionCeloData.cs" />
+    <Compile Include="Data\StatusControlData.cs" />
+    <Compile Include="Data\StatusOrdenoData.cs" />
+    <Compile Include="Data\StockData.cs" />
+    <Compile Include="Data\TallaData.cs" />
+    <Compile Include="Data\TareaData.cs" />
+    <Compile Include="Data\TipificacionCanalData.cs" />
+    <Compile Include="Data\TipoAbortoData.cs" />
+    <Compile Include="Data\TipoAltaData.cs" />
+    <Compile Include="Data\TipoAnalisisData.cs" />
+    <Compile Include="Data\TipoBajaData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\TipoCompraData.cs" />
+    <Compile Include="Data\TipoCondicionData.cs" />
+    <Compile Include="Data\TipoContactoData.cs" />
+    <Compile Include="Data\TipoCubricionData.cs" />
+    <Compile Include="Data\TipoDiagnosticoData.cs" />
+    <Compile Include="Data\TipoEnfermedadData.cs" />
+    <Compile Include="Data\TipoEngrasamientoData.cs" />
+    <Compile Include="Data\TipoInseminacionData.cs" />
+    <Compile Include="Data\TipoLoteData.cs" />
+    <Compile Include="Data\TipoPartoData.cs" />
+    <Compile Include="Data\TipoPersonalData.cs" />
+    <Compile Include="Data\TipoProductoData.cs" />
+    <Compile Include="Data\TipoSecadoData.cs" />
+    <Compile Include="Data\TipoVentaData.cs" />
+    <Compile Include="Data\TransformacionData.cs" />
+    <Compile Include="Data\TratEnfermedadData.cs" />
+    <Compile Include="Data\TratHigieneData.cs" />
+    <Compile Include="Data\TratParcelaData.cs" />
+    <Compile Include="Data\TratProfilaxisData.cs" />
+    <Compile Include="Data\VentaData.cs" />
+    <Compile Include="Data\VeterinarioData.cs" />
+    <Compile Include="Data\ZonaData.cs" />
+    <Compile Include="Informes\Abonados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Abonados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AbonadosDS.cs">
+      <DependentUpon>AbonadosDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AbonadosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbonadosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Abortos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Abortos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AbortosDS.cs">
+      <DependentUpon>AbortosDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AbortosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbortosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\AnimalesDestetados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesDestetados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AnimalesDestetadosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesDestetadosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\AnimalesEnTratamiento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesEnTratamiento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AnimalesEnTratamientoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesEnTratamientoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\AnimalesImproductivos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesImproductivos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AnimalesImproductivosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesImproductivosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\AnimalesMuertos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesMuertos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AnimalesMuertosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesMuertosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\AnimalesNacidosGenealogia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesNacidosGenealogia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\AnimalesNacidosGenealogiaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnimalesNacidosGenealogiaDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\CapacidadMaternal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CapacidadMaternal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\CapacidadMaternalDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CapacidadMaternalDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Celos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Celos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\CelosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CelosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\CondicionesCorporales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondicionesCorporales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\CondicionesCorporalesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondicionesCorporalesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ConsultaMorbilidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMorbilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsultaMorbilidadDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMorbilidadDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ConsultaMortalidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMortalidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsultaMortalidadDS.cs">
+      <DependentUpon>ConsultaMortalidadDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ConsultaMortalidadDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMortalidadDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ControlDeStockDeAlimentacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlDeStockDeAlimentacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ControlDeStockDeAlimentacionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlDeStockDeAlimentacionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\DiagGestacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagGestacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\DiagGestacionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagGestacionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\DistribucionPartos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DistribucionPartos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\DistribucionPartosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DistribucionPartosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\EstadisticasFertilidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadisticasFertilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\EstadisticasFertilidadDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadisticasFertilidadDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\EvolucionAnual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvolucionAnual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\EvolucionAnualDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvolucionAnualDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FichaAnimal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FichaAnimal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\FichaAnimalDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FichaAnimalDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\GastosIngresos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastosIngresos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\GastosIngresosDS.cs">
+      <DependentUpon>GastosIngresosDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\GastosIngresosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GastosIngresosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\GenealogiaAnimal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenealogiaAnimal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\GenealogiaAnimalDS.cs">
+      <DependentUpon>GenealogiaAnimalDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\GenealogiaAnimalDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenealogiaAnimalDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\GMD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\GMDDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GMDDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\HistorialEnfermedades.cs">
+      <DependentUpon>HistorialEnfermedades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Informes\HistorialEnfermedadesDS.Designer.cs">
+      <DependentUpon>HistorialEnfermedadesDS.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Informes\IndicesConversion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndicesConversion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\IndicesConversionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndicesConversionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\InformacionCanalDS.cs">
+      <DependentUpon>InformacionCanalDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\Inseminaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inseminaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\InseminacionesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InseminacionesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\IntervaloPartos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IntervaloPartos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\IntervaloPartosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IntervaloPartosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Lactaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lactaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\LactacionesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LactacionesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ListadoAnimales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoAnimales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ListadoAnimalesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoAnimalesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Muerte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Muerte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\MuerteDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuerteDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\MuerteGeneral.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuerteGeneral.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\MuerteNacimiento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuerteNacimiento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\MuerteNacimientoDS.cs">
+      <DependentUpon>MuerteNacimientoDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\MuerteNacimientoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuerteNacimientoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Partos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Partos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\PartosDS.cs">
+      <DependentUpon>PartosDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\PartosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Pesos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pesos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\PesosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PesosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\PrevalenciaEnfermedades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrevalenciaEnfermedades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\PrevalenciaEnfermedadesDS.cs">
+      <DependentUpon>PrevalenciaEnfermedadesDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\PrevalenciaEnfermedadesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrevalenciaEnfermedadesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ProduccionLeche.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionLeche.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ProduccionLecheDS.cs">
+      <DependentUpon>ProduccionLecheDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ProduccionLecheDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionLecheDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Prolificidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Prolificidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\ProlificidadDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProlificidadDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Recolectas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recolectas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\RecolectasDS.cs">
+      <DependentUpon>RecolectasDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\RecolectasDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecolectasDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Recuento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recuento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\RecuentoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecuentoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\InformacionCanal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformacionCanal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\InformacionCanalDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformacionCanalDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Secados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Secados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\SecadosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecadosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Sembrados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sembrados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\SembradosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SembradosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\SincCelos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SincCelos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\SincCelosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SincCelosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\TasaAbortos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasaAbortos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TasaAbortosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasaAbortosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\TasaPartos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasaPartos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TasaPartosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasaPartosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\TratParcelas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TratParcelas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TratParcelasDS.cs">
+      <DependentUpon>TratParcelasDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TratParcelasDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TratParcelasDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\_Plantillas\GeneralYSubinforme.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralYSubinforme.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\_Plantillas\SubInformeConFiltro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubInformeConFiltro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\_Plantillas\SubInformeSinFiltro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubInformeSinFiltro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\_Plantillas\Vertical.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vertical.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TrazaAnimales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaAnimales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TrazaAnimalesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaAnimalesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\TrazaProductos.cs">
+      <DependentUpon>TrazaProductos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Informes\LibroExplotacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibroExplotacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\LibroExplotacionDS.cs">
+      <DependentUpon>LibroExplotacionDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\LibroExplotacionDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibroExplotacionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Generic\DynamicComparer.cs" />
+    <Compile Include="Generic\DynamicEmit.cs" />
+    <Compile Include="Generic\SortableBindingList.cs" />
+    <Compile Include="Informes\TrazaProductosDS.cs">
+      <DependentUpon>TrazaProductosDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TrazaProductosDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaProductosDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Abonado.cs" />
+    <Compile Include="Logic\Aborto.cs" />
+    <Compile Include="Logic\Alta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Analisis.cs" />
+    <Compile Include="Logic\AniLot.cs" />
+    <Compile Include="Logic\Animal.cs" />
+    <Compile Include="Logic\AniPro.cs" />
+    <Compile Include="Logic\APPCC.cs" />
+    <Compile Include="Logic\Asignacion.cs" />
+    <Compile Include="Logic\Baja.cs" />
+    <Compile Include="Logic\BD.cs" />
+    <Compile Include="Logic\Categoria.cs" />
+    <Compile Include="Logic\Celo.cs" />
+    <Compile Include="Logic\Cita.cs" />
+    <Compile Include="Logic\ClaseBase.cs" />
+    <Compile Include="Logic\Cliente.cs" />
+    <Compile Include="Logic\Combinacion.cs" />
+    <Compile Include="Logic\Composicion.cs" />
+    <Compile Include="Logic\Compra.cs" />
+    <Compile Include="Logic\CondicionCorporal.cs" />
+    <Compile Include="Logic\Conformacion.cs" />
+    <Compile Include="Logic\ConformacionCanal.cs" />
+    <Compile Include="Logic\Contacto.cs" />
+    <Compile Include="Logic\ControlLeche.cs" />
+    <Compile Include="Logic\ExpPro.cs" />
+    <Compile Include="Logic\ExpCli.cs" />
+    <Compile Include="Logic\Cubricion.cs" />
+    <Compile Include="Logic\Cuenta.cs" />
+    <Compile Include="Logic\DiagAnimal.cs" />
+    <Compile Include="Logic\DiagInseminacion.cs" />
+    <Compile Include="Logic\Ejecucion.cs" />
+    <Compile Include="Logic\Enfermedad.cs" />
+    <Compile Include="Logic\EngrasamientoCanal.cs" />
+    <Compile Include="Logic\ExpMod.cs" />
+    <Compile Include="Logic\Fotografia.cs" />
+    <Compile Include="Logic\GastoDefinicion.cs" />
+    <Compile Include="Logic\Herramientas\SincronizarContactos.cs" />
+    <Compile Include="Logic\IControlGasto.cs" />
+    <Compile Include="Logic\IControlStock.cs" />
+    <Compile Include="Logic\ImportacionAnimal.cs" />
+    <Compile Include="Logic\ImportacionControl.cs" />
+    <Compile Include="Logic\Informes\DatosInformes.cs" />
+    <Compile Include="Logic\INotificable.cs" />
+    <Compile Include="Logic\Maquinaria.cs" />
+    <Compile Include="Logic\Menu.cs" />
+    <Compile Include="Logic\Modulo.cs" />
+    <Compile Include="Logic\Movimiento.cs" />
+    <Compile Include="Logic\MovimientoDefinicion.cs" />
+    <Compile Include="Logic\Notificable.cs" />
+    <Compile Include="Logic\NotificableEventArgs.cs" />
+    <Compile Include="Logic\NotificableException.cs" />
+    <Compile Include="Logic\PartosMultiples.cs" />
+    <Compile Include="Logic\PlaMaq.cs" />
+    <Compile Include="Logic\PlanHigiene.cs" />
+    <Compile Include="Logic\Plantilla.cs" />
+    <Compile Include="Logic\PlaVet.cs" />
+    <Compile Include="Logic\PlaZon.cs" />
+    <Compile Include="Logic\Proceso.cs" />
+    <Compile Include="Logic\Programa.cs" />
+    <Compile Include="Logic\ProHig.cs" />
+    <Compile Include="Logic\ProPro.cs" />
+    <Compile Include="Logic\ResultadoOperacion.cs" />
+    <Compile Include="Logic\TipoCubricion.cs" />
+    <Compile Include="Logic\TipoLote.cs" />
+    <Compile Include="Logic\TipoPersonal.cs" />
+    <Compile Include="Logic\Transformacion.cs" />
+    <Compile Include="Logic\TratHigiene.cs" />
+    <Compile Include="Logic\TratProfilaxis.cs" />
+    <Compile Include="Logic\Zona.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reflection\EnumConfig.cs" />
+    <Compile Include="Reflection\EnumDescription.cs" />
+    <Compile Include="Logic\Especie.cs" />
+    <Compile Include="Logic\Estado.cs" />
+    <Compile Include="Logic\Estancia.cs" />
+    <Compile Include="Logic\ExpEsp.cs" />
+    <Compile Include="Logic\ExpTit.cs" />
+    <Compile Include="Logic\Extendida.cs" />
+    <Compile Include="Logic\Facilidad.cs" />
+    <Compile Include="Data\FamiliaData.cs" />
+    <Compile Include="Logic\Familia.cs" />
+    <Compile Include="Logic\Gasto.cs" />
+    <Compile Include="Logic\HistMedicamento.cs" />
+    <Compile Include="Logic\Inseminacion.cs" />
+    <Compile Include="Logic\InsPar.cs" />
+    <Compile Include="Logic\Laboratorio.cs" />
+    <Compile Include="Logic\Lactacion.cs" />
+    <Compile Include="Logic\LibroGenealogico.cs" />
+    <Compile Include="Logic\LoteAnimal.cs" />
+    <Compile Include="Logic\Marcador.cs" />
+    <Compile Include="Logic\Momento.cs" />
+    <Compile Include="Logic\Motivo.cs" />
+    <Compile Include="Logic\Naturaleza.cs" />
+    <Compile Include="Logic\MuestraControl.cs" />
+    <Compile Include="Logic\Parcela.cs" />
+    <Compile Include="Logic\Parto.cs" />
+    <Compile Include="Logic\Pastoreo.cs" />
+    <Compile Include="Logic\Peso.cs" />
+    <Compile Include="Logic\Plaga.cs" />
+    <Compile Include="Logic\Producto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\Proveedor.cs" />
+    <Compile Include="Logic\Racion.cs" />
+    <Compile Include="Data\RacionData.cs" />
+    <Compile Include="Logic\Raza.cs" />
+    <Compile Include="Logic\Receta.cs" />
+    <Compile Include="Logic\Recolecta.cs" />
+    <Compile Include="Logic\RendimientoCanal.cs" />
+    <Compile Include="Logic\Resena.cs" />
+    <Compile Include="Logic\Secado.cs" />
+    <Compile Include="Logic\Siembra.cs" />
+    <Compile Include="Logic\SincronizacionCelo.cs" />
+    <Compile Include="Logic\StatusControl.cs" />
+    <Compile Include="Logic\StatusOrdeno.cs" />
+    <Compile Include="Logic\Stock.cs" />
+    <Compile Include="Logic\Talla.cs" />
+    <Compile Include="Logic\Tarea.cs" />
+    <Compile Include="Logic\TipificacionCanal.cs" />
+    <Compile Include="Logic\TipoAborto.cs" />
+    <Compile Include="Logic\TipoAlta.cs" />
+    <Compile Include="Logic\TipoAnalisis.cs" />
+    <Compile Include="Logic\TipoBaja.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logic\TipoCompra.cs" />
+    <Compile Include="Logic\TipoCondicion.cs" />
+    <Compile Include="Logic\TipoContacto.cs" />
+    <Compile Include="Logic\TipoDiagnostico.cs" />
+    <Compile Include="Logic\TipoEnfermedad.cs" />
+    <Compile Include="Logic\TipoEngrasamientocs.cs" />
+    <Compile Include="Logic\TipoParto.cs" />
+    <Compile Include="Logic\TipoProducto.cs" />
+    <Compile Include="Logic\TipoSecado.cs" />
+    <Compile Include="Logic\TipoVenta.cs" />
+    <Compile Include="Logic\TratEnfermedad.cs" />
+    <Compile Include="Logic\TratParcela.cs" />
+    <Compile Include="Logic\Traza.cs" />
+    <Compile Include="Logic\TipoInseminacion.cs" />
+    <Compile Include="Logic\Venta.cs" />
+    <Compile Include="Logic\Veterinario.cs" />
+    <Compile Include="Data\TitularData.cs" />
+    <Compile Include="Logic\CondicionJuridica.cs" />
+    <Compile Include="Data\ConfiguracionData.cs" />
+    <Compile Include="Data\ExplotacionData.cs" />
+    <Compile Include="Data\MunicipioData.cs" />
+    <Compile Include="Logic\Configuracion.cs" />
+    <Compile Include="Logic\Explotacion.cs" />
+    <Compile Include="Logic\GEXVOC.cs">
+      <DependentUpon>GEXVOC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\IClaseBase.cs" />
+    <Compile Include="Logic\LogicException.cs" />
+    <Compile Include="Logic\GEXVOC.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GEXVOC.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Municipio.cs" />
+    <Compile Include="Logic\Provincia.cs" />
+    <Compile Include="Logic\Titular.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reflection\EnumConversiones.cs" />
+    <Compile Include="Reflection\ProcesoConversiones.cs" />
+    <Compile Include="Reflection\ProcesoDescripcion.cs" />
+    <Compile Include="Reflection\Reflection.cs" />
+    <Compile Include="Registro\Registro.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logic\GEXVOC.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GEXVOC.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Informes\AbortosDS.xsc">
+      <DependentUpon>AbortosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AbortosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AbortosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AbortosDS.xss">
+      <DependentUpon>AbortosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesDestetadosDS.xsc">
+      <DependentUpon>AnimalesDestetadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesDestetadosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalesDestetadosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AnimalesDestetadosDS.xss">
+      <DependentUpon>AnimalesDestetadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesEnTratamientoDS.xsc">
+      <DependentUpon>AnimalesEnTratamientoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesEnTratamientoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalesEnTratamientoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AnimalesEnTratamientoDS.xss">
+      <DependentUpon>AnimalesEnTratamientoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesImproductivosDS.xsc">
+      <DependentUpon>AnimalesImproductivosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesImproductivosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalesImproductivosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AnimalesImproductivosDS.xss">
+      <DependentUpon>AnimalesImproductivosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesMuertosDS.xsc">
+      <DependentUpon>AnimalesMuertosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesMuertosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalesMuertosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AnimalesMuertosDS.xss">
+      <DependentUpon>AnimalesMuertosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesNacidosGenealogiaDS.xsc">
+      <DependentUpon>AnimalesNacidosGenealogiaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AnimalesNacidosGenealogiaDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AnimalesNacidosGenealogiaDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AnimalesNacidosGenealogiaDS.xss">
+      <DependentUpon>AnimalesNacidosGenealogiaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CapacidadMaternalDS.xsc">
+      <DependentUpon>CapacidadMaternalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CapacidadMaternalDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CapacidadMaternalDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\CapacidadMaternalDS.xss">
+      <DependentUpon>CapacidadMaternalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CelosDS.xsc">
+      <DependentUpon>CelosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CelosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CelosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\CelosDS.xss">
+      <DependentUpon>CelosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CondicionesCorporalesDS.xsc">
+      <DependentUpon>CondicionesCorporalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CondicionesCorporalesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CondicionesCorporalesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\CondicionesCorporalesDS.xss">
+      <DependentUpon>CondicionesCorporalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsultaMorbilidadDS.xsc">
+      <DependentUpon>ConsultaMorbilidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsultaMorbilidadDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultaMorbilidadDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ConsultaMorbilidadDS.xss">
+      <DependentUpon>ConsultaMorbilidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsultaMortalidadDS.xsc">
+      <DependentUpon>ConsultaMortalidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsultaMortalidadDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultaMortalidadDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ConsultaMortalidadDS.xss">
+      <DependentUpon>ConsultaMortalidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosAsignacionDS.xsc">
+      <DependentUpon>ConsumosAsignacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosAsignacionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsumosAsignacionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ConsumosAsignacionDS.xss">
+      <DependentUpon>ConsumosAsignacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosDS.xsc">
+      <DependentUpon>ConsumosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsumosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ConsumosDS.xss">
+      <DependentUpon>ConsumosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosProduccionDS.xsc">
+      <DependentUpon>ConsumosProduccionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ConsumosProduccionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsumosProduccionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ConsumosProduccionDS.xss">
+      <DependentUpon>ConsumosProduccionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ControlDeStockDeAlimentacionDS.xsc">
+      <DependentUpon>ControlDeStockDeAlimentacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ControlDeStockDeAlimentacionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlDeStockDeAlimentacionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ControlDeStockDeAlimentacionDS.xss">
+      <DependentUpon>ControlDeStockDeAlimentacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\DiagGestacionDS.xsc">
+      <DependentUpon>DiagGestacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\DiagGestacionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiagGestacionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\DiagGestacionDS.xss">
+      <DependentUpon>DiagGestacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\DistribucionPartosDS.xsc">
+      <DependentUpon>DistribucionPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\DistribucionPartosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DistribucionPartosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\DistribucionPartosDS.xss">
+      <DependentUpon>DistribucionPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\EstadisticasFertilidadDS.xsc">
+      <DependentUpon>EstadisticasFertilidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\EstadisticasFertilidadDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstadisticasFertilidadDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\EstadisticasFertilidadDS.xss">
+      <DependentUpon>EstadisticasFertilidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\EvolucionAnualDS.xsc">
+      <DependentUpon>EvolucionAnualDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\EvolucionAnualDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EvolucionAnualDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\EvolucionAnualDS.xss">
+      <DependentUpon>EvolucionAnualDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\FichaAnimalDS.xsc">
+      <DependentUpon>FichaAnimalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\FichaAnimalDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FichaAnimalDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\FichaAnimalDS.xss">
+      <DependentUpon>FichaAnimalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GastosIngresosDS.xsc">
+      <DependentUpon>GastosIngresosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GastosIngresosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GastosIngresosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\GastosIngresosDS.xss">
+      <DependentUpon>GastosIngresosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GenealogiaAnimalDS.xsc">
+      <DependentUpon>GenealogiaAnimalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GenealogiaAnimalDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenealogiaAnimalDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\GenealogiaAnimalDS.xss">
+      <DependentUpon>GenealogiaAnimalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GMDDS.xsc">
+      <DependentUpon>GMDDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\GMDDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GMDDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\GMDDS.xss">
+      <DependentUpon>GMDDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\HistorialEnfermedadesDS.xsc">
+      <DependentUpon>HistorialEnfermedadesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\HistorialEnfermedadesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HistorialEnfermedadesDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Informes\HistorialEnfermedadesDS.xss">
+      <DependentUpon>HistorialEnfermedadesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IndicesConversionDS.xsc">
+      <DependentUpon>IndicesConversionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IndicesConversionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IndicesConversionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\IndicesConversionDS.xss">
+      <DependentUpon>IndicesConversionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\InseminacionesDS.xsc">
+      <DependentUpon>InseminacionesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\InseminacionesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InseminacionesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\InseminacionesDS.xss">
+      <DependentUpon>InseminacionesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IntervaloPartosDS.xsc">
+      <DependentUpon>IntervaloPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IntervaloPartosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IntervaloPartosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\IntervaloPartosDS.xss">
+      <DependentUpon>IntervaloPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\LactacionesDS.xsc">
+      <DependentUpon>LactacionesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\LactacionesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LactacionesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\LactacionesDS.xss">
+      <DependentUpon>LactacionesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ListadoAnimalesDS.xsc">
+      <DependentUpon>ListadoAnimalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ListadoAnimalesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListadoAnimalesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ListadoAnimalesDS.xss">
+      <DependentUpon>ListadoAnimalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MuerteDS.xsc">
+      <DependentUpon>MuerteDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MuerteDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MuerteDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\MuerteDS.xss">
+      <DependentUpon>MuerteDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MuerteNacimientoDS.xsc">
+      <DependentUpon>MuerteNacimientoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MuerteNacimientoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MuerteNacimientoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\MuerteNacimientoDS.xss">
+      <DependentUpon>MuerteNacimientoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PartosDS.xsc">
+      <DependentUpon>PartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PartosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\PartosDS.xss">
+      <DependentUpon>PartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PesosDS.xsc">
+      <DependentUpon>PesosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PesosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PesosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\PesosDS.xss">
+      <DependentUpon>PesosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PrevalenciaEnfermedadesDS.xsc">
+      <DependentUpon>PrevalenciaEnfermedadesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\PrevalenciaEnfermedadesDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrevalenciaEnfermedadesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\PrevalenciaEnfermedadesDS.xss">
+      <DependentUpon>PrevalenciaEnfermedadesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ProduccionLecheDS.xsc">
+      <DependentUpon>ProduccionLecheDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ProduccionLecheDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProduccionLecheDS.Designer.cs</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Informes\ProduccionLecheDS.xss">
+      <DependentUpon>ProduccionLecheDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ProlificidadDS.xsc">
+      <DependentUpon>ProlificidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ProlificidadDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProlificidadDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ProlificidadDS.xss">
+      <DependentUpon>ProlificidadDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\RecolectasDS.xsc">
+      <DependentUpon>RecolectasDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\RecolectasDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecolectasDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\RecolectasDS.xss">
+      <DependentUpon>RecolectasDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\RecuentoDS.xsc">
+      <DependentUpon>RecuentoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\RecuentoDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RecuentoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\RecuentoDS.xss">
+      <DependentUpon>RecuentoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\InformacionCanalDS.xsc">
+      <DependentUpon>InformacionCanalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\InformacionCanalDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InformacionCanalDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\InformacionCanalDS.xss">
+      <DependentUpon>InformacionCanalDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SecadosDS.xsc">
+      <DependentUpon>SecadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SecadosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecadosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\SecadosDS.xss">
+      <DependentUpon>SecadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SembradosDS.xsc">
+      <DependentUpon>SembradosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SembradosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SembradosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\SembradosDS.xss">
+      <DependentUpon>SembradosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SincCelosDS.xsc">
+      <DependentUpon>SincCelosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\SincCelosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SincCelosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\SincCelosDS.xss">
+      <DependentUpon>SincCelosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TasaAbortosDS.xsc">
+      <DependentUpon>TasaAbortosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TasaAbortosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TasaAbortosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\TasaAbortosDS.xss">
+      <DependentUpon>TasaAbortosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TasaPartosDS.xsc">
+      <DependentUpon>TasaPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TasaPartosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TasaPartosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\TasaPartosDS.xss">
+      <DependentUpon>TasaPartosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TratParcelasDS.xsc">
+      <DependentUpon>TratParcelasDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TratParcelasDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TratParcelasDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\TratParcelasDS.xss">
+      <DependentUpon>TratParcelasDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TrazaAnimalesDS.xsc">
+      <DependentUpon>TrazaAnimalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TrazaAnimalesDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrazaAnimalesDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\TrazaAnimalesDS.xss">
+      <DependentUpon>TrazaAnimalesDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TrazaProductosDS.xsc">
+      <DependentUpon>TrazaProductosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\TrazaProductosDS.xsd">
+      <SubType>
+      </SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrazaProductosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\TrazaProductosDS.xss">
+      <DependentUpon>TrazaProductosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Stock y Gasto.cd" />
+    <None Include="Informes\AbonadosDS.xsc">
+      <DependentUpon>AbonadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\AbonadosDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AbonadosDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\AbonadosDS.xss">
+      <DependentUpon>AbonadosDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\LibroExplotacionDS.xsc">
+      <DependentUpon>LibroExplotacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\LibroExplotacionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LibroExplotacionDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\LibroExplotacionDS.xss">
+      <DependentUpon>LibroExplotacionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Logic\GEXVOC.dbml.layout">
+      <DependentUpon>GEXVOC.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controles\Asistente\Icono.png" />
+    <Content Include="Controles\Asistente\Lateral.png" />
+    <Content Include="Logic\GEXVOC.dbml.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\Asistente\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Asistente\InfoContainer.resx">
+      <DependentUpon>InfoContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Asistente\InfoPage.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Asistente\Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Asistente\WizardPage.resx">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlBuscarObjeto.resx">
+      <DependentUpon>ctlBuscarObjeto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlCombo.resx">
+      <DependentUpon>ctlCombo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlFecha.resx">
+      <DependentUpon>ctlFecha.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlInforme.resx">
+      <DependentUpon>ctlInforme.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlTexto.resx">
+      <DependentUpon>ctlTexto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlNotificador.resx">
+      <DependentUpon>ctlNotificador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Abonados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Abonados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Abortos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Abortos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\AnimalesDestetados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AnimalesDestetados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\AnimalesEnTratamiento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AnimalesEnTratamiento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\AnimalesImproductivos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AnimalesImproductivos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\AnimalesMuertos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AnimalesMuertos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\AnimalesNacidosGenealogia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AnimalesNacidosGenealogia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\CapacidadMaternal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CapacidadMaternal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Celos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Celos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\CondicionesCorporales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CondicionesCorporales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ConsultaMorbilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultaMorbilidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ConsultaMortalidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultaMortalidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Consumos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Consumos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ConsumosAsignacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsumosAsignacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ConsumosProduccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsumosProduccion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ControlDeStockDeAlimentacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ControlDeStockDeAlimentacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\DiagGestacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DiagGestacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\DistribucionPartos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DistribucionPartos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\EstadisticasFertilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EstadisticasFertilidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\EvolucionAnual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EvolucionAnual.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FichaAnimal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FichaAnimal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\GastosIngresos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GastosIngresos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\GenealogiaAnimal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GenealogiaAnimal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\GMD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GMD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\HistorialEnfermedades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HistorialEnfermedades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\IndiceConversionReducido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IndiceConversionReducido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\IndicesConversion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IndicesConversion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Inseminaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Inseminaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\IntervaloPartos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IntervaloPartos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Lactaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lactaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ListadoAnimales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListadoAnimales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Muerte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Muerte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\MuerteGeneral.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MuerteGeneral.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\MuerteNacimiento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MuerteNacimiento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Partos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Partos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Pesos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Pesos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\PrevalenciaEnfermedades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrevalenciaEnfermedades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ProduccionLeche.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProduccionLeche.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Prolificidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Prolificidad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Recolectas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Recolectas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Recuento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Recuento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\InformacionCanal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformacionCanal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Secados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Secados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Sembrados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sembrados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\SincCelos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SincCelos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TasaAbortos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TasaAbortos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TasaPartos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TasaPartos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TratParcelas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TratParcelas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\_Plantillas\GeneralYSubinforme.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GeneralYSubinforme.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\_Plantillas\SubInformeConFiltro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubInformeConFiltro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\_Plantillas\SubInformeSinFiltro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubInformeSinFiltro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\_Plantillas\Vertical.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Vertical.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TrazaAnimales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrazaAnimales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TrazaProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrazaProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\LibroExplotacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LibroExplotacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

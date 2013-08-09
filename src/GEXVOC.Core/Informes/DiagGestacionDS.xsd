@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DiagGestacionDS" targetNamespace="http://tempuri.org/DiagGestacionDS.xsd" xmlns:mstns="http://tempuri.org/DiagGestacionDS.xsd" xmlns="http://tempuri.org/DiagGestacionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DiagGestacionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DiagGestacionDS" msprop:Generator_UserDSName="DiagGestacionDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DiagInseminacion" msprop:Generator_UserTableName="DiagInseminacion" msprop:Generator_RowDeletedName="DiagInseminacionRowDeleted" msprop:Generator_TableClassName="DiagInseminacionDataTable" msprop:Generator_RowChangedName="DiagInseminacionRowChanged" msprop:Generator_RowClassName="DiagInseminacionRow" msprop:Generator_RowChangingName="DiagInseminacionRowChanging" msprop:Generator_RowEvArgName="DiagInseminacionRowChangeEvent" msprop:Generator_RowEvHandlerName="DiagInseminacionRowChangeEventHandler" msprop:Generator_TablePropName="DiagInseminacion" msprop:Generator_TableVarName="tableDiagInseminacion" msprop:Generator_RowDeletingName="DiagInseminacionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdTipo" msprop:Generator_UserColumnName="IdTipo" msprop:Generator_ColumnPropNameInRow="IdTipo" msprop:Generator_ColumnVarNameInTable="columnIdTipo" msprop:Generator_ColumnPropNameInTable="IdTipoColumn" type="xs:int" />
+              <xs:element name="IdAnimal" msprop:Generator_UserColumnName="IdAnimal" msprop:Generator_ColumnPropNameInRow="IdAnimal" msprop:Generator_ColumnVarNameInTable="columnIdAnimal" msprop:Generator_ColumnPropNameInTable="IdAnimalColumn" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="Resultado" msprop:Generator_UserColumnName="Resultado" msprop:Generator_ColumnPropNameInRow="Resultado" msprop:Generator_ColumnVarNameInTable="columnResultado" msprop:Generator_ColumnPropNameInTable="ResultadoColumn" type="xs:boolean" />
+              <xs:element name="DiasGestacion" msprop:Generator_UserColumnName="DiasGestacion" msprop:Generator_ColumnPropNameInRow="DiasGestacion" msprop:Generator_ColumnVarNameInTable="columnDiasGestacion" msprop:Generator_ColumnPropNameInTable="DiasGestacionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescTipo" msprop:Generator_UserColumnName="DescTipo" msprop:Generator_ColumnPropNameInRow="DescTipo" msprop:Generator_ColumnVarNameInTable="columnDescTipo" msprop:Generator_ColumnPropNameInTable="DescTipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescResultado" msprop:Generator_UserColumnName="DescResultado" msprop:Generator_ColumnPropNameInRow="DescResultado" msprop:Generator_ColumnVarNameInTable="columnDescResultado" msprop:Generator_ColumnPropNameInTable="DescResultadoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DiagInseminacion" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

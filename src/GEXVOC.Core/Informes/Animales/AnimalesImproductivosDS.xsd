@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AnimalesImproductivosDS" targetNamespace="http://tempuri.org/AnimalesImproductivosDS.xsd" xmlns:mstns="http://tempuri.org/AnimalesImproductivosDS.xsd" xmlns="http://tempuri.org/AnimalesImproductivosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AnimalesImproductivosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AnimalesImproductivosDS" msprop:Generator_DataSetName="AnimalesImproductivosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AnimalesImproductivos" msprop:Generator_UserTableName="AnimalesImproductivos" msprop:Generator_RowDeletedName="AnimalesImproductivosRowDeleted" msprop:Generator_RowChangedName="AnimalesImproductivosRowChanged" msprop:Generator_RowClassName="AnimalesImproductivosRow" msprop:Generator_RowChangingName="AnimalesImproductivosRowChanging" msprop:Generator_RowEvArgName="AnimalesImproductivosRowChangeEvent" msprop:Generator_RowEvHandlerName="AnimalesImproductivosRowChangeEventHandler" msprop:Generator_TableClassName="AnimalesImproductivosDataTable" msprop:Generator_TableVarName="tableAnimalesImproductivos" msprop:Generator_RowDeletingName="AnimalesImproductivosRowDeleting" msprop:Generator_TablePropName="AnimalesImproductivos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Especie" msprop:Generator_UserColumnName="Especie" msprop:Generator_ColumnVarNameInTable="columnEspecie" msprop:Generator_ColumnPropNameInRow="Especie" msprop:Generator_ColumnPropNameInTable="EspecieColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreAnimal" msprop:Generator_UserColumnName="NombreAnimal" msprop:Generator_ColumnVarNameInTable="columnNombreAnimal" msprop:Generator_ColumnPropNameInRow="NombreAnimal" msprop:Generator_ColumnPropNameInTable="NombreAnimalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FNacimiento" msprop:Generator_UserColumnName="FNacimiento" msprop:Generator_ColumnVarNameInTable="columnFNacimiento" msprop:Generator_ColumnPropNameInRow="FNacimiento" msprop:Generator_ColumnPropNameInTable="FNacimientoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MesesSinParto" msprop:Generator_UserColumnName="MesesSinParto" msprop:Generator_ColumnVarNameInTable="columnMesesSinParto" msprop:Generator_ColumnPropNameInRow="MesesSinParto" msprop:Generator_ColumnPropNameInTable="MesesSinPartoColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
