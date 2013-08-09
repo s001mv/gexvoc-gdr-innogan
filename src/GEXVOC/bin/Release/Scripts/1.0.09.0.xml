@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.9.0"
+  Fecha="30/09/2008"
+  Descripcion=" 
+  - Ejecución de plan de pruebas 1.0.8
+  - Reparación de errores detectados en el plan de pruebas 1.0.8
+  - Se ha creado el informe Alimentación -> Consumos y producción. (Para el que se han definido dos nuevos procesos)."
+  Script=" 
+------------SE HAN CREADO 2 NUEVOS PROCESOS, SE ASIGNAN POR DEFECTO A SUS MÓDULOS CONVENIENTES----------  
+USE [gexvoc]
+GO
+  
+declare @IdModulo int;
+  
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN CARNE';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA PRODUCCIÓN CARNE	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionCarne' AND Formulario='InfConsumos' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionCarne','InfConsumos',null)  
+  
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA PRODUCCIÓN LECHE';----OBTENGO EL IDENTIFICADOR DEL SUBSISTEMA PRODUCCIÓN LECHE	
+IF NOT EXISTS (SELECT * FROM [Proceso] WHERE IdModulo=@IdModulo AND Nombre='ProducionLeche' AND Formulario='InfConsumos' )	
+	INSERT INTO [Proceso]([IdModulo],[Nombre],[Formulario],[ValorBoolInicial]) VALUES(@IdModulo,'ProducionLeche','InfConsumos',null)
+
+  
+------------AÑADO LOS PERMISOS PARA LOS INFORMES AL MÓDULO ALIMENTACIÓN----------  
+declare @IdMenuSuperior int;
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='SUBSISTEMA ALIMENTACIÓN';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA ALIMENTACIÓN
+set @IdMenuSuperior=null;
+
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MSInformes',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MSInformes';----OBTENGO EL IDENTIFICADOR DEL MSInformes
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPNodoAlimentacion',0)
+
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MPNodoAlimentacion';----OBTENGO EL IDENTIFICADOR DEL MPNodoAlimentacion
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndControlStockAlimentacion',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'MPndConsumosyProdiccion',0)
+
+GO
+"
+/>

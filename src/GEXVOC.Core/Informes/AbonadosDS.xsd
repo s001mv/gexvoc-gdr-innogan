@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AbonadosDS" targetNamespace="http://tempuri.org/AbonadosDS.xsd" xmlns:mstns="http://tempuri.org/AbonadosDS.xsd" xmlns="http://tempuri.org/AbonadosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AbonadosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AbonadosDS" msprop:Generator_DataSetName="AbonadosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Abonados" msprop:Generator_UserTableName="Abonados" msprop:Generator_RowDeletedName="AbonadosRowDeleted" msprop:Generator_RowChangedName="AbonadosRowChanged" msprop:Generator_RowClassName="AbonadosRow" msprop:Generator_RowChangingName="AbonadosRowChanging" msprop:Generator_RowEvArgName="AbonadosRowChangeEvent" msprop:Generator_RowEvHandlerName="AbonadosRowChangeEventHandler" msprop:Generator_TableClassName="AbonadosDataTable" msprop:Generator_TableVarName="tableAbonados" msprop:Generator_RowDeletingName="AbonadosRowDeleting" msprop:Generator_TablePropName="Abonados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdFinca" msprop:Generator_UserColumnName="IdFinca" msprop:Generator_ColumnPropNameInRow="IdFinca" msprop:Generator_ColumnVarNameInTable="columnIdFinca" msprop:Generator_ColumnPropNameInTable="IdFincaColumn" type="xs:long" />
+              <xs:element name="Abono" msprop:Generator_UserColumnName="Abono" msprop:Generator_ColumnPropNameInRow="Abono" msprop:Generator_ColumnVarNameInTable="columnAbono" msprop:Generator_ColumnPropNameInTable="AbonoColumn" type="xs:string" />
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:decimal" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Fincas" msprop:Generator_UserTableName="Fincas" msprop:Generator_RowDeletedName="FincasRowDeleted" msprop:Generator_RowChangedName="FincasRowChanged" msprop:Generator_RowClassName="FincasRow" msprop:Generator_RowChangingName="FincasRowChanging" msprop:Generator_RowEvArgName="FincasRowChangeEvent" msprop:Generator_RowEvHandlerName="FincasRowChangeEventHandler" msprop:Generator_TableClassName="FincasDataTable" msprop:Generator_TableVarName="tableFincas" msprop:Generator_RowDeletingName="FincasRowDeleting" msprop:Generator_TablePropName="Fincas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdFinca" msprop:Generator_UserColumnName="IdFinca" msprop:Generator_ColumnPropNameInRow="IdFinca" msprop:Generator_ColumnVarNameInTable="columnIdFinca" msprop:Generator_ColumnPropNameInTable="IdFincaColumn" type="xs:long" />
+              <xs:element name="Finca" msprop:Generator_UserColumnName="Finca" msprop:Generator_ColumnPropNameInRow="Finca" msprop:Generator_ColumnVarNameInTable="columnFinca" msprop:Generator_ColumnPropNameInTable="FincaColumn" type="xs:string" />
+              <xs:element name="Poligono" msprop:Generator_UserColumnName="Poligono" msprop:Generator_ColumnPropNameInRow="Poligono" msprop:Generator_ColumnVarNameInTable="columnPoligono" msprop:Generator_ColumnPropNameInTable="PoligonoColumn" type="xs:string" />
+              <xs:element name="Parcela" msprop:Generator_UserColumnName="Parcela" msprop:Generator_ColumnPropNameInRow="Parcela" msprop:Generator_ColumnVarNameInTable="columnParcela" msprop:Generator_ColumnPropNameInTable="ParcelaColumn" type="xs:string" />
+              <xs:element name="Tamaño" msprop:Generator_UserColumnName="Tamaño" msprop:Generator_ColumnPropNameInRow="Tamaño" msprop:Generator_ColumnVarNameInTable="columnTamaño" msprop:Generator_ColumnPropNameInTable="TamañoColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cabecera" msprop:Generator_UserTableName="Cabecera" msprop:Generator_RowDeletedName="CabeceraRowDeleted" msprop:Generator_RowChangedName="CabeceraRowChanged" msprop:Generator_RowClassName="CabeceraRow" msprop:Generator_RowChangingName="CabeceraRowChanging" msprop:Generator_RowEvArgName="CabeceraRowChangeEvent" msprop:Generator_RowEvHandlerName="CabeceraRowChangeEventHandler" msprop:Generator_TableClassName="CabeceraDataTable" msprop:Generator_TableVarName="tableCabecera" msprop:Generator_RowDeletingName="CabeceraRowDeleting" msprop:Generator_TablePropName="Cabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Titular" msprop:Generator_UserColumnName="Titular" msprop:Generator_ColumnPropNameInRow="Titular" msprop:Generator_ColumnVarNameInTable="columnTitular" msprop:Generator_ColumnPropNameInTable="TitularColumn" type="xs:string" />
+              <xs:element name="DNI" msprop:Generator_UserColumnName="DNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" type="xs:string" />
+              <xs:element name="FInicio" msprop:Generator_UserColumnName="FInicio" msprop:Generator_ColumnPropNameInRow="FInicio" msprop:Generator_ColumnVarNameInTable="columnFInicio" msprop:Generator_ColumnPropNameInTable="FInicioColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ffin" msprop:Generator_UserColumnName="Ffin" msprop:Generator_ColumnPropNameInRow="Ffin" msprop:Generator_ColumnVarNameInTable="columnFfin" msprop:Generator_ColumnPropNameInTable="FfinColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Fincas_Abonados" msdata:parent="Fincas" msdata:child="Abonados" msdata:parentkey="IdFinca" msdata:childkey="IdFinca" msprop:Generator_UserRelationName="Fincas_Abonados" msprop:Generator_RelationVarName="relationFincas_Abonados" msprop:Generator_UserChildTable="Abonados" msprop:Generator_UserParentTable="Fincas" msprop:Generator_ParentPropName="FincasRow" msprop:Generator_ChildPropName="GetAbonadosRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

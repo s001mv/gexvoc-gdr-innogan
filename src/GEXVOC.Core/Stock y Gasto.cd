@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Receta implementa gasto pero no utiliza la interface porque es un gasto especial en el que no se tiene en cuenta el producto.">
+    <Position X="2.979" Y="7.365" Height="0.917" Width="1.7" />
+  </Comment>
+  <Class Name="GEXVOC.Core.Logic.Venta" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IkAiACFDMGUAgjESQUHBwgABnriAiKEIGAABBIBVAgQ=</HashCode>
+      <FileName>Logic\Venta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Notificable" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Logic\Notificable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Compra" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EmAiACEBkCUAgqESQFFZwgABnrCBiKUIOCADQIBUEhA=</HashCode>
+      <FileName>Logic\Compra.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Asignacion" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADiAAADiDYQIEBSZJEgygAjrrAIACQIMAACEAA0CAA=</HashCode>
+      <FileName>Logic\Asignacion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Abonado" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAiABEhgAUAoCECQgFBYwQBj7AAgAUIWAAAEAAUhgA=</HashCode>
+      <FileName>Logic\Abonado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.ProHig" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAiACEBgAUAIAACQEFAQgABirAAACQIEAABEAAMKgA=</HashCode>
+      <FileName>Logic\ProHig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.ProPro" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAiACFBgAUIYCACQEFAQgABirAAAAQIEAABEBAAggA=</HashCode>
+      <FileName>Logic\ProPro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.TratParcela" Collapsed="true">
+    <Position X="5.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QUAnmDEpkAQC4gEAQEFBYgABv7SBgAUOGAQBEAAUgAQ=</HashCode>
+      <FileName>Logic\TratParcela.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Inseminacion" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAiAgEjgBRArLETYHGUdhABnLCAiqWIGABAGCB0uAQ=</HashCode>
+      <FileName>Logic\Inseminacion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Recolecta" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEiABGhAAUQgAGAQAFBYgABr7AAgAEICAAAAAAUogA=</HashCode>
+      <FileName>Logic\Recolecta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Siembra" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAiABExgAVAoAEAQAFBYgAFj7AAgAUIGAAAmAAUggA=</HashCode>
+      <FileName>Logic\Siembra.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GEXVOC.Core.Logic.Receta" Collapsed="true">
+    <Position X="1.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAiMgCBggQAoAESYAEIAgABjrCFgiUIGgAACDAUAAA=</HashCode>
+      <FileName>Logic\Receta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="GEXVOC.Core.Logic.IControlGasto">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Logic\IControlGasto.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GEXVOC.Core.Logic.INotificable">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\INotificable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GEXVOC.Core.Logic.IControlStock">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\IControlStock.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GEXVOC.Core.Logic.IClaseBase" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAQAAAAAAAAAAAAAAJAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\IClaseBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

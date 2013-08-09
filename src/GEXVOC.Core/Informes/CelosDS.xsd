@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CelosDS" targetNamespace="http://tempuri.org/CelosDS.xsd" xmlns:mstns="http://tempuri.org/CelosDS.xsd" xmlns="http://tempuri.org/CelosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CelosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CelosDS" msprop:Generator_DataSetName="CelosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Celo" msprop:Generator_UserTableName="Celo" msprop:Generator_RowDeletedName="CeloRowDeleted" msprop:Generator_RowChangedName="CeloRowChanged" msprop:Generator_RowClassName="CeloRow" msprop:Generator_RowChangingName="CeloRowChanging" msprop:Generator_RowEvArgName="CeloRowChangeEvent" msprop:Generator_RowEvHandlerName="CeloRowChangeEventHandler" msprop:Generator_TableClassName="CeloDataTable" msprop:Generator_TableVarName="tableCelo" msprop:Generator_RowDeletingName="CeloRowDeleting" msprop:Generator_TablePropName="Celo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="IdVeterinario" msprop:Generator_UserColumnName="IdVeterinario" msprop:Generator_ColumnVarNameInTable="columnIdVeterinario" msprop:Generator_ColumnPropNameInRow="IdVeterinario" msprop:Generator_ColumnPropNameInTable="IdVeterinarioColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescHembra" msprop:Generator_UserColumnName="DescHembra" msprop:Generator_ColumnVarNameInTable="columnDescHembra" msprop:Generator_ColumnPropNameInRow="DescHembra" msprop:Generator_ColumnPropNameInTable="DescHembraColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescPersonal" msprop:Generator_UserColumnName="DescPersonal" msprop:Generator_ColumnVarNameInTable="columnDescPersonal" msprop:Generator_ColumnPropNameInRow="DescPersonal" msprop:Generator_ColumnPropNameInTable="DescPersonalColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Celo" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

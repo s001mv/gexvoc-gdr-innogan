@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LactacionesDS" targetNamespace="http://tempuri.org/LactacionesDS.xsd" xmlns:mstns="http://tempuri.org/LactacionesDS.xsd" xmlns="http://tempuri.org/LactacionesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LactacionesDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="LactacionesDS" msprop:Generator_UserDSName="LactacionesDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lactacion" msprop:Generator_UserTableName="Lactacion" msprop:Generator_RowDeletedName="LactacionRowDeleted" msprop:Generator_TableClassName="LactacionDataTable" msprop:Generator_RowChangedName="LactacionRowChanged" msprop:Generator_RowClassName="LactacionRow" msprop:Generator_RowChangingName="LactacionRowChanging" msprop:Generator_RowEvArgName="LactacionRowChangeEvent" msprop:Generator_RowEvHandlerName="LactacionRowChangeEventHandler" msprop:Generator_TablePropName="Lactacion" msprop:Generator_TableVarName="tableLactacion" msprop:Generator_RowDeletingName="LactacionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="FechaInicio" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" type="xs:dateTime" />
+              <xs:element name="FechaFin" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Control" msprop:Generator_UserTableName="Control" msprop:Generator_RowDeletedName="ControlRowDeleted" msprop:Generator_TableClassName="ControlDataTable" msprop:Generator_RowChangedName="ControlRowChanged" msprop:Generator_RowClassName="ControlRow" msprop:Generator_RowChangingName="ControlRowChanging" msprop:Generator_RowEvArgName="ControlRowChangeEvent" msprop:Generator_RowEvHandlerName="ControlRowChangeEventHandler" msprop:Generator_TablePropName="Control" msprop:Generator_TableVarName="tableControl" msprop:Generator_RowDeletingName="ControlRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdLactacion" msprop:Generator_UserColumnName="IdLactacion" msprop:Generator_ColumnPropNameInRow="IdLactacion" msprop:Generator_ColumnVarNameInTable="columnIdLactacion" msprop:Generator_ColumnPropNameInTable="IdLactacionColumn" type="xs:int" />
+              <xs:element name="IdControl" msprop:Generator_UserColumnName="IdControl" msprop:Generator_ColumnPropNameInRow="IdControl" msprop:Generator_ColumnVarNameInTable="columnIdControl" msprop:Generator_ColumnPropNameInTable="IdControlColumn" type="xs:int" />
+              <xs:element name="IdOrdeno" msprop:Generator_UserColumnName="IdOrdeno" msprop:Generator_ColumnPropNameInRow="IdOrdeno" msprop:Generator_ColumnVarNameInTable="columnIdOrdeno" msprop:Generator_ColumnPropNameInTable="IdOrdenoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="LecheManana" msprop:Generator_UserColumnName="LecheManana" msprop:Generator_ColumnPropNameInRow="LecheManana" msprop:Generator_ColumnVarNameInTable="columnLecheManana" msprop:Generator_ColumnPropNameInTable="LecheMananaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LecheTarde" msprop:Generator_UserColumnName="LecheTarde" msprop:Generator_ColumnPropNameInRow="LecheTarde" msprop:Generator_ColumnVarNameInTable="columnLecheTarde" msprop:Generator_ColumnPropNameInTable="LecheTardeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LecheNoche" msprop:Generator_UserColumnName="LecheNoche" msprop:Generator_ColumnPropNameInRow="LecheNoche" msprop:Generator_ColumnVarNameInTable="columnLecheNoche" msprop:Generator_ColumnPropNameInTable="LecheNocheColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DescStatusControl" msprop:Generator_UserColumnName="DescStatusControl" msprop:Generator_ColumnPropNameInRow="DescStatusControl" msprop:Generator_ColumnVarNameInTable="columnDescStatusControl" msprop:Generator_ColumnPropNameInTable="DescStatusControlColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescStatusOrdeno" msprop:Generator_UserColumnName="DescStatusOrdeno" msprop:Generator_ColumnPropNameInRow="DescStatusOrdeno" msprop:Generator_ColumnVarNameInTable="columnDescStatusOrdeno" msprop:Generator_ColumnPropNameInTable="DescStatusOrdenoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lactacion" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Control_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Control" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Control_Lactacion" msdata:parent="Lactacion" msdata:child="Control" msdata:parentkey="Id" msdata:childkey="IdLactacion" msprop:Generator_UserRelationName="FK_Control_Lactacion" msprop:Generator_RelationVarName="relationFK_Control_Lactacion" msprop:Generator_UserChildTable="Control" msprop:Generator_UserParentTable="Lactacion" msprop:Generator_ParentPropName="LactacionRow" msprop:Generator_ChildPropName="GetControlRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

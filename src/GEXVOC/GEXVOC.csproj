@@ -1,0 +1,2812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44982FAF-6481-4AA0-B272-A9AC8537755D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEXVOC</RootNamespace>
+    <AssemblyName>GEXVOC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acerca.Designer.cs">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\Alertas\Alertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\Alertas\Alertas.Designer.cs">
+      <DependentUpon>Alertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\BindingMaestro.cs" />
+    <Compile Include="Clases\DefinicionEstiloGrid.cs" />
+    <Compile Include="Herramientas\ImportadorAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorAnimales.Designer.cs">
+      <DependentUpon>ImportadorAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorAnimalesOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorAnimalesOC.Designer.cs">
+      <DependentUpon>ImportadorAnimalesOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorAnimalesWebPigan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorAnimalesWebPigan.Designer.cs">
+      <DependentUpon>ImportadorAnimalesWebPigan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorControles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\ImportadorControles.Designer.cs">
+      <DependentUpon>ImportadorControles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas\MakeBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Herramientas\MakeBackup.designer.cs">
+      <DependentUpon>MakeBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Inicio\SeleccionServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Inicio\SeleccionServidor.Designer.cs">
+      <DependentUpon>SeleccionServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versionado\ElementoVersion.cs" />
+    <Compile Include="Clases\Generic.cs" />
+    <Compile Include="Clases\Validacion.cs" />
+    <Compile Include="Versionado\frmDetallesVersiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Versionado\frmDetallesVersiones.Designer.cs">
+      <DependentUpon>frmDetallesVersiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versionado\Versionado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditMuestraControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditMuestraControl.Designer.cs">
+      <DependentUpon>EditMuestraControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditMuestras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditMuestras.Designer.cs">
+      <DependentUpon>EditMuestras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\EditHistMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\EditHistMedicamento.Designer.cs">
+      <DependentUpon>EditHistMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\EditReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\EditReceta.Designer.cs">
+      <DependentUpon>EditReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\FindHistMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\FindHistMedicamento.Designer.cs">
+      <DependentUpon>FindHistMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditDestete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditDestete.Designer.cs">
+      <DependentUpon>EditDestete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\EditVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\EditVenta.Designer.cs">
+      <DependentUpon>EditVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\FindVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\FindVenta.Designer.cs">
+      <DependentUpon>FindVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Alimentacion\InfControlDeStockDeAlimentacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Alimentacion\InfControlDeStockDeAlimentacion.Designer.cs">
+      <DependentUpon>InfControlDeStockDeAlimentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Animales\InfAnimalesImproductivos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Animales\InfAnimalesImproductivos.Designer.cs">
+      <DependentUpon>InfAnimalesImproductivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Animales\InfFichaAnimal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Animales\InfFichaAnimal.Designer.cs">
+      <DependentUpon>InfFichaAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Animales\InfHistorialEnfermedades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Animales\InfHistorialEnfermedades.Designer.cs">
+      <DependentUpon>InfHistorialEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Animales\InfListadoAnimales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Animales\InfListadoAnimales.Designer.cs">
+      <DependentUpon>InfListadoAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Economia\InfGastosIngresos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Economia\InfGastosIngresos.Designer.cs">
+      <DependentUpon>InfGastosIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfTratParcela.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfTratParcela.Designer.cs">
+      <DependentUpon>InfTratParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfRecolecta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfRecolecta.Designer.cs">
+      <DependentUpon>InfRecolecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfSembrado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfSembrado.Designer.cs">
+      <DependentUpon>InfSembrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Produccion\Carne\infGMD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Produccion\Carne\infGMD.Designer.cs">
+      <DependentUpon>infGMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Produccion\Carne\infIndicesConversion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Produccion\Carne\infIndicesConversion.Designer.cs">
+      <DependentUpon>infIndicesConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Produccion\Leche\InfProduccionLeche.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Produccion\Leche\InfProduccionLeche.Designer.cs">
+      <DependentUpon>InfProduccionLeche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Produccion\Leche\InfRecuento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Produccion\Leche\InfRecuento.Designer.cs">
+      <DependentUpon>InfRecuento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesDestetados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesDestetados.Designer.cs">
+      <DependentUpon>infAnimalesDestetados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesMuertos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesMuertos.Designer.cs">
+      <DependentUpon>infAnimalesMuertos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesNacidosGenealogia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infAnimalesNacidosGenealogia.Designer.cs">
+      <DependentUpon>infAnimalesNacidosGenealogia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infProlificidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\infProlificidad.Designer.cs">
+      <DependentUpon>infProlificidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfEstadisticasFertilidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfEstadisticasFertilidad.Designer.cs">
+      <DependentUpon>InfEstadisticasFertilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfEvolucionAnual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfEvolucionAnual.Designer.cs">
+      <DependentUpon>InfEvolucionAnual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfTasaPartos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfTasaPartos.Designer.cs">
+      <DependentUpon>InfTasaPartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfTasaAbortos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfTasaAbortos.Designer.cs">
+      <DependentUpon>InfTasaAbortos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfIntervaloPartos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfIntervaloPartos.Designer.cs">
+      <DependentUpon>InfIntervaloPartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfCapacidadMaternal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\InfCapacidadMaternal.Designer.cs">
+      <DependentUpon>InfCapacidadMaternal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfDistribucionPartos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Reproduccion\Partos\InfDistribucionPartos.Designer.cs">
+      <DependentUpon>InfDistribucionPartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infAnimalesEnTratamiento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infAnimalesEnTratamiento.Designer.cs">
+      <DependentUpon>infAnimalesEnTratamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infConsultaMorbilidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infConsultaMorbilidad.Designer.cs">
+      <DependentUpon>infConsultaMorbilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infConsultaMortalidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infConsultaMortalidad.Designer.cs">
+      <DependentUpon>infConsultaMortalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infPrevalenciaEnfermedades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Sanidad\infPrevalenciaEnfermedades.Designer.cs">
+      <DependentUpon>infPrevalenciaEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Trazabilidad\InfTrazaAnimales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Trazabilidad\InfTrazaAnimales.Designer.cs">
+      <DependentUpon>InfTrazaAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Trazabilidad\InfTrazaProductos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Trazabilidad\InfTrazaProductos.Designer.cs">
+      <DependentUpon>InfTrazaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\EditDatosSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\EditDatosSistema.Designer.cs">
+      <DependentUpon>EditDatosSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desarrollo\frmDinamico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desarrollo\frmDinamico.Designer.cs">
+      <DependentUpon>frmDinamico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desarrollo\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desarrollo\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desarrollo\VisorMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desarrollo\VisorMovimientos.Designer.cs">
+      <DependentUpon>VisorMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindTipoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindTipoPersonal.Designer.cs">
+      <DependentUpon>FindTipoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditAPPCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditAPPCC.Designer.cs">
+      <DependentUpon>EditAPPCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindAPPCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindAPPCC.Designer.cs">
+      <DependentUpon>FindAPPCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindMomentoPeso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindMomentoPeso.Designer.cs">
+      <DependentUpon>FindMomentoPeso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericInfArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericInfArbol.Designer.cs">
+      <DependentUpon>GenericInfArbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericVisorSWF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericVisorSWF.Designer.cs">
+      <DependentUpon>GenericVisorSWF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindDiagInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindDiagInseminacion.Designer.cs">
+      <DependentUpon>FindDiagInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\EditProHig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\EditProHig.Designer.cs">
+      <DependentUpon>EditProHig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\EditTratHigiene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\EditTratHigiene.Designer.cs">
+      <DependentUpon>EditTratHigiene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Sanidad\Higiene\FindPlanHigiene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Sanidad\Higiene\FindPlanHigiene.Designer.cs">
+      <DependentUpon>FindPlanHigiene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\FindTratHigiene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Higiene\FindTratHigiene.Designer.cs">
+      <DependentUpon>FindTratHigiene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\EditProPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\EditProPro.Designer.cs">
+      <DependentUpon>EditProPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\EditTratProfilaxis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\EditTratProfilaxis.Designer.cs">
+      <DependentUpon>EditTratProfilaxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Sanidad\Profilaxis\FindPrograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Sanidad\Profilaxis\FindPrograma.Designer.cs">
+      <DependentUpon>FindPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\FindTratProfilaxis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanidad\Profilaxis\FindTratProfilaxis.Designer.cs">
+      <DependentUpon>FindTratProfilaxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaEspera.Designer.cs">
+      <DependentUpon>PantallaEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\EditPersonalizarProcesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\EditPersonalizarProcesos.Designer.cs">
+      <DependentUpon>EditPersonalizarProcesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplos\FindBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplos\FindBuscar.Designer.cs">
+      <DependentUpon>FindBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplos\frmEditGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplos\frmEditGrid.Designer.cs">
+      <DependentUpon>frmEditGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\Asistente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\Asistente.Designer.cs">
+      <DependentUpon>Asistente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditExpMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditExpMod.Designer.cs">
+      <DependentUpon>EditExpMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditTarea.Designer.cs">
+      <DependentUpon>EditTarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\FindTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\FindTarea.Designer.cs">
+      <DependentUpon>FindTarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\FindTipoContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\FindTipoContacto.Designer.cs">
+      <DependentUpon>FindTipoContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Inicio\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Inicio\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditAborto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditAborto.Designer.cs">
+      <DependentUpon>EditAborto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditAniLotLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditAniLotLotes.Designer.cs">
+      <DependentUpon>EditAniLotLotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditCelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditCelo.Designer.cs">
+      <DependentUpon>EditCelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditCondicionCorporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditCondicionCorporal.Designer.cs">
+      <DependentUpon>EditCondicionCorporal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditDiagInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditDiagInseminacion.Designer.cs">
+      <DependentUpon>EditDiagInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditLoteAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditLoteAnimal.Designer.cs">
+      <DependentUpon>EditLoteAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditSincronizacionCelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditSincronizacionCelo.Designer.cs">
+      <DependentUpon>EditSincronizacionCelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindAborto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindAborto.Designer.cs">
+      <DependentUpon>FindAborto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindCelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindCelo.Designer.cs">
+      <DependentUpon>FindCelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\FindCondicionCorporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\FindCondicionCorporal.Designer.cs">
+      <DependentUpon>FindCondicionCorporal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\FindLoteAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\FindLoteAnimal.Designer.cs">
+      <DependentUpon>FindLoteAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\FindPesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\FindPesos.Designer.cs">
+      <DependentUpon>FindPesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindSincronizacionCelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindSincronizacionCelo.Designer.cs">
+      <DependentUpon>FindSincronizacionCelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\SelectorAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\SelectorAnimales.Designer.cs">
+      <DependentUpon>SelectorAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\EditAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\EditAnalisis.Designer.cs">
+      <DependentUpon>EditAnalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\EditCombinacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\EditCombinacion.Designer.cs">
+      <DependentUpon>EditCombinacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\EditResena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\EditResena.Designer.cs">
+      <DependentUpon>EditResena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\FindAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\FindAnalisis.Designer.cs">
+      <DependentUpon>FindAnalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\FindCombinacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\FindCombinacion.Designer.cs">
+      <DependentUpon>FindCombinacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genetica\FindResena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genetica\FindResena.Designer.cs">
+      <DependentUpon>FindResena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\EditAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\EditAsignacion.Designer.cs">
+      <DependentUpon>EditAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\EditPastoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\EditPastoreo.Designer.cs">
+      <DependentUpon>EditPastoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\FindPastoreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Alimenticia\FindPastoreo.Designer.cs">
+      <DependentUpon>FindPastoreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\EditCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\EditCompra.Designer.cs">
+      <DependentUpon>EditCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\EditGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\EditGasto.Designer.cs">
+      <DependentUpon>EditGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\FindCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\FindCompra.Designer.cs">
+      <DependentUpon>FindCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion financiera\FindGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion financiera\FindGasto.Designer.cs">
+      <DependentUpon>FindGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\EditAbonado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\EditAbonado.Designer.cs">
+      <DependentUpon>EditAbonado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\EditParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\EditParcela.Designer.cs">
+      <DependentUpon>EditParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\EditRecolecta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\EditRecolecta.Designer.cs">
+      <DependentUpon>EditRecolecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\EditSiembra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\EditSiembra.Designer.cs">
+      <DependentUpon>EditSiembra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\EditTratParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\EditTratParcela.Designer.cs">
+      <DependentUpon>EditTratParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\FindAbonado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\FindAbonado.Designer.cs">
+      <DependentUpon>FindAbonado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\FindParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\FindParcela.Designer.cs">
+      <DependentUpon>FindParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\FindRecolecta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\FindRecolecta.Designer.cs">
+      <DependentUpon>FindRecolecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\FindTratParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\FindTratParcela.Designer.cs">
+      <DependentUpon>FindTratParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ArbolInfomes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\ArbolInfomes.Designer.cs">
+      <DependentUpon>ArbolInfomes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfAbonado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Parcelas\InfAbonado.Designer.cs">
+      <DependentUpon>InfAbonado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Animales\InfLibroExplotacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Animales\InfLibroExplotacion.Designer.cs">
+      <DependentUpon>InfLibroExplotacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoCondicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoCondicion.Designer.cs">
+      <DependentUpon>EditTipoCondicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoCondicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoCondicion.Designer.cs">
+      <DependentUpon>FindTipoCondicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Genetica\EditMarcador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Genetica\EditMarcador.Designer.cs">
+      <DependentUpon>EditMarcador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Genetica\FindMarcador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Genetica\FindMarcador.Designer.cs">
+      <DependentUpon>FindMarcador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditCita.Designer.cs">
+      <DependentUpon>EditCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\FindCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\FindCita.Designer.cs">
+      <DependentUpon>FindCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\EditConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\EditConfiguracion.Designer.cs">
+      <DependentUpon>EditConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\EditModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\EditModulo.Designer.cs">
+      <DependentUpon>EditModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\EditPersonalizarMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\EditPersonalizarMenus.Designer.cs">
+      <DependentUpon>EditPersonalizarMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\FindModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\FindModulo.Designer.cs">
+      <DependentUpon>FindModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parametrizacion\pnlOpcionesComunes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parametrizacion\pnlOpcionesComunes.Designer.cs">
+      <DependentUpon>pnlOpcionesComunes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericFindDinamico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericFindDinamico.Designer.cs">
+      <DependentUpon>GenericFindDinamico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Alimentacion\InfConsumos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informes\Alimentacion\InfConsumos.Designer.cs">
+      <DependentUpon>InfConsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Bancarios\EditCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Bancarios\EditCuentas.Designer.cs">
+      <DependentUpon>EditCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Bancarios\FindCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Bancarios\FindCuentas.Designer.cs">
+      <DependentUpon>FindCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditNaturalezaGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditNaturalezaGasto.Designer.cs">
+      <DependentUpon>EditNaturalezaGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditTipoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditTipoCompra.Designer.cs">
+      <DependentUpon>EditTipoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditTipoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditTipoVenta.Designer.cs">
+      <DependentUpon>EditTipoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindNaturalezaGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindNaturalezaGasto.Designer.cs">
+      <DependentUpon>FindNaturalezaGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindTipoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindTipoCompra.Designer.cs">
+      <DependentUpon>FindTipoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindTipoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindTipoVenta.Designer.cs">
+      <DependentUpon>FindTipoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericMaestroEventArgs.cs" />
+    <Compile Include="Reproduccion\Partos\EditPartosMultiples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditPartosMultiples.Designer.cs">
+      <DependentUpon>EditPartosMultiples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindTipoAborto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindTipoAborto.Designer.cs">
+      <DependentUpon>FindTipoAborto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditConformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditConformacion.Designer.cs">
+      <DependentUpon>EditConformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\EditEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\EditEnfermedad.Designer.cs">
+      <DependentUpon>EditEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditFacilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditFacilidad.Designer.cs">
+      <DependentUpon>EditFacilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditLaboratorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditLaboratorios.Designer.cs">
+      <DependentUpon>EditLaboratorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\EditMunicipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\EditMunicipios.Designer.cs">
+      <DependentUpon>EditMunicipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\EditProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\EditProvincia.Designer.cs">
+      <DependentUpon>EditProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditRazas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditRazas.Designer.cs">
+      <DependentUpon>EditRazas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\EditStatusControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\EditStatusControl.Designer.cs">
+      <DependentUpon>EditStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\EditStatusOrdeno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\EditStatusOrdeno.Designer.cs">
+      <DependentUpon>EditStatusOrdeno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditTalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditTalla.Designer.cs">
+      <DependentUpon>EditTalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoAlta.Designer.cs">
+      <DependentUpon>EditTipoAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoBaja.Designer.cs">
+      <DependentUpon>EditTipoBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoDiagnostico.Designer.cs">
+      <DependentUpon>EditTipoDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditCliente.Designer.cs">
+      <DependentUpon>EditCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\EditProveedor.Designer.cs">
+      <DependentUpon>EditProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoInseminacion.Designer.cs">
+      <DependentUpon>EditTipoInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditTipoParto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditTipoParto.Designer.cs">
+      <DependentUpon>EditTipoParto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindCliente.Designer.cs">
+      <DependentUpon>FindCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFinanciera\FindProveedor.Designer.cs">
+      <DependentUpon>FindProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\EditComposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\EditComposicion.Designer.cs">
+      <DependentUpon>EditComposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\EditRacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\EditRacion.Designer.cs">
+      <DependentUpon>EditRacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\FindRacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Alimentario\FindRacion.Designer.cs">
+      <DependentUpon>FindRacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFincas\EditPlaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFincas\EditPlaga.Designer.cs">
+      <DependentUpon>EditPlaga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoSecado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\EditTipoSecado.Designer.cs">
+      <DependentUpon>EditTipoSecado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindConformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindConformacion.Designer.cs">
+      <DependentUpon>FindConformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindEnfermedad.Designer.cs">
+      <DependentUpon>FindEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindFacilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindFacilidad.Designer.cs">
+      <DependentUpon>FindFacilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindLaboratorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindLaboratorios.Designer.cs">
+      <DependentUpon>FindLaboratorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\FindMunicipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\FindMunicipios.Designer.cs">
+      <DependentUpon>FindMunicipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\FindProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Localizaciones\FindProvincia.Designer.cs">
+      <DependentUpon>FindProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindRazas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindRazas.Designer.cs">
+      <DependentUpon>FindRazas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\FindStatusControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\FindStatusControl.Designer.cs">
+      <DependentUpon>FindStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\FindStatusOrdeno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Metodos de control\FindStatusOrdeno.Designer.cs">
+      <DependentUpon>FindStatusOrdeno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindTalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindTalla.Designer.cs">
+      <DependentUpon>FindTalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoAlta.Designer.cs">
+      <DependentUpon>FindTipoAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoBaja.Designer.cs">
+      <DependentUpon>FindTipoBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoDiagnostico.Designer.cs">
+      <DependentUpon>FindTipoDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindTipoEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindTipoEnfermedad.Designer.cs">
+      <DependentUpon>FindTipoEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoInseminacion.Designer.cs">
+      <DependentUpon>FindTipoInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindTipoParto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindTipoParto.Designer.cs">
+      <DependentUpon>FindTipoParto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFincas\FindPlaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\GestionFincas\FindPlaga.Designer.cs">
+      <DependentUpon>FindPlaga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoSecado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\FindTipoSecado.Designer.cs">
+      <DependentUpon>FindTipoSecado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditCategoria.Designer.cs">
+      <DependentUpon>EditCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditConformacionCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditConformacionCanal.Designer.cs">
+      <DependentUpon>EditConformacionCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditRendimientoCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditRendimientoCanal.Designer.cs">
+      <DependentUpon>EditRendimientoCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditTipificacionCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditTipificacionCanal.Designer.cs">
+      <DependentUpon>EditTipificacionCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindCategoria.Designer.cs">
+      <DependentUpon>FindCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindConformacionCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindConformacionCanal.Designer.cs">
+      <DependentUpon>FindConformacionCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindEngrasamientoCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindEngrasamientoCanal.Designer.cs">
+      <DependentUpon>FindEngrasamientoCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindRendimientoCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindRendimientoCanal.Designer.cs">
+      <DependentUpon>FindRendimientoCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindTipificacionCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindTipificacionCanal.Designer.cs">
+      <DependentUpon>FindTipificacionCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditEngrasamientoCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditEngrasamientoCanal.Designer.cs">
+      <DependentUpon>EditEngrasamientoCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditFamilia.Designer.cs">
+      <DependentUpon>EditFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditProducto.Designer.cs">
+      <DependentUpon>EditProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\EditTipoEngrasamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\EditTipoEngrasamiento.Designer.cs">
+      <DependentUpon>EditTipoEngrasamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditTipoProducto.Designer.cs">
+      <DependentUpon>EditTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ExploradorProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\ExploradorProductos.Designer.cs">
+      <DependentUpon>ExploradorProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FindFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FindFamilia.Designer.cs">
+      <DependentUpon>FindFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FindProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FindProducto.Designer.cs">
+      <DependentUpon>FindProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produccion\FindTipoEngrasamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produccion\FindTipoEngrasamiento.Designer.cs">
+      <DependentUpon>FindTipoEngrasamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FindTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FindTipoProducto.Designer.cs">
+      <DependentUpon>FindTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditAnimales.designer.cs">
+      <DependentUpon>EditAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditContacto.Designer.cs">
+      <DependentUpon>EditContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditControlLeche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditControlLeche.designer.cs">
+      <DependentUpon>EditControlLeche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\EditDiagAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\EditDiagAnimal.Designer.cs">
+      <DependentUpon>EditDiagAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditExpEsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditExpEsp.designer.cs">
+      <DependentUpon>EditExpEsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\EditExplotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\EditExplotaciones.designer.cs">
+      <DependentUpon>EditExplotaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditInseminacion.designer.cs">
+      <DependentUpon>EditInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditPartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\EditPartos.designer.cs">
+      <DependentUpon>EditPartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\EditPesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\EditPesos.designer.cs">
+      <DependentUpon>EditPesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditSecados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\EditSecados.designer.cs">
+      <DependentUpon>EditSecados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditCubricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditCubricion.Designer.cs">
+      <DependentUpon>EditCubricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\EditEstancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\EditEstancia.Designer.cs">
+      <DependentUpon>EditEstancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindCubricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindCubricion.Designer.cs">
+      <DependentUpon>FindCubricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindTipoCubricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindTipoCubricion.Designer.cs">
+      <DependentUpon>FindTipoCubricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\EditRegularizacionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\EditRegularizacionStock.Designer.cs">
+      <DependentUpon>EditRegularizacionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Titulares\EditTitulares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Titulares\EditTitulares.designer.cs">
+      <DependentUpon>EditTitulares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\EditTratEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\EditTratEnfermedad.Designer.cs">
+      <DependentUpon>EditTratEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\EditPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\EditPersonal.designer.cs">
+      <DependentUpon>EditPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ganado\FindAnimales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganado\FindAnimales.designer.cs">
+      <DependentUpon>FindAnimales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\FindDiagAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\FindDiagAnimal.Designer.cs">
+      <DependentUpon>FindDiagAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\FindContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\FindContacto.Designer.cs">
+      <DependentUpon>FindContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotacion\FindExplotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotacion\FindExplotaciones.designer.cs">
+      <DependentUpon>FindExplotaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\FindInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\FindInseminacion.designer.cs">
+      <DependentUpon>FindInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindPartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reproduccion\Partos\FindPartos.designer.cs">
+      <DependentUpon>FindPartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\FindSecados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control de explotación\Control lechero\FindSecados.designer.cs">
+      <DependentUpon>FindSecados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParcelas\FindSiembra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParcelas\FindSiembra.designer.cs">
+      <DependentUpon>FindSiembra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Titulares\FindTitulares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Titulares\FindTitulares.designer.cs">
+      <DependentUpon>FindTitulares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control veterinario\FindTratEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control veterinario\FindTratEnfermedad.Designer.cs">
+      <DependentUpon>FindTratEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Control Veterinario\FindPersonal.designer.cs">
+      <DependentUpon>FindPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericEdit.designer.cs">
+      <DependentUpon>GenericEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericEditDinamico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericEditDinamico.Designer.cs">
+      <DependentUpon>GenericEditDinamico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericEventArgs.cs" />
+    <Compile Include="Plantillas\GenericFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericFind.designer.cs">
+      <DependentUpon>GenericFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericInf.Designer.cs">
+      <DependentUpon>GenericInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\GenericInfArbolEventArgs.cs" />
+    <Compile Include="Plantillas\GenericMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\GenericMaestro.Designer.cs">
+      <DependentUpon>GenericMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acerca.resx">
+      <DependentUpon>Acerca.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\Alertas\Alertas.resx">
+      <DependentUpon>Alertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Control lechero\EditMuestraControl.resx">
+      <DependentUpon>EditMuestraControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Control lechero\EditMuestras.resx">
+      <DependentUpon>EditMuestras.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\EditHistMedicamento.resx">
+      <DependentUpon>EditHistMedicamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\EditReceta.resx">
+      <DependentUpon>EditReceta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\FindHistMedicamento.resx">
+      <DependentUpon>FindHistMedicamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditDestete.resx">
+      <DependentUpon>EditDestete.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\EditVenta.resx">
+      <DependentUpon>EditVenta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\FindVenta.resx">
+      <DependentUpon>FindVenta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\ImportadorAnimales.resx">
+      <DependentUpon>ImportadorAnimales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\ImportadorAnimalesOC.resx">
+      <DependentUpon>ImportadorAnimalesOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\ImportadorAnimalesWebPigan.resx">
+      <DependentUpon>ImportadorAnimalesWebPigan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\ImportadorControles.resx">
+      <DependentUpon>ImportadorControles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Herramientas\MakeBackup.resx">
+      <DependentUpon>MakeBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Alimentacion\InfControlDeStockDeAlimentacion.resx">
+      <DependentUpon>InfControlDeStockDeAlimentacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Animales\InfAnimalesImproductivos.resx">
+      <DependentUpon>InfAnimalesImproductivos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Animales\InfFichaAnimal.resx">
+      <DependentUpon>InfFichaAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Animales\InfHistorialEnfermedades.resx">
+      <DependentUpon>InfHistorialEnfermedades.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Animales\InfListadoAnimales.resx">
+      <DependentUpon>InfListadoAnimales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Economia\InfGastosIngresos.resx">
+      <DependentUpon>InfGastosIngresos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Parcelas\InfTratParcela.resx">
+      <DependentUpon>InfTratParcela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Parcelas\InfRecolecta.resx">
+      <DependentUpon>InfRecolecta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Parcelas\InfSembrado.resx">
+      <DependentUpon>InfSembrado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Produccion\Carne\infGMD.resx">
+      <DependentUpon>infGMD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Produccion\Carne\infIndicesConversion.resx">
+      <DependentUpon>infIndicesConversion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Produccion\Leche\InfProduccionLeche.resx">
+      <DependentUpon>InfProduccionLeche.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Produccion\Leche\InfRecuento.resx">
+      <DependentUpon>InfRecuento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\infAnimalesDestetados.resx">
+      <DependentUpon>infAnimalesDestetados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\infAnimalesMuertos.resx">
+      <DependentUpon>infAnimalesMuertos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\infAnimalesNacidosGenealogia.resx">
+      <DependentUpon>infAnimalesNacidosGenealogia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\infProlificidad.resx">
+      <DependentUpon>infProlificidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\InfEstadisticasFertilidad.resx">
+      <DependentUpon>InfEstadisticasFertilidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\InfEvolucionAnual.resx">
+      <DependentUpon>InfEvolucionAnual.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\Partos\InfTasaPartos.resx">
+      <DependentUpon>InfTasaPartos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\Partos\InfTasaAbortos.resx">
+      <DependentUpon>InfTasaAbortos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\Partos\InfIntervaloPartos.resx">
+      <DependentUpon>InfIntervaloPartos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\InfCapacidadMaternal.resx">
+      <DependentUpon>InfCapacidadMaternal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Reproduccion\Partos\InfDistribucionPartos.resx">
+      <DependentUpon>InfDistribucionPartos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Sanidad\infAnimalesEnTratamiento.resx">
+      <DependentUpon>infAnimalesEnTratamiento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Sanidad\infConsultaMorbilidad.resx">
+      <DependentUpon>infConsultaMorbilidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Sanidad\infConsultaMortalidad.resx">
+      <DependentUpon>infConsultaMortalidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Sanidad\infPrevalenciaEnfermedades.resx">
+      <DependentUpon>infPrevalenciaEnfermedades.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Trazabilidad\InfTrazaAnimales.resx">
+      <DependentUpon>InfTrazaAnimales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Trazabilidad\InfTrazaProductos.resx">
+      <DependentUpon>InfTrazaProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\EditDatosSistema.resx">
+      <DependentUpon>EditDatosSistema.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desarrollo\frmDinamico.resx">
+      <DependentUpon>frmDinamico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desarrollo\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desarrollo\VisorMovimientos.resx">
+      <DependentUpon>VisorMovimientos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\FindTipoPersonal.resx">
+      <DependentUpon>FindTipoPersonal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditAPPCC.resx">
+      <DependentUpon>EditAPPCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindAPPCC.resx">
+      <DependentUpon>FindAPPCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindMomentoPeso.resx">
+      <DependentUpon>FindMomentoPeso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericInfArbol.resx">
+      <DependentUpon>GenericInfArbol.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericVisorSWF.resx">
+      <DependentUpon>GenericVisorSWF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindDiagInseminacion.resx">
+      <DependentUpon>FindDiagInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Higiene\EditProHig.resx">
+      <DependentUpon>EditProHig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Higiene\EditTratHigiene.resx">
+      <DependentUpon>EditTratHigiene.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Sanidad\Higiene\FindPlanHigiene.resx">
+      <DependentUpon>FindPlanHigiene.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Higiene\FindTratHigiene.resx">
+      <DependentUpon>FindTratHigiene.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Profilaxis\EditProPro.resx">
+      <DependentUpon>EditProPro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Profilaxis\EditTratProfilaxis.resx">
+      <DependentUpon>EditTratProfilaxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Sanidad\Profilaxis\FindPrograma.resx">
+      <DependentUpon>FindPrograma.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanidad\Profilaxis\FindTratProfilaxis.resx">
+      <DependentUpon>FindTratProfilaxis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaEspera.resx">
+      <DependentUpon>PantallaEspera.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\EditPersonalizarProcesos.resx">
+      <DependentUpon>EditPersonalizarProcesos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejemplos\FindBuscar.resx">
+      <DependentUpon>FindBuscar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejemplos\frmEditGrid.resx">
+      <DependentUpon>frmEditGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\Asistente.resx">
+      <DependentUpon>Asistente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditExpMod.resx">
+      <DependentUpon>EditExpMod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditTarea.resx">
+      <DependentUpon>EditTarea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\FindTarea.resx">
+      <DependentUpon>FindTarea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\FindTipoContacto.resx">
+      <DependentUpon>FindTipoContacto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Inicio\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditAborto.resx">
+      <DependentUpon>EditAborto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditAniLotLotes.resx">
+      <DependentUpon>EditAniLotLotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditCelo.resx">
+      <DependentUpon>EditCelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditCondicionCorporal.resx">
+      <DependentUpon>EditCondicionCorporal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditDiagInseminacion.resx">
+      <DependentUpon>EditDiagInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditLoteAnimal.resx">
+      <DependentUpon>EditLoteAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditSincronizacionCelo.resx">
+      <DependentUpon>EditSincronizacionCelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindAborto.resx">
+      <DependentUpon>FindAborto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindCelo.resx">
+      <DependentUpon>FindCelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\FindCondicionCorporal.resx">
+      <DependentUpon>FindCondicionCorporal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\FindLoteAnimal.resx">
+      <DependentUpon>FindLoteAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\FindPesos.resx">
+      <DependentUpon>FindPesos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindSincronizacionCelo.resx">
+      <DependentUpon>FindSincronizacionCelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\SelectorAnimales.resx">
+      <DependentUpon>SelectorAnimales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\EditAnalisis.resx">
+      <DependentUpon>EditAnalisis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\EditCombinacion.resx">
+      <DependentUpon>EditCombinacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\EditResena.resx">
+      <DependentUpon>EditResena.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\FindAnalisis.resx">
+      <DependentUpon>FindAnalisis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\FindCombinacion.resx">
+      <DependentUpon>FindCombinacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genetica\FindResena.resx">
+      <DependentUpon>FindResena.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Alimenticia\EditAsignacion.resx">
+      <DependentUpon>EditAsignacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Alimenticia\EditPastoreo.resx">
+      <DependentUpon>EditPastoreo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Alimenticia\FindPastoreo.resx">
+      <DependentUpon>FindPastoreo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\EditCompra.resx">
+      <DependentUpon>EditCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\EditGasto.resx">
+      <DependentUpon>EditGasto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\FindCompra.resx">
+      <DependentUpon>FindCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion financiera\FindGasto.resx">
+      <DependentUpon>FindGasto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\EditAbonado.resx">
+      <DependentUpon>EditAbonado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\EditParcela.resx">
+      <DependentUpon>EditParcela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\EditRecolecta.resx">
+      <DependentUpon>EditRecolecta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\EditSiembra.resx">
+      <DependentUpon>EditSiembra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\EditTratParcela.resx">
+      <DependentUpon>EditTratParcela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\FindAbonado.resx">
+      <DependentUpon>FindAbonado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\FindParcela.resx">
+      <DependentUpon>FindParcela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\FindRecolecta.resx">
+      <DependentUpon>FindRecolecta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\FindTratParcela.resx">
+      <DependentUpon>FindTratParcela.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ArbolInfomes.resx">
+      <DependentUpon>ArbolInfomes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Parcelas\InfAbonado.resx">
+      <DependentUpon>InfAbonado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Animales\InfLibroExplotacion.resx">
+      <DependentUpon>InfLibroExplotacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoCondicion.resx">
+      <DependentUpon>EditTipoCondicion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoCondicion.resx">
+      <DependentUpon>FindTipoCondicion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Genetica\EditMarcador.resx">
+      <DependentUpon>EditMarcador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Genetica\FindMarcador.resx">
+      <DependentUpon>FindMarcador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditCita.resx">
+      <DependentUpon>EditCita.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\FindCita.resx">
+      <DependentUpon>FindCita.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\EditConfiguracion.resx">
+      <DependentUpon>EditConfiguracion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\EditModulo.resx">
+      <DependentUpon>EditModulo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\EditPersonalizarMenus.resx">
+      <DependentUpon>EditPersonalizarMenus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\FindModulo.resx">
+      <DependentUpon>FindModulo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parametrizacion\pnlOpcionesComunes.resx">
+      <DependentUpon>pnlOpcionesComunes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericFindDinamico.resx">
+      <DependentUpon>GenericFindDinamico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Alimentacion\InfConsumos.resx">
+      <DependentUpon>InfConsumos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Bancarios\EditCuentas.resx">
+      <DependentUpon>EditCuentas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Bancarios\FindCuentas.resx">
+      <DependentUpon>FindCuentas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\EditNaturalezaGasto.resx">
+      <DependentUpon>EditNaturalezaGasto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\EditTipoCompra.resx">
+      <DependentUpon>EditTipoCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\EditTipoVenta.resx">
+      <DependentUpon>EditTipoVenta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\FindNaturalezaGasto.resx">
+      <DependentUpon>FindNaturalezaGasto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\FindTipoCompra.resx">
+      <DependentUpon>FindTipoCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\FindTipoVenta.resx">
+      <DependentUpon>FindTipoVenta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditPartosMultiples.resx">
+      <DependentUpon>EditPartosMultiples.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindTipoAborto.resx">
+      <DependentUpon>FindTipoAborto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditConformacion.resx">
+      <DependentUpon>EditConformacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\EditEnfermedad.resx">
+      <DependentUpon>EditEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditFacilidad.resx">
+      <DependentUpon>EditFacilidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditLaboratorios.resx">
+      <DependentUpon>EditLaboratorios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Localizaciones\EditMunicipios.resx">
+      <DependentUpon>EditMunicipios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Localizaciones\EditProvincia.resx">
+      <DependentUpon>EditProvincia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditRazas.resx">
+      <DependentUpon>EditRazas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Metodos de control\EditStatusControl.resx">
+      <DependentUpon>EditStatusControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Metodos de control\EditStatusOrdeno.resx">
+      <DependentUpon>EditStatusOrdeno.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditTalla.resx">
+      <DependentUpon>EditTalla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoAlta.resx">
+      <DependentUpon>EditTipoAlta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoBaja.resx">
+      <DependentUpon>EditTipoBaja.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoDiagnostico.resx">
+      <DependentUpon>EditTipoDiagnostico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\EditCliente.resx">
+      <DependentUpon>EditCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\EditProveedor.resx">
+      <DependentUpon>EditProveedor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoInseminacion.resx">
+      <DependentUpon>EditTipoInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditTipoParto.resx">
+      <DependentUpon>EditTipoParto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\FindCliente.resx">
+      <DependentUpon>FindCliente.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFinanciera\FindProveedor.resx">
+      <DependentUpon>FindProveedor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Alimentario\EditComposicion.resx">
+      <DependentUpon>EditComposicion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Alimentario\EditRacion.resx">
+      <DependentUpon>EditRacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Alimentario\FindRacion.resx">
+      <DependentUpon>FindRacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFincas\EditPlaga.resx">
+      <DependentUpon>EditPlaga.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\EditTipoSecado.resx">
+      <DependentUpon>EditTipoSecado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\FindConformacion.resx">
+      <DependentUpon>FindConformacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\FindEnfermedad.resx">
+      <DependentUpon>FindEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\FindFacilidad.resx">
+      <DependentUpon>FindFacilidad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindLaboratorios.resx">
+      <DependentUpon>FindLaboratorios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Localizaciones\FindMunicipios.resx">
+      <DependentUpon>FindMunicipios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Localizaciones\FindProvincia.resx">
+      <DependentUpon>FindProvincia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindRazas.resx">
+      <DependentUpon>FindRazas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Metodos de control\FindStatusControl.resx">
+      <DependentUpon>FindStatusControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Metodos de control\FindStatusOrdeno.resx">
+      <DependentUpon>FindStatusOrdeno.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\FindTalla.resx">
+      <DependentUpon>FindTalla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoAlta.resx">
+      <DependentUpon>FindTipoAlta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoBaja.resx">
+      <DependentUpon>FindTipoBaja.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoDiagnostico.resx">
+      <DependentUpon>FindTipoDiagnostico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\FindTipoEnfermedad.resx">
+      <DependentUpon>FindTipoEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoInseminacion.resx">
+      <DependentUpon>FindTipoInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\FindTipoParto.resx">
+      <DependentUpon>FindTipoParto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\GestionFincas\FindPlaga.resx">
+      <DependentUpon>FindPlaga.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\FindTipoSecado.resx">
+      <DependentUpon>FindTipoSecado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditCategoria.resx">
+      <DependentUpon>EditCategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditConformacionCanal.resx">
+      <DependentUpon>EditConformacionCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditRendimientoCanal.resx">
+      <DependentUpon>EditRendimientoCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditTipificacionCanal.resx">
+      <DependentUpon>EditTipificacionCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindCategoria.resx">
+      <DependentUpon>FindCategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindConformacionCanal.resx">
+      <DependentUpon>FindConformacionCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindEngrasamientoCanal.resx">
+      <DependentUpon>FindEngrasamientoCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindRendimientoCanal.resx">
+      <DependentUpon>FindRendimientoCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindTipificacionCanal.resx">
+      <DependentUpon>FindTipificacionCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditEngrasamientoCanal.resx">
+      <DependentUpon>EditEngrasamientoCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditFamilia.resx">
+      <DependentUpon>EditFamilia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditProducto.resx">
+      <DependentUpon>EditProducto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\EditTipoEngrasamiento.resx">
+      <DependentUpon>EditTipoEngrasamiento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditTipoProducto.resx">
+      <DependentUpon>EditTipoProducto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\ExploradorProductos.resx">
+      <DependentUpon>ExploradorProductos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FindFamilia.resx">
+      <DependentUpon>FindFamilia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FindProducto.resx">
+      <DependentUpon>FindProducto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produccion\FindTipoEngrasamiento.resx">
+      <DependentUpon>FindTipoEngrasamiento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FindTipoProducto.resx">
+      <DependentUpon>FindTipoProducto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditAnimales.resx">
+      <DependentUpon>EditAnimales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditContacto.resx">
+      <DependentUpon>EditContacto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditControlLeche.resx">
+      <DependentUpon>EditControlLeche.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\EditDiagAnimal.resx">
+      <DependentUpon>EditDiagAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditExpEsp.resx">
+      <DependentUpon>EditExpEsp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\EditExplotaciones.resx">
+      <DependentUpon>EditExplotaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditInseminacion.resx">
+      <DependentUpon>EditInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\EditPartos.resx">
+      <DependentUpon>EditPartos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\EditPesos.resx">
+      <DependentUpon>EditPesos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Control lechero\EditSecados.resx">
+      <DependentUpon>EditSecados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditCubricion.resx">
+      <DependentUpon>EditCubricion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\EditEstancia.resx">
+      <DependentUpon>EditEstancia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindCubricion.resx">
+      <DependentUpon>FindCubricion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindTipoCubricion.resx">
+      <DependentUpon>FindTipoCubricion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Inicio\SeleccionServidor.resx">
+      <DependentUpon>SeleccionServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\EditRegularizacionStock.resx">
+      <DependentUpon>EditRegularizacionStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Titulares\EditTitulares.resx">
+      <DependentUpon>EditTitulares.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\EditTratEnfermedad.resx">
+      <DependentUpon>EditTratEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\EditPersonal.resx">
+      <DependentUpon>EditPersonal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganado\FindAnimales.resx">
+      <DependentUpon>FindAnimales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\FindDiagAnimal.resx">
+      <DependentUpon>FindDiagAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\FindContacto.resx">
+      <DependentUpon>FindContacto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotacion\FindExplotaciones.resx">
+      <DependentUpon>FindExplotaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\FindInseminacion.resx">
+      <DependentUpon>FindInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reproduccion\Partos\FindPartos.resx">
+      <DependentUpon>FindPartos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control de explotación\Control lechero\FindSecados.resx">
+      <DependentUpon>FindSecados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParcelas\FindSiembra.resx">
+      <DependentUpon>FindSiembra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Titulares\FindTitulares.resx">
+      <DependentUpon>FindTitulares.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control veterinario\FindTratEnfermedad.resx">
+      <DependentUpon>FindTratEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Control Veterinario\FindPersonal.resx">
+      <DependentUpon>FindPersonal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericEdit.resx">
+      <DependentUpon>GenericEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericEditDinamico.resx">
+      <DependentUpon>GenericEditDinamico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericFind.resx">
+      <DependentUpon>GenericFind.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericInf.resx">
+      <DependentUpon>GenericInf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\GenericMaestro.resx">
+      <DependentUpon>GenericMaestro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditPlaMaq.resx">
+      <DependentUpon>EditPlaMaq.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditPlaVet.resx">
+      <DependentUpon>EditPlaVet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditPlaZon.resx">
+      <DependentUpon>EditPlaZon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditTransformacion.resx">
+      <DependentUpon>EditTransformacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\FindPlantilla.resx">
+      <DependentUpon>FindPlantilla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditPlantilla.resx">
+      <DependentUpon>EditPlantilla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\FindZona.resx">
+      <DependentUpon>FindZona.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditZona.resx">
+      <DependentUpon>EditZona.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\EditMaquinaria.resx">
+      <DependentUpon>EditMaquinaria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trazabilidad\FindMaquinaria.resx">
+      <DependentUpon>FindMaquinaria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Versionado\frmDetallesVersiones.resx">
+      <DependentUpon>frmDetallesVersiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Versionado\MuestraVersion.resx">
+      <DependentUpon>MuestraVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaMaq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaMaq.designer.cs">
+      <DependentUpon>EditPlaMaq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaVet.designer.cs">
+      <DependentUpon>EditPlaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaZon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlaZon.designer.cs">
+      <DependentUpon>EditPlaZon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditTransformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditTransformacion.designer.cs">
+      <DependentUpon>EditTransformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\FindPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\FindPlantilla.Designer.cs">
+      <DependentUpon>FindPlantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditPlantilla.designer.cs">
+      <DependentUpon>EditPlantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\FindZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\FindZona.Designer.cs">
+      <DependentUpon>FindZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditZona.Designer.cs">
+      <DependentUpon>EditZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\EditMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\EditMaquinaria.Designer.cs">
+      <DependentUpon>EditMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trazabilidad\FindMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trazabilidad\FindMaquinaria.Designer.cs">
+      <DependentUpon>FindMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Versionado\MuestraVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Versionado\MuestraVersion.Designer.cs">
+      <DependentUpon>MuestraVersion.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cup_of_milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\farm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redneck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redneck%27s_wife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\tractor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GEXVOC.Core\GEXVOC.Core.csproj">
+      <Project>{C8B06393-4B26-4E3F-9E3E-3FA022153D28}</Project>
+      <Name>GEXVOC.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kde1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kde2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ejecutar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gtk-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99 - Gastos y control de stock - Inseminaciones.swf" />
+    <None Include="Resources\98 - Compras.swf" />
+    <None Include="Resources\97 - Venta de avena producida en la propia explotacion.swf" />
+    <None Include="Resources\13 - Subsistema Alimentación.swf" />
+    <None Include="Resources\12 - Subsistema Fincas.swf" />
+    <None Include="Resources\11 - Subsistema Economía.swf" />
+    <None Include="Resources\10 - Subsistema APPCC.swf" />
+    <None Include="Resources\09 - Subsistema Trazabilidad.swf" />
+    <None Include="Resources\08 - Subsistema Libro Genealógico.swf" />
+    <None Include="Resources\07 - Subsistema Agenda.swf" />
+    <None Include="Resources\06 - Subsistema basico - Animales - Mantenimientos asociados.swf" />
+    <None Include="Resources\05 - Subsistema basico - Animales - Baja.swf" />
+    <None Include="Resources\04 - Subsistema basico - Animales - Alta.swf" />
+    <None Include="Resources\03 - Subsistema basico.swf" />
+    <None Include="Resources\02 - Gestion de Multiples Expotaciones.swf" />
+    <None Include="Resources\01 - Creacion de Explotación Inicial.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ayuda\01 - Creación de Explotación Inicial.swf">
+    </Content>
+    <Content Include="Ayuda\02 - Gestion de Multiples Expotaciones.swf">
+    </Content>
+    <Content Include="Ayuda\03 - Subsistema básico.swf">
+    </Content>
+    <Content Include="Ayuda\04 - Subsistema básico - Altas de animales.swf">
+    </Content>
+    <Content Include="Ayuda\05 - Subsistema básico - Bajas de animales.swf">
+    </Content>
+    <Content Include="Ayuda\06 - Subsistema básico - Mantenimientos relacionados con animales.swf">
+    </Content>
+    <Content Include="Ayuda\07 - Subsistema Agenda.swf">
+    </Content>
+    <Content Include="Ayuda\08 - Subsistema Libro Genealógico.swf">
+    </Content>
+    <Content Include="Ayuda\09 - Subsistema Trazabilidad.swf">
+    </Content>
+    <Content Include="Ayuda\10 - Subsistema APPCC.swf">
+    </Content>
+    <Content Include="Ayuda\11 - Subsistema Economía.swf">
+    </Content>
+    <Content Include="Ayuda\12 - Subsistema Fincas.swf">
+    </Content>
+    <Content Include="Ayuda\13 - Subsistema Alimentación.swf">
+    </Content>
+    <Content Include="Ayuda\14 - Subsistema Sanidad.swf">
+    </Content>
+    <Content Include="Ayuda\15 - Subsistema Reproducción %28Parte 1%29.swf">
+    </Content>
+    <Content Include="Ayuda\15 - Subsistema Reproducción %28Parte 2%29.swf">
+    </Content>
+    <Content Include="Ayuda\16 - Subsistema Producción Carne.swf">
+    </Content>
+    <Content Include="Ayuda\17 - Subsistema Producción Leche.swf">
+    </Content>
+    <Content Include="Ayuda\20 - Personalización de Subsistemas.swf">
+    </Content>
+    <Content Include="Ayuda\21 - Importar Animales %28Bovino%29.swf" />
+    <Content Include="Ayuda\22 - Importar Animales %28Ovino-Caprino%29.swf" />
+    <Content Include="Ayuda\23 - Importar Animales %28Bovino%29 Web Pigan.swf" />
+    <Content Include="Ayuda\24 - Importar Controles.swf" />
+    <Content Include="Ayuda\A - Venta de avena producida en la propia explotación.swf">
+    </Content>
+    <Content Include="Ayuda\B - Compra de Arroz.swf">
+    </Content>
+    <Content Include="Ayuda\C - Gastos y control de stock - Inseminaciones.swf">
+    </Content>
+    <Content Include="Ayuda\D - Combos Extendidos.swf">
+    </Content>
+    <None Include="Resources\innogan.jpg" />
+    <None Include="Resources\innogan1.jpg" />
+    <None Include="Resources\Innogan_peque.png" />
+    <None Include="Resources\Innogan_Trans.png" />
+    <None Include="Resources\Innogan_Trans1.png" />
+    <None Include="Resources\innoganBlanco.png" />
+    <None Include="Resources\innoganBlanco1.png" />
+    <None Include="Resources\andaluciablanco.png" />
+    <None Include="Resources\leaderblanco.png" />
+    <None Include="Resources\andaluciablanco2.png" />
+    <None Include="Resources\andaluciablanco1.png" />
+    <None Include="Resources\andaluciablanco21.png" />
+    <None Include="Resources\andaluciablanco22.png" />
+    <None Include="Resources\janda.png" />
+    <None Include="Resources\janda1.png" />
+    <None Include="Resources\UE.png" />
+    <None Include="Resources\Lateral.png" />
+    <None Include="Resources\Lateral-gexvoc copia.png" />
+    <None Include="Resources\cuerpo.png" />
+    <None Include="Resources\Lateral1.png" />
+    <None Include="Resources\Lateral-gexvoc_1.png" />
+    <None Include="Resources\Lateral-gexvoc_11.png" />
+    <Content Include="Scripts\1.0.04.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.05.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.06.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.07.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.08.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.09.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.10.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.11.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.12.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.13.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.14.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.15.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.16.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\1.0.17.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

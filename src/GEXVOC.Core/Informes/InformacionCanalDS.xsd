@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InformacionCanalDS" targetNamespace="http://tempuri.org/RendimientoCanalDS.xsd" xmlns:mstns="http://tempuri.org/RendimientoCanalDS.xsd" xmlns="http://tempuri.org/RendimientoCanalDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InformacionCanalDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="InformacionCanalDS" msprop:Generator_DataSetName="InformacionCanalDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="InformacionCanal" msprop:Generator_UserTableName="InformacionCanal" msprop:Generator_RowDeletedName="InformacionCanalRowDeleted" msprop:Generator_RowChangedName="InformacionCanalRowChanged" msprop:Generator_RowClassName="InformacionCanalRow" msprop:Generator_RowChangingName="InformacionCanalRowChanging" msprop:Generator_RowEvArgName="InformacionCanalRowChangeEvent" msprop:Generator_RowEvHandlerName="InformacionCanalRowChangeEventHandler" msprop:Generator_TableClassName="InformacionCanalDataTable" msprop:Generator_TableVarName="tableInformacionCanal" msprop:Generator_RowDeletingName="InformacionCanalRowDeleting" msprop:Generator_TablePropName="InformacionCanal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipificacionFecha" msprop:Generator_UserColumnName="TipificacionFecha" msprop:Generator_ColumnPropNameInRow="TipificacionFecha" msprop:Generator_ColumnVarNameInTable="columnTipificacionFecha" msprop:Generator_ColumnPropNameInTable="TipificacionFechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TipificacionDescConformacion" msprop:Generator_UserColumnName="TipificacionDescConformacion" msprop:Generator_ColumnPropNameInRow="TipificacionDescConformacion" msprop:Generator_ColumnVarNameInTable="columnTipificacionDescConformacion" msprop:Generator_ColumnPropNameInTable="TipificacionDescConformacionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TipificacionDescCategoria" msprop:Generator_UserColumnName="TipificacionDescCategoria" msprop:Generator_ColumnPropNameInRow="TipificacionDescCategoria" msprop:Generator_ColumnVarNameInTable="columnTipificacionDescCategoria" msprop:Generator_ColumnPropNameInTable="TipificacionDescCategoriaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EngrasamientoFecha" msprop:Generator_UserColumnName="EngrasamientoFecha" msprop:Generator_ColumnPropNameInRow="EngrasamientoFecha" msprop:Generator_ColumnVarNameInTable="columnEngrasamientoFecha" msprop:Generator_ColumnPropNameInTable="EngrasamientoFechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EngrasamientoDescTipo" msprop:Generator_UserColumnName="EngrasamientoDescTipo" msprop:Generator_ColumnPropNameInRow="EngrasamientoDescTipo" msprop:Generator_ColumnVarNameInTable="columnEngrasamientoDescTipo" msprop:Generator_ColumnPropNameInTable="EngrasamientoDescTipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="RendimientoFecha" msprop:Generator_UserColumnName="RendimientoFecha" msprop:Generator_ColumnPropNameInRow="RendimientoFecha" msprop:Generator_ColumnVarNameInTable="columnRendimientoFecha" msprop:Generator_ColumnPropNameInTable="RendimientoFechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RendimientoRendimiento" msprop:Generator_UserColumnName="RendimientoRendimiento" msprop:Generator_ColumnPropNameInRow="RendimientoRendimiento" msprop:Generator_ColumnVarNameInTable="columnRendimientoRendimiento" msprop:Generator_ColumnPropNameInTable="RendimientoRendimientoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IdTipificacion" msprop:Generator_UserColumnName="IdTipificacion" msprop:Generator_ColumnPropNameInRow="IdTipificacion" msprop:Generator_ColumnVarNameInTable="columnIdTipificacion" msprop:Generator_ColumnPropNameInTable="IdTipificacionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdEngrasamiento" msprop:Generator_UserColumnName="IdEngrasamiento" msprop:Generator_ColumnPropNameInRow="IdEngrasamiento" msprop:Generator_ColumnVarNameInTable="columnIdEngrasamiento" msprop:Generator_ColumnPropNameInTable="IdEngrasamientoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdRendimiento" msprop:Generator_UserColumnName="IdRendimiento" msprop:Generator_ColumnPropNameInRow="IdRendimiento" msprop:Generator_ColumnVarNameInTable="columnIdRendimiento" msprop:Generator_ColumnPropNameInTable="IdRendimientoColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

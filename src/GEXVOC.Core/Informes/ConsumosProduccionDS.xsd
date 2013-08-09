@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConsumosProduccionDS" targetNamespace="http://tempuri.org/ConsumosProduccionDS.xsd" xmlns:mstns="http://tempuri.org/ConsumosProduccionDS.xsd" xmlns="http://tempuri.org/ConsumosProduccionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConsumosProduccionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ConsumosProduccionDS" msprop:Generator_UserDSName="ConsumosProduccionDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lactacion" msprop:Generator_UserTableName="Lactacion" msprop:Generator_RowDeletedName="LactacionRowDeleted" msprop:Generator_TableClassName="LactacionDataTable" msprop:Generator_RowChangedName="LactacionRowChanged" msprop:Generator_RowClassName="LactacionRow" msprop:Generator_RowChangingName="LactacionRowChanging" msprop:Generator_RowEvArgName="LactacionRowChangeEvent" msprop:Generator_RowEvHandlerName="LactacionRowChangeEventHandler" msprop:Generator_TablePropName="Lactacion" msprop:Generator_TableVarName="tableLactacion" msprop:Generator_RowDeletingName="LactacionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="FechaInicio" msprop:Generator_UserColumnName="FechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" type="xs:dateTime" />
+              <xs:element name="FechaFin" msprop:Generator_UserColumnName="FechaFin" msprop:Generator_ColumnPropNameInRow="FechaFin" msprop:Generator_ColumnVarNameInTable="columnFechaFin" msprop:Generator_ColumnPropNameInTable="FechaFinColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Modificable" msprop:Generator_UserColumnName="Modificable" msprop:Generator_ColumnPropNameInRow="Modificable" msprop:Generator_ColumnVarNameInTable="columnModificable" msprop:Generator_ColumnPropNameInTable="ModificableColumn" type="xs:boolean" />
+              <xs:element name="TotalLeche" msprop:Generator_UserColumnName="TotalLeche" msprop:Generator_ColumnPropNameInRow="TotalLeche" msprop:Generator_ColumnVarNameInTable="columnTotalLeche" msprop:Generator_ColumnPropNameInTable="TotalLecheColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lactacion" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PrevalenciaEnfermedadesDS" targetNamespace="http://tempuri.org/PrevalenciaEnfermedadesDS.xsd" xmlns:mstns="http://tempuri.org/PrevalenciaEnfermedadesDS.xsd" xmlns="http://tempuri.org/PrevalenciaEnfermedadesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PrevalenciaEnfermedadesDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PrevalenciaEnfermedadesDS" msprop:Generator_DataSetName="PrevalenciaEnfermedadesDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Animal" msprop:Generator_UserTableName="Animal" msprop:Generator_RowDeletedName="AnimalRowDeleted" msprop:Generator_RowChangedName="AnimalRowChanged" msprop:Generator_RowClassName="AnimalRow" msprop:Generator_RowChangingName="AnimalRowChanging" msprop:Generator_RowEvArgName="AnimalRowChangeEvent" msprop:Generator_RowEvHandlerName="AnimalRowChangeEventHandler" msprop:Generator_TableClassName="AnimalDataTable" msprop:Generator_TableVarName="tableAnimal" msprop:Generator_RowDeletingName="AnimalRowDeleting" msprop:Generator_TablePropName="Animal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdExplotacion" msprop:Generator_UserColumnName="IdExplotacion" msprop:Generator_ColumnVarNameInTable="columnIdExplotacion" msprop:Generator_ColumnPropNameInRow="IdExplotacion" msprop:Generator_ColumnPropNameInTable="IdExplotacionColumn" type="xs:int" />
+              <xs:element name="IdRaza" msprop:Generator_UserColumnName="IdRaza" msprop:Generator_ColumnVarNameInTable="columnIdRaza" msprop:Generator_ColumnPropNameInRow="IdRaza" msprop:Generator_ColumnPropNameInTable="IdRazaColumn" type="xs:int" />
+              <xs:element name="IdEstado" msprop:Generator_UserColumnName="IdEstado" msprop:Generator_ColumnVarNameInTable="columnIdEstado" msprop:Generator_ColumnPropNameInRow="IdEstado" msprop:Generator_ColumnPropNameInTable="IdEstadoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdTalla" msprop:Generator_UserColumnName="IdTalla" msprop:Generator_ColumnVarNameInTable="columnIdTalla" msprop:Generator_ColumnPropNameInRow="IdTalla" msprop:Generator_ColumnPropNameInTable="IdTallaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdConformacion" msprop:Generator_UserColumnName="IdConformacion" msprop:Generator_ColumnVarNameInTable="columnIdConformacion" msprop:Generator_ColumnPropNameInRow="IdConformacion" msprop:Generator_ColumnPropNameInTable="IdConformacionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DIB" msprop:Generator_UserColumnName="DIB" msprop:Generator_ColumnVarNameInTable="columnDIB" msprop:Generator_ColumnPropNameInRow="DIB" msprop:Generator_ColumnPropNameInTable="DIBColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Crotal" msprop:Generator_UserColumnName="Crotal" msprop:Generator_ColumnVarNameInTable="columnCrotal" msprop:Generator_ColumnPropNameInRow="Crotal" msprop:Generator_ColumnPropNameInTable="CrotalColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tatuaje" msprop:Generator_UserColumnName="Tatuaje" msprop:Generator_ColumnVarNameInTable="columnTatuaje" msprop:Generator_ColumnPropNameInRow="Tatuaje" msprop:Generator_ColumnPropNameInTable="TatuajeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genotipo" msprop:Generator_UserColumnName="Genotipo" msprop:Generator_ColumnVarNameInTable="columnGenotipo" msprop:Generator_ColumnPropNameInRow="Genotipo" msprop:Generator_ColumnPropNameInTable="GenotipoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaNacimiento" msprop:Generator_UserColumnName="FechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" type="xs:dateTime" />
+              <xs:element name="FechaDestete" msprop:Generator_UserColumnName="FechaDestete" msprop:Generator_ColumnVarNameInTable="columnFechaDestete" msprop:Generator_ColumnPropNameInRow="FechaDestete" msprop:Generator_ColumnPropNameInTable="FechaDesteteColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sexo" msprop:Generator_UserColumnName="Sexo" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Morfologia" msprop:Generator_UserColumnName="Morfologia" msprop:Generator_ColumnVarNameInTable="columnMorfologia" msprop:Generator_ColumnPropNameInRow="Morfologia" msprop:Generator_ColumnPropNameInTable="MorfologiaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DescRaza" msprop:Generator_UserColumnName="DescRaza" msprop:Generator_ColumnVarNameInTable="columnDescRaza" msprop:Generator_ColumnPropNameInRow="DescRaza" msprop:Generator_ColumnPropNameInTable="DescRazaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescEspecie" msprop:Generator_UserColumnName="DescEspecie" msprop:Generator_ColumnVarNameInTable="columnDescEspecie" msprop:Generator_ColumnPropNameInRow="DescEspecie" msprop:Generator_ColumnPropNameInTable="DescEspecieColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DiagAnimal" msprop:Generator_UserTableName="DiagAnimal" msprop:Generator_RowDeletedName="DiagAnimalRowDeleted" msprop:Generator_RowChangedName="DiagAnimalRowChanged" msprop:Generator_RowClassName="DiagAnimalRow" msprop:Generator_RowChangingName="DiagAnimalRowChanging" msprop:Generator_RowEvArgName="DiagAnimalRowChangeEvent" msprop:Generator_RowEvHandlerName="DiagAnimalRowChangeEventHandler" msprop:Generator_TableClassName="DiagAnimalDataTable" msprop:Generator_TableVarName="tableDiagAnimal" msprop:Generator_RowDeletingName="DiagAnimalRowDeleting" msprop:Generator_TablePropName="DiagAnimal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdAnimal" msprop:Generator_UserColumnName="IdAnimal" msprop:Generator_ColumnVarNameInTable="columnIdAnimal" msprop:Generator_ColumnPropNameInRow="IdAnimal" msprop:Generator_ColumnPropNameInTable="IdAnimalColumn" type="xs:int" />
+              <xs:element name="IdEnfermedad" msprop:Generator_UserColumnName="IdEnfermedad" msprop:Generator_ColumnVarNameInTable="columnIdEnfermedad" msprop:Generator_ColumnPropNameInRow="IdEnfermedad" msprop:Generator_ColumnPropNameInTable="IdEnfermedadColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IdVeterinario" msprop:Generator_UserColumnName="IdVeterinario" msprop:Generator_ColumnVarNameInTable="columnIdVeterinario" msprop:Generator_ColumnPropNameInRow="IdVeterinario" msprop:Generator_ColumnPropNameInTable="IdVeterinarioColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescEnfermedad" msprop:Generator_UserColumnName="DescEnfermedad" msprop:Generator_ColumnVarNameInTable="columnDescEnfermedad" msprop:Generator_ColumnPropNameInRow="DescEnfermedad" msprop:Generator_ColumnPropNameInTable="DescEnfermedadColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Animal" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="DiagAnimal_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DiagAnimal" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DiagAnimal_Animal" msdata:parent="DiagAnimal" msdata:child="Animal" msdata:parentkey="IdAnimal" msdata:childkey="Id" msprop:Generator_UserRelationName="DiagAnimal_Animal" msprop:Generator_RelationVarName="relationDiagAnimal_Animal" msprop:Generator_UserChildTable="Animal" msprop:Generator_UserParentTable="DiagAnimal" msprop:Generator_ParentPropName="DiagAnimalRow" msprop:Generator_ChildPropName="GetAnimalRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,975 @@
+﻿// Sección de declaración de nombre de tablas del archivo de mapeo.
+		
+		public System.Data.Linq.Table<Abonado> Abonados
+        {
+            get
+            {
+                return this.GetTable<Abonado>();
+            }
+        }
+
+        public System.Data.Linq.Table<Veterinario> Veterinarios
+        {
+            get
+            {
+                return this.GetTable<Veterinario>();
+            }
+        }
+
+        public System.Data.Linq.Table<Aborto> Abortos
+        {
+            get
+            {
+                return this.GetTable<Aborto>();
+            }
+        }
+
+        public System.Data.Linq.Table<AniLot> AniLot
+        {
+            get
+            {
+                return this.GetTable<AniLot>();
+            }
+        }
+
+        public System.Data.Linq.Table<Animal> Animales
+        {
+            get
+            {
+                return this.GetTable<Animal>();
+            }
+        }
+
+        public System.Data.Linq.Table<APPCC> APPCC
+        {
+            get
+            {
+                return this.GetTable<APPCC>();
+            }
+        }
+
+        public System.Data.Linq.Table<Asignacion> Asignaciones
+        {
+            get
+            {
+                return this.GetTable<Asignacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Baja> Bajas
+        {
+            get
+            {
+                return this.GetTable<Baja>();
+            }
+        }
+
+        public System.Data.Linq.Table<Categoria> Categorias
+        {
+            get
+            {
+                return this.GetTable<Categoria>();
+            }
+        }
+
+        public System.Data.Linq.Table<Celo> Celos
+        {
+            get
+            {
+                return this.GetTable<Celo>();
+            }
+        }
+
+        public System.Data.Linq.Table<Cita> Citas
+        {
+            get
+            {
+                return this.GetTable<Cita>();
+            }
+        }
+
+        public System.Data.Linq.Table<Cliente> Clientes
+        {
+            get
+            {
+                return this.GetTable<Cliente>();
+            }
+        }
+
+        public System.Data.Linq.Table<Composicion> Composiciones
+        {
+            get
+            {
+                return this.GetTable<Composicion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Compra> Compras
+        {
+            get
+            {
+                return this.GetTable<Compra>();
+            }
+        }
+
+        public System.Data.Linq.Table<CondicionCorporal> CondicionesCorporales
+        {
+            get
+            {
+                return this.GetTable<CondicionCorporal>();
+            }
+        }
+
+        public System.Data.Linq.Table<CondicionJuridica> CondicionesJuridicas
+        {
+            get
+            {
+                return this.GetTable<CondicionJuridica>();
+            }
+        }
+
+        public System.Data.Linq.Table<Configuracion> Configuraciones
+        {
+            get
+            {
+                return this.GetTable<Configuracion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Conformacion> Conformaciones
+        {
+            get
+            {
+                return this.GetTable<Conformacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<ConformacionCanal> ConformacionesCanal
+        {
+            get
+            {
+                return this.GetTable<ConformacionCanal>();
+            }
+        }
+
+        public System.Data.Linq.Table<Contacto> Contactos
+        {
+            get
+            {
+                return this.GetTable<Contacto>();
+            }
+        }
+
+        public System.Data.Linq.Table<ControlLeche> Controles
+        {
+            get
+            {
+                return this.GetTable<ControlLeche>();
+            }
+        }
+
+        public System.Data.Linq.Table<Cubricion> Cubriciones
+        {
+            get
+            {
+                return this.GetTable<Cubricion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Cuenta> Cuentas
+        {
+            get
+            {
+                return this.GetTable<Cuenta>();
+            }
+        }
+
+        public System.Data.Linq.Table<DiagAnimal> DiagsAnimales
+        {
+            get
+            {
+                return this.GetTable<DiagAnimal>();
+            }
+        }
+
+        public System.Data.Linq.Table<DiagInseminacion> DiagsInseminaciones
+        {
+            get
+            {
+                return this.GetTable<DiagInseminacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Enfermedad> Enfermedades
+        {
+            get
+            {
+                return this.GetTable<Enfermedad>();
+            }
+        }
+
+        public System.Data.Linq.Table<EngrasamientoCanal> EngrasamientosCanal
+        {
+            get
+            {
+                return this.GetTable<EngrasamientoCanal>();
+            }
+        }
+
+        public System.Data.Linq.Table<Especie> Especies
+        {
+            get
+            {
+                return this.GetTable<Especie>();
+            }
+        }
+
+        public System.Data.Linq.Table<Estado> Estados
+        {
+            get
+            {
+                return this.GetTable<Estado>();
+            }
+        }
+
+        public System.Data.Linq.Table<Estancia> Estancias
+        {
+            get
+            {
+                return this.GetTable<Estancia>();
+            }
+        }
+
+        public System.Data.Linq.Table<ExpCli> ExpCli
+        {
+            get
+            {
+                return this.GetTable<ExpCli>();
+            }
+        }
+
+        public System.Data.Linq.Table<ExpEsp> ExpEsp
+        {
+            get
+            {
+                return this.GetTable<ExpEsp>();
+            }
+        }
+
+        public System.Data.Linq.Table<Explotacion> Explotaciones
+        {
+            get
+            {
+                return this.GetTable<Explotacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<ExpMod> ExpMod
+        {
+            get
+            {
+                return this.GetTable<ExpMod>();
+            }
+        }
+
+        public System.Data.Linq.Table<ExpPro> ExpPro
+        {
+            get
+            {
+                return this.GetTable<ExpPro>();
+            }
+        }
+
+        public System.Data.Linq.Table<ExpTit> ExpTit
+        {
+            get
+            {
+                return this.GetTable<ExpTit>();
+            }
+        }
+
+        public System.Data.Linq.Table<Extendida> Extendidas
+        {
+            get
+            {
+                return this.GetTable<Extendida>();
+            }
+        }
+
+        public System.Data.Linq.Table<Facilidad> Facilidades
+        {
+            get
+            {
+                return this.GetTable<Facilidad>();
+            }
+        }
+
+        public System.Data.Linq.Table<Familia> Familias
+        {
+            get
+            {
+                return this.GetTable<Familia>();
+            }
+        }
+
+        public System.Data.Linq.Table<Gasto> Gastos
+        {
+            get
+            {
+                return this.GetTable<Gasto>();
+            }
+        }
+
+        public System.Data.Linq.Table<HistMedicamento> HistMedicamentos
+        {
+            get
+            {
+                return this.GetTable<HistMedicamento>();
+            }
+        }
+
+        public System.Data.Linq.Table<Inseminacion> Inseminaciones
+        {
+            get
+            {
+                return this.GetTable<Inseminacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<InsPar> InsPar
+        {
+            get
+            {
+                return this.GetTable<InsPar>();
+            }
+        }
+
+        public System.Data.Linq.Table<Laboratorio> Laboratorios
+        {
+            get
+            {
+                return this.GetTable<Laboratorio>();
+            }
+        }
+
+        public System.Data.Linq.Table<Lactacion> Lactaciones
+        {
+            get
+            {
+                return this.GetTable<Lactacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<LibroGenealogico> LibrosGenealogicos
+        {
+            get
+            {
+                return this.GetTable<LibroGenealogico>();
+            }
+        }
+
+        public System.Data.Linq.Table<LoteAnimal> LotesAnimales
+        {
+            get
+            {
+                return this.GetTable<LoteAnimal>();
+            }
+        }
+
+        public System.Data.Linq.Table<Menu> Menus
+        {
+            get
+            {
+                return this.GetTable<Menu>();
+            }
+        }
+
+        public System.Data.Linq.Table<Modulo> Modulos
+        {
+            get
+            {
+                return this.GetTable<Modulo>();
+            }
+        }
+
+        public System.Data.Linq.Table<Momento> Momentos
+        {
+            get
+            {
+                return this.GetTable<Momento>();
+            }
+        }
+
+        public System.Data.Linq.Table<Motivo> Motivos
+        {
+            get
+            {
+                return this.GetTable<Motivo>();
+            }
+        }
+
+        public System.Data.Linq.Table<MuestraControl> MuestrasControles
+        {
+            get
+            {
+                return this.GetTable<MuestraControl>();
+            }
+        }
+
+        public System.Data.Linq.Table<Municipio> Municipios
+        {
+            get
+            {
+                return this.GetTable<Municipio>();
+            }
+        }
+
+        public System.Data.Linq.Table<Naturaleza> Naturalezas
+        {
+            get
+            {
+                return this.GetTable<Naturaleza>();
+            }
+        }
+
+        public System.Data.Linq.Table<Parcela> Parcelas
+        {
+            get
+            {
+                return this.GetTable<Parcela>();
+            }
+        }
+
+        public System.Data.Linq.Table<Parto> Partos
+        {
+            get
+            {
+                return this.GetTable<Parto>();
+            }
+        }
+
+        public System.Data.Linq.Table<Pastoreo> Pastoreos
+        {
+            get
+            {
+                return this.GetTable<Pastoreo>();
+            }
+        }
+
+        public System.Data.Linq.Table<Peso> Pesos
+        {
+            get
+            {
+                return this.GetTable<Peso>();
+            }
+        }
+
+        public System.Data.Linq.Table<Plaga> Plagas
+        {
+            get
+            {
+                return this.GetTable<Plaga>();
+            }
+        }
+
+        public System.Data.Linq.Table<Producto> Productos
+        {
+            get
+            {
+                return this.GetTable<Producto>();
+            }
+        }
+
+        public System.Data.Linq.Table<Programa> Programas
+        {
+            get
+            {
+                return this.GetTable<Programa>();
+            }
+        }
+
+        public System.Data.Linq.Table<Proveedor> Proveedores
+        {
+            get
+            {
+                return this.GetTable<Proveedor>();
+            }
+        }
+
+        public System.Data.Linq.Table<Provincia> Provincias
+        {
+            get
+            {
+                return this.GetTable<Provincia>();
+            }
+        }
+
+        public System.Data.Linq.Table<Racion> Raciones
+        {
+            get
+            {
+                return this.GetTable<Racion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Raza> Razas
+        {
+            get
+            {
+                return this.GetTable<Raza>();
+            }
+        }
+
+        public System.Data.Linq.Table<Recolecta> Recolectas
+        {
+            get
+            {
+                return this.GetTable<Recolecta>();
+            }
+        }
+
+        public System.Data.Linq.Table<RendimientoCanal> RendimientosCanal
+        {
+            get
+            {
+                return this.GetTable<RendimientoCanal>();
+            }
+        }
+
+        public System.Data.Linq.Table<Secado> Secados
+        {
+            get
+            {
+                return this.GetTable<Secado>();
+            }
+        }
+
+        public System.Data.Linq.Table<Siembra> Siembras
+        {
+            get
+            {
+                return this.GetTable<Siembra>();
+            }
+        }
+
+        public System.Data.Linq.Table<SincronizacionCelo> SincronizacionCelos
+        {
+            get
+            {
+                return this.GetTable<SincronizacionCelo>();
+            }
+        }
+
+        public System.Data.Linq.Table<StatusControl> StatusControles
+        {
+            get
+            {
+                return this.GetTable<StatusControl>();
+            }
+        }
+
+        public System.Data.Linq.Table<StatusOrdeno> StatusOrdenos
+        {
+            get
+            {
+                return this.GetTable<StatusOrdeno>();
+            }
+        }
+
+        public System.Data.Linq.Table<Stock> Stocks
+        {
+            get
+            {
+                return this.GetTable<Stock>();
+            }
+        }
+
+        public System.Data.Linq.Table<Talla> Tallas
+        {
+            get
+            {
+                return this.GetTable<Talla>();
+            }
+        }
+
+        public System.Data.Linq.Table<Tarea> Tareas
+        {
+            get
+            {
+                return this.GetTable<Tarea>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipificacionCanal> TipificacionesCanal
+        {
+            get
+            {
+                return this.GetTable<TipificacionCanal>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoAborto> TiposAbortos
+        {
+            get
+            {
+                return this.GetTable<TipoAborto>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoBaja> TiposBajas
+        {
+            get
+            {
+                return this.GetTable<TipoBaja>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoCompra> TiposCompras
+        {
+            get
+            {
+                return this.GetTable<TipoCompra>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoDiagnostico> TiposDiagnosticos
+        {
+            get
+            {
+                return this.GetTable<TipoDiagnostico>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoEnfermedad> TiposEnfermedades
+        {
+            get
+            {
+                return this.GetTable<TipoEnfermedad>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoEngrasamiento> TiposEngrasamientos
+        {
+            get
+            {
+                return this.GetTable<TipoEngrasamiento>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoInseminacion> TiposInseminaciones
+        {
+            get
+            {
+                return this.GetTable<TipoInseminacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoParto> TiposPartos
+        {
+            get
+            {
+                return this.GetTable<TipoParto>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoProducto> TiposProductos
+        {
+            get
+            {
+                return this.GetTable<TipoProducto>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoSecado> TiposSecados
+        {
+            get
+            {
+                return this.GetTable<TipoSecado>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoVenta> TiposVentas
+        {
+            get
+            {
+                return this.GetTable<TipoVenta>();
+            }
+        }
+
+        public System.Data.Linq.Table<Titular> Titulares
+        {
+            get
+            {
+                return this.GetTable<Titular>();
+            }
+        }
+
+        public System.Data.Linq.Table<TratEnfermedad> TratsEnfermedades
+        {
+            get
+            {
+                return this.GetTable<TratEnfermedad>();
+            }
+        }
+        public System.Data.Linq.Table<Receta> Receta
+        {
+            get
+            {
+                return this.GetTable<Receta>();
+            }
+        }
+        public System.Data.Linq.Table<TratHigiene> TratsHigiene
+        {
+            get
+            {
+                return this.GetTable<TratHigiene>();
+            }
+        }
+
+        public System.Data.Linq.Table<TratParcela> TratsParcelas
+        {
+            get
+            {
+                return this.GetTable<TratParcela>();
+            }
+        }
+
+        public System.Data.Linq.Table<Venta> Ventas
+        {
+            get
+            {
+                return this.GetTable<Venta>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoCondicion> TiposCondiciones
+        {
+            get
+            {
+                return this.GetTable<TipoCondicion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Alta> Altas
+        {
+            get
+            {
+                return this.GetTable<Alta>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoAlta> TiposAltas
+        {
+            get
+            {
+                return this.GetTable<TipoAlta>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoContacto> TipoContacto
+        {
+            get
+            {
+                return this.GetTable<TipoContacto>();
+            }
+        }
+
+        public System.Data.Linq.Table<Analisis> Analisis
+        {
+            get
+            {
+                return this.GetTable<Analisis>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoAnalisis> TipoAnalisis
+        {
+            get
+            {
+                return this.GetTable<TipoAnalisis>();
+            }
+        }
+
+        public System.Data.Linq.Table<Combinacion> Combinaciones
+        {
+            get
+            {
+                return this.GetTable<Combinacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Marcador> Marcadores
+        {
+            get
+            {
+                return this.GetTable<Marcador>();
+            }
+        }
+
+        public System.Data.Linq.Table<Resena> Resenas
+        {
+            get
+            {
+                return this.GetTable<Resena>();
+            }
+        }
+
+        public System.Data.Linq.Table<Proceso> Proceso
+        {
+            get
+            {
+                return this.GetTable<Proceso>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoPersonal> TipoPersonal
+        {
+            get
+            {
+                return this.GetTable<TipoPersonal>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoCubricion> TipoCubricion
+        {
+            get
+            {
+                return this.GetTable<TipoCubricion>();
+            }
+        }
+
+        public System.Data.Linq.Table<TratHigiene> TratHigiene
+        {
+            get
+            {
+                return this.GetTable<TratHigiene>();
+            }
+        }
+
+        public System.Data.Linq.Table<PlanHigiene> PlanHigiene
+        {
+            get
+            {
+                return this.GetTable<PlanHigiene>();
+            }
+        }
+
+        public System.Data.Linq.Table<ProHig> ProHig
+        {
+            get
+            {
+                return this.GetTable<ProHig>();
+            }
+        }
+
+        public System.Data.Linq.Table<TratProfilaxis> TratProfilaxis
+        {
+            get
+            {
+                return this.GetTable<TratProfilaxis>();
+            }
+        }
+
+        public System.Data.Linq.Table<AniPro> AniPro
+        {
+            get
+            {
+                return this.GetTable<AniPro>();
+            }
+        }
+
+        public System.Data.Linq.Table<ProPro> ProPro
+        {
+            get
+            {
+                return this.GetTable<ProPro>();
+            }
+        }
+
+        public System.Data.Linq.Table<Movimiento> Movimiento
+        {
+            get
+            {
+                return this.GetTable<Movimiento>();
+            }
+        }
+
+        public System.Data.Linq.Table<Maquinaria> Maquinaria
+        {
+            get
+            {
+                return this.GetTable<Maquinaria>();
+            }
+        }
+
+        public System.Data.Linq.Table<Zona> Zonas
+        {
+            get
+            {
+                return this.GetTable<Zona>();
+            }
+        }
+
+        public System.Data.Linq.Table<Plantilla> Plantillas
+        {
+            get
+            {
+                return this.GetTable<Plantilla>();
+            }
+        }
+
+        public System.Data.Linq.Table<PlaMaq> PlaMaq
+        {
+            get
+            {
+                return this.GetTable<PlaMaq>();
+            }
+        }
+
+        public System.Data.Linq.Table<PlaZon> PlaZon
+        {
+            get
+            {
+                return this.GetTable<PlaZon>();
+            }
+        }
+
+        public System.Data.Linq.Table<Ejecucion> Ejecuciones
+        {
+            get
+            {
+                return this.GetTable<Ejecucion>();
+            }
+        }
+
+        public System.Data.Linq.Table<Transformacion> Transformaciones
+        {
+            get
+            {
+                return this.GetTable<Transformacion>();
+            }
+        }
+
+        public System.Data.Linq.Table<PlaVet> PlaVet
+        {
+            get
+            {
+                return this.GetTable<PlaVet>();
+            }
+        }
+
+        public System.Data.Linq.Table<TipoLote> TipoLote
+        {
+            get
+            {
+                return this.GetTable<TipoLote>();
+            }
+        }
+
+        public System.Data.Linq.Table<Fotografia> Fotografia
+        {
+            get
+            {
+                return this.GetTable<Fotografia>();
+            }
+        }

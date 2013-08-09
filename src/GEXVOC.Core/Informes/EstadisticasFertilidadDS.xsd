@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EstadisticasFertilidadDS" targetNamespace="http://tempuri.org/EstadisticasFertilidadDS.xsd" xmlns:mstns="http://tempuri.org/EstadisticasFertilidadDS.xsd" xmlns="http://tempuri.org/EstadisticasFertilidadDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EstadisticasFertilidadDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="EstadisticasFertilidadDS" msprop:Generator_UserDSName="EstadisticasFertilidadDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Estadistica" msprop:Generator_UserTableName="Estadistica" msprop:Generator_RowDeletedName="EstadisticaRowDeleted" msprop:Generator_TableClassName="EstadisticaDataTable" msprop:Generator_RowChangedName="EstadisticaRowChanged" msprop:Generator_RowClassName="EstadisticaRow" msprop:Generator_RowChangingName="EstadisticaRowChanging" msprop:Generator_RowEvArgName="EstadisticaRowChangeEvent" msprop:Generator_RowEvHandlerName="EstadisticaRowChangeEventHandler" msprop:Generator_TablePropName="Estadistica" msprop:Generator_TableVarName="tableEstadistica" msprop:Generator_RowDeletingName="EstadisticaRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Inseminados" msprop:Generator_UserColumnName="Inseminados" msprop:Generator_ColumnPropNameInRow="Inseminados" msprop:Generator_ColumnVarNameInTable="columnInseminados" msprop:Generator_ColumnPropNameInTable="InseminadosColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Gestantes" msprop:Generator_UserColumnName="Gestantes" msprop:Generator_ColumnPropNameInRow="Gestantes" msprop:Generator_ColumnVarNameInTable="columnGestantes" msprop:Generator_ColumnPropNameInTable="GestantesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Primera" msprop:Generator_UserColumnName="Primera" msprop:Generator_ColumnPropNameInRow="Primera" msprop:Generator_ColumnVarNameInTable="columnPrimera" msprop:Generator_ColumnPropNameInTable="PrimeraColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Segunda" msprop:Generator_UserColumnName="Segunda" msprop:Generator_ColumnPropNameInRow="Segunda" msprop:Generator_ColumnVarNameInTable="columnSegunda" msprop:Generator_ColumnPropNameInTable="SegundaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Tercera" msprop:Generator_UserColumnName="Tercera" msprop:Generator_ColumnPropNameInRow="Tercera" msprop:Generator_ColumnVarNameInTable="columnTercera" msprop:Generator_ColumnPropNameInTable="TerceraColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Mas" msprop:Generator_UserColumnName="Mas" msprop:Generator_ColumnPropNameInRow="Mas" msprop:Generator_ColumnVarNameInTable="columnMas" msprop:Generator_ColumnPropNameInTable="MasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundidad1" msprop:Generator_UserColumnName="Fecundidad1" msprop:Generator_ColumnPropNameInRow="Fecundidad1" msprop:Generator_ColumnVarNameInTable="columnFecundidad1" msprop:Generator_ColumnPropNameInTable="Fecundidad1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundidad2" msprop:Generator_UserColumnName="Fecundidad2" msprop:Generator_ColumnPropNameInRow="Fecundidad2" msprop:Generator_ColumnVarNameInTable="columnFecundidad2" msprop:Generator_ColumnPropNameInTable="Fecundidad2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundidad3" msprop:Generator_UserColumnName="Fecundidad3" msprop:Generator_ColumnPropNameInRow="Fecundidad3" msprop:Generator_ColumnVarNameInTable="columnFecundidad3" msprop:Generator_ColumnPropNameInTable="Fecundidad3Column" type="xs:int" minOccurs="0" />
+              <xs:element name="FecundidadMas" msprop:Generator_UserColumnName="FecundidadMas" msprop:Generator_ColumnPropNameInRow="FecundidadMas" msprop:Generator_ColumnVarNameInTable="columnFecundidadMas" msprop:Generator_ColumnPropNameInTable="FecundidadMasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundadas1" msprop:Generator_UserColumnName="Fecundadas1" msprop:Generator_ColumnPropNameInRow="Fecundadas1" msprop:Generator_ColumnVarNameInTable="columnFecundadas1" msprop:Generator_ColumnPropNameInTable="Fecundadas1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundadas2" msprop:Generator_UserColumnName="Fecundadas2" msprop:Generator_ColumnPropNameInRow="Fecundadas2" msprop:Generator_ColumnVarNameInTable="columnFecundadas2" msprop:Generator_ColumnPropNameInTable="Fecundadas2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecundadas3" msprop:Generator_UserColumnName="Fecundadas3" msprop:Generator_ColumnPropNameInRow="Fecundadas3" msprop:Generator_ColumnVarNameInTable="columnFecundadas3" msprop:Generator_ColumnPropNameInTable="Fecundadas3Column" type="xs:int" minOccurs="0" />
+              <xs:element name="FecundadasMas" msprop:Generator_UserColumnName="FecundadasMas" msprop:Generator_ColumnPropNameInRow="FecundadasMas" msprop:Generator_ColumnVarNameInTable="columnFecundadasMas" msprop:Generator_ColumnPropNameInTable="FecundadasMasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Preñez" msprop:Generator_UserColumnName="Preñez" msprop:Generator_ColumnPropNameInRow="Preñez" msprop:Generator_ColumnVarNameInTable="columnPreñez" msprop:Generator_ColumnPropNameInTable="PreñezColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InseminacionesDS" targetNamespace="http://tempuri.org/InseminacionesDS.xsd" xmlns:mstns="http://tempuri.org/InseminacionesDS.xsd" xmlns="http://tempuri.org/InseminacionesDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InseminacionesDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="InseminacionesDS" msprop:Generator_UserDSName="InseminacionesDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Inseminacion" msprop:Generator_UserTableName="Inseminacion" msprop:Generator_RowDeletedName="InseminacionRowDeleted" msprop:Generator_TableClassName="InseminacionDataTable" msprop:Generator_RowChangedName="InseminacionRowChanged" msprop:Generator_RowClassName="InseminacionRow" msprop:Generator_RowChangingName="InseminacionRowChanging" msprop:Generator_RowEvArgName="InseminacionRowChangeEvent" msprop:Generator_RowEvHandlerName="InseminacionRowChangeEventHandler" msprop:Generator_TablePropName="Inseminacion" msprop:Generator_TableVarName="tableInseminacion" msprop:Generator_RowDeletingName="InseminacionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdMacho" msprop:Generator_UserColumnName="IdMacho" msprop:Generator_ColumnPropNameInRow="IdMacho" msprop:Generator_ColumnVarNameInTable="columnIdMacho" msprop:Generator_ColumnPropNameInTable="IdMachoColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="IdTipo" msprop:Generator_UserColumnName="IdTipo" msprop:Generator_ColumnPropNameInRow="IdTipo" msprop:Generator_ColumnVarNameInTable="columnIdTipo" msprop:Generator_ColumnPropNameInTable="IdTipoColumn" type="xs:int" />
+              <xs:element name="IdVeterinario" msprop:Generator_UserColumnName="IdVeterinario" msprop:Generator_ColumnPropNameInRow="IdVeterinario" msprop:Generator_ColumnVarNameInTable="columnIdVeterinario" msprop:Generator_ColumnPropNameInTable="IdVeterinarioColumn" type="xs:int" />
+              <xs:element name="IdEmbrion" msprop:Generator_UserColumnName="IdEmbrion" msprop:Generator_ColumnPropNameInRow="IdEmbrion" msprop:Generator_ColumnVarNameInTable="columnIdEmbrion" msprop:Generator_ColumnPropNameInTable="IdEmbrionColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="Dosis" msprop:Generator_UserColumnName="Dosis" msprop:Generator_ColumnPropNameInRow="Dosis" msprop:Generator_ColumnVarNameInTable="columnDosis" msprop:Generator_ColumnPropNameInTable="DosisColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="DescTipo" msprop:Generator_UserColumnName="DescTipo" msprop:Generator_ColumnPropNameInRow="DescTipo" msprop:Generator_ColumnVarNameInTable="columnDescTipo" msprop:Generator_ColumnPropNameInTable="DescTipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescVeterinario" msprop:Generator_UserColumnName="DescVeterinario" msprop:Generator_ColumnPropNameInRow="DescVeterinario" msprop:Generator_ColumnVarNameInTable="columnDescVeterinario" msprop:Generator_ColumnPropNameInTable="DescVeterinarioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescMacho" msprop:Generator_UserColumnName="DescMacho" msprop:Generator_ColumnPropNameInRow="DescMacho" msprop:Generator_ColumnVarNameInTable="columnDescMacho" msprop:Generator_ColumnPropNameInTable="DescMachoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Inseminacion" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

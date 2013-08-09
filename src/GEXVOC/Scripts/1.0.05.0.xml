@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.5.0"
+  Fecha="03/09/2008"
+  Descripcion=" 
+  - Se han configurado los distintos subsistemas iniciales:
+    * SUBSISTEMA AGENDA
+    * SUBSISTEMA PRODUCCIÓN CARNE
+    * SUBSISTEMA PRODUCCIÓN LECHE
+    * SUBSISTEMA REPRODUCCIÓN
+    * SUBSISTEMA ALIMENTACIÓN
+    * SUBSISTEMA TRAZABILIDAD
+    * SUBSISTEMA SANIDAD
+    * SUBSISTEMA APPCC
+    * SUBSISTEMA ECONOMÍA
+    * SUBSISTEMA FINCAS
+    * SUBSISTEMA VADEMÉCUM
+    * SUBSISTEMA GENÉTICA
+    * SUBSISTEMA GENEALOGÍA
+    * SUBSISTEMA ALERTAS
+  - Se ha añadido la gestión de Compras y Ventas."
+  Script=""
+/>

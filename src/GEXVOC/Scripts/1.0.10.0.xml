@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.10.0"
+  Fecha="06/10/2008"
+  Descripcion=" 
+  - Ejecución de plan de pruebas 1.0.9
+  - Reparación de errores detectados en el plan de pruebas 1.0.9
+  - Correción de duplicidad exitente en Estado 'SEMENTAL' (elemento del sistema).
+  - Campos email deben dejar introducir datos en minúsculas. Aplicado a los siguientes elementos: Contactos, Titulares, Personal, Clientes, Proveedores.
+  - No se puede modificar ni eliminar un aborto que no sea el último.
+  - Si se inserta un secado con fecha anterior al último parto u aborto debemos notificarlo pero se debe permitir la operación. (Existe un secado automatico de este tipo que no debe ser notificado)
+  - DETALLES TIPOS DE ABORTOS:
+      * Aborto continuando lactación (Anteriormente: Aborto sin lactacion)
+        Deja lactacion actual abierta y permite meter controles, si no existe lactación previa se produce un error.
+      * Aborto seguido de nueva lactación (Anteriormente:  Aborto seguido de lactacion:)
+        Crea su propia lactacion (Cerrando la anterior si existe) y los controles se asignan a dicha lactacion.
+      * Todos los demás tipos de abortos cierran lactación y no permiten meter controles ni iniciar lactacion hasta que exista un nuevo parto o aborto seguido de lactacion.
+  - Correción de Búsqueda formularios Tipificacion, Rendimiento y Engrasamiento para filtrado por explotación activa.
+  - Corrección de la asignación del producto Pajuela Propia a la familia correspondiente quedando la definición completa como: PRODUCCIÓN->PAJUELA SEMEN->PAJUELA PROPIA"
+  Script=" 
+---------------------------------------------  
+---CORRECIÓN DEL ESTADO DE SISTEMA SEMENTAL--
+---------------------------------------------
+
+--Localizamos el estado semental (Cualquiera de ellos si existen varios)
+declare @idestado int
+Select @idestado=Id from [Estado] WHERE [Descripcion] = 'SEMENTAL'
+
+--Marcamos dicho estado como de sistema
+UPDATE [Estado] SET [Sistema] = 1 WHERE Id=@idestado
+
+--Asignamos dicho estado a todos los animales que tengan asignado cualquier estado que se corresponda con la descripción 'SEMENTAL'
+update animal set IdEstado=@idestado WHERE id in (SELECT dbo.Animal.Id
+												                          FROM   dbo.Animal INNER JOIN dbo.Estado ON dbo.Animal.IdEstado = dbo.Estado.Id
+											                            WHERE  (dbo.Estado.Descripcion = 'SEMENTAL'))
+                            
+--Eliminamos todos los estados que se correspondan con la descripción 'SEMENTAL' y no sean el que se encuentra en proceso
+delete from estado WHERE [Descripcion] = 'SEMENTAL' AND id!=@idestado;
+GO
+
+
+-------------------------------------------------------
+---CREAMOS LOS NUEVOS TIPOS DE ABORTOS DE SISTEMA------
+---PARA ELLO NOS VALDREMOS DE PARTE DE LOS EXISTENTES--
+-------------------------------------------------------
+  
+  UPDATE [TipoAborto] SET [Descripcion] = 'ABORTO CONTINUANDO LACTACIÓN',[Sistema] = 1 WHERE DESCRIPCION='ABORTO SEGUIDO DE LACTACIÓN'
+  UPDATE [TipoAborto] SET [Descripcion] = 'ABORTO SEGUIDO DE NUEVA LACTACIÓN',[Sistema] = 1 WHERE DESCRIPCION='ABORTO SIN LACTACIÓN'
+  
+  IF NOT EXISTS (SELECT * FROM [TipoAborto] WHERE Descripcion='ABORTO CONTINUANDO LACTACIÓN' AND SISTEMA=1)	
+	  INSERT INTO [TipoAborto]([Descripcion],[Sistema]) VALUES ('ABORTO CONTINUANDO LACTACIÓN',1)
+
+  IF NOT EXISTS (SELECT * FROM [TipoAborto] WHERE Descripcion='ABORTO SEGUIDO DE NUEVA LACTACIÓN' AND SISTEMA=1)	
+	  INSERT INTO [TipoAborto]([Descripcion],[Sistema]) VALUES ('ABORTO SEGUIDO DE NUEVA LACTACIÓN',1)
+  
+GO
+
+  
+------------------------------------------------------------
+---ASIGNAMOS LA FAMILIA ADECUADA AL PRODUCTO PAJUELA SEMEN--
+------------------------------------------------------------
+declare @idFamilia int;
+declare @idProducto int;
+set @idFamilia=-1;
+set @idProducto=-1;
+
+SELECT @idFamilia=[Id]    
+  FROM [gexvoc].[dbo].[Familia]
+  Where Descripcion ='PAJUELA SEMEN'
+
+Select @idProducto=id
+from producto
+where Descripcion='PAJUELA PROPIA'
+
+print @idFamilia;
+print @idProducto;
+
+if(@idFamilia!=-1 AND  @idProducto!=-1)	
+	UPDATE [gexvoc].[dbo].[Producto] SET [IdFamilia] = @idFamilia WHERE id=@idProducto;
+GO
+"
+/>

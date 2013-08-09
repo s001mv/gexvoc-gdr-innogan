@@ -1,0 +1,418 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85B454AF-D607-456E-B0A2-A5A53C558787}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEXVOC.UI</RootNamespace>
+    <AssemblyName>GEXVOC</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>GEXVOC</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animales\Animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animales\Animal.Designer.cs">
+      <DependentUpon>Animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animales\BorrarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animales\BorrarAnimal.Designer.cs">
+      <DependentUpon>BorrarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Condicion Corporal\CondicionCorporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Condicion Corporal\CondicionCorporal.Designer.cs">
+      <DependentUpon>CondicionCorporal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cubriciones\Cubriciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cubriciones\Cubriciones.Designer.cs">
+      <DependentUpon>Cubriciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cubriciones\InsertarCubricion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cubriciones\InsertarCubricion.Designer.cs">
+      <DependentUpon>InsertarCubricion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartosMultiples\InsertarPartosMultiples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartosMultiples\InsertarPartosMultiples.Designer.cs">
+      <DependentUpon>InsertarPartosMultiples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartosMultiples\PartosMultiples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartosMultiples\PartosMultiples.Designer.cs">
+      <DependentUpon>PartosMultiples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secados\InsertarSecados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secados\InsertarSecados.Designer.cs">
+      <DependentUpon>InsertarSecados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leches\Controles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leches\Controles.Designer.cs">
+      <DependentUpon>Controles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico Gestacion\DiagnosticoGestacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnostico Gestacion\DiagnosticoGestacion.Designer.cs">
+      <DependentUpon>DiagnosticoGestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosticos Enfermedades\Diagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosticos Enfermedades\Diagnosticos.Designer.cs">
+      <DependentUpon>Diagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enfermedades.Designer.cs">
+      <DependentUpon>Enfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explotaciones\Explotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explotaciones\Explotaciones.Designer.cs">
+      <DependentUpon>Explotaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactory.cs" />
+    <Compile Include="Inseminaciones\Inseminaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inseminaciones\Inseminaciones.Designer.cs">
+      <DependentUpon>Inseminaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animales\InsertarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animales\InsertarAnimal.designer.cs">
+      <DependentUpon>InsertarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Condicion Corporal\InsertarCondicionCorporal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Condicion Corporal\InsertarCondicionCorporal.Designer.cs">
+      <DependentUpon>InsertarCondicionCorporal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico Gestacion\InsertarDiagnosticoGestacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnostico Gestacion\InsertarDiagnosticoGestacion.Designer.cs">
+      <DependentUpon>InsertarDiagnosticoGestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inseminaciones\InsertarInseminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inseminaciones\InsertarInseminacion.Designer.cs">
+      <DependentUpon>InsertarInseminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosticos Enfermedades\InsertarDiagnosticoEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosticos Enfermedades\InsertarDiagnosticoEnfermedad.Designer.cs">
+      <DependentUpon>InsertarDiagnosticoEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leches\InsertarRegistroLeches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leches\InsertarRegistroLeches.Designer.cs">
+      <DependentUpon>InsertarRegistroLeches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secados\Secados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secados\Secados.Designer.cs">
+      <DependentUpon>Secados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionarLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarLotes.Designer.cs">
+      <DependentUpon>SeleccionarLotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tratamientos Enfermedades\InsertarTratamientoEnfermedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tratamientos Enfermedades\InsertarTratamientoEnfermedad.Designer.cs">
+      <DependentUpon>InsertarTratamientoEnfermedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partos\InsertarParto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partos\InsertarParto.Designer.cs">
+      <DependentUpon>InsertarParto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesos\InsertarPeso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesos\InsertarPeso.Designer.cs">
+      <DependentUpon>InsertarPeso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intro.designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partos\Partos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partos\Partos.Designer.cs">
+      <DependentUpon>Partos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesos\Pesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesos\Pesos.Designer.cs">
+      <DependentUpon>Pesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Animales\Animal.resx">
+      <DependentUpon>Animal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animales\BorrarAnimal.resx">
+      <DependentUpon>BorrarAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Condicion Corporal\CondicionCorporal.resx">
+      <DependentUpon>CondicionCorporal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cubriciones\Cubriciones.resx">
+      <DependentUpon>Cubriciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cubriciones\InsertarCubricion.resx">
+      <DependentUpon>InsertarCubricion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartosMultiples\InsertarPartosMultiples.resx">
+      <DependentUpon>InsertarPartosMultiples.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartosMultiples\PartosMultiples.resx">
+      <DependentUpon>PartosMultiples.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secados\InsertarSecados.resx">
+      <DependentUpon>InsertarSecados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leches\Controles.resx">
+      <DependentUpon>Controles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnostico Gestacion\DiagnosticoGestacion.resx">
+      <DependentUpon>DiagnosticoGestacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosticos Enfermedades\Diagnosticos.resx">
+      <DependentUpon>Diagnosticos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enfermedades.resx">
+      <DependentUpon>Enfermedades.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explotaciones\Explotaciones.resx">
+      <DependentUpon>Explotaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inseminaciones\Inseminaciones.resx">
+      <DependentUpon>Inseminaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animales\InsertarAnimal.resx">
+      <DependentUpon>InsertarAnimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Condicion Corporal\InsertarCondicionCorporal.resx">
+      <DependentUpon>InsertarCondicionCorporal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnostico Gestacion\InsertarDiagnosticoGestacion.resx">
+      <DependentUpon>InsertarDiagnosticoGestacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inseminaciones\InsertarInseminacion.resx">
+      <DependentUpon>InsertarInseminacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosticos Enfermedades\InsertarDiagnosticoEnfermedad.resx">
+      <DependentUpon>InsertarDiagnosticoEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leches\InsertarRegistroLeches.resx">
+      <DependentUpon>InsertarRegistroLeches.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secados\Secados.resx">
+      <DependentUpon>Secados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarLotes.resx">
+      <DependentUpon>SeleccionarLotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tratamientos Enfermedades\InsertarTratamientoEnfermedad.resx">
+      <DependentUpon>InsertarTratamientoEnfermedad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partos\InsertarParto.resx">
+      <DependentUpon>InsertarParto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesos\InsertarPeso.resx">
+      <DependentUpon>InsertarPeso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partos\Partos.resx">
+      <DependentUpon>Partos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesos\Pesos.resx">
+      <DependentUpon>Pesos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sincronizar.resx">
+      <DependentUpon>Sincronizar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tratamientos Enfermedades\Tratamientos.resx">
+      <DependentUpon>Tratamientos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sincronizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sincronizar.Designer.cs">
+      <DependentUpon>Sincronizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tratamientos Enfermedades\Tratamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tratamientos Enfermedades\Tratamientos.Designer.cs">
+      <DependentUpon>Tratamientos.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GEXVOC.Core\GEXVOC.Core.csproj">
+      <Project>{51F58979-E248-4E0E-AC38-4D6FC6154713}</Project>
+      <Name>GEXVOC.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gexvoc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <Content Include="gexvocce.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

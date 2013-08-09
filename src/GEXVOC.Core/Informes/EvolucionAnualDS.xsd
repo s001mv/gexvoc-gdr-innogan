@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EvolucionAnualDS" targetNamespace="http://tempuri.org/EvolucionAnualDS.xsd" xmlns:mstns="http://tempuri.org/EvolucionAnualDS.xsd" xmlns="http://tempuri.org/EvolucionAnualDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EvolucionAnualDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EvolucionAnualDS" msprop:Generator_DataSetName="EvolucionAnualDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Evolucion" msprop:Generator_UserTableName="Evolucion" msprop:Generator_RowDeletedName="EvolucionRowDeleted" msprop:Generator_RowChangedName="EvolucionRowChanged" msprop:Generator_RowClassName="EvolucionRow" msprop:Generator_RowChangingName="EvolucionRowChanging" msprop:Generator_RowEvArgName="EvolucionRowChangeEvent" msprop:Generator_RowEvHandlerName="EvolucionRowChangeEventHandler" msprop:Generator_TableClassName="EvolucionDataTable" msprop:Generator_TableVarName="tableEvolucion" msprop:Generator_RowDeletingName="EvolucionRowDeleting" msprop:Generator_TablePropName="Evolucion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAnimales" msprop:Generator_UserColumnName="NAnimales" msprop:Generator_ColumnPropNameInRow="NAnimales" msprop:Generator_ColumnVarNameInTable="columnNAnimales" msprop:Generator_ColumnPropNameInTable="NAnimalesColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NPrimiparas" msprop:Generator_UserColumnName="NPrimiparas" msprop:Generator_ColumnPropNameInRow="NPrimiparas" msprop:Generator_ColumnVarNameInTable="columnNPrimiparas" msprop:Generator_ColumnPropNameInTable="NPrimiparasColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NAnimalesNacidos" msprop:Generator_UserColumnName="NAnimalesNacidos" msprop:Generator_ColumnPropNameInRow="NAnimalesNacidos" msprop:Generator_ColumnVarNameInTable="columnNAnimalesNacidos" msprop:Generator_ColumnPropNameInTable="NAnimalesNacidosColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NAnimalesDestetados" msprop:Generator_UserColumnName="NAnimalesDestetados" msprop:Generator_ColumnPropNameInRow="NAnimalesDestetados" msprop:Generator_ColumnVarNameInTable="columnNAnimalesDestetados" msprop:Generator_ColumnPropNameInTable="NAnimalesDestetadosColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PorcentajeMortalidadNacimiento" msprop:Generator_UserColumnName="PorcentajeMortalidadNacimiento" msprop:Generator_ColumnPropNameInRow="PorcentajeMortalidadNacimiento" msprop:Generator_ColumnVarNameInTable="columnPorcentajeMortalidadNacimiento" msprop:Generator_ColumnPropNameInTable="PorcentajeMortalidadNacimientoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PorcentajeMortalidadDestete" msprop:Generator_UserColumnName="PorcentajeMortalidadDestete" msprop:Generator_ColumnVarNameInTable="columnPorcentajeMortalidadDestete" msprop:Generator_ColumnPropNameInRow="PorcentajeMortalidadDestete" msprop:Generator_ColumnPropNameInTable="PorcentajeMortalidadDesteteColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PorcentajeMortalidadPerinatal" msprop:Generator_UserColumnName="PorcentajeMortalidadPerinatal" msprop:Generator_ColumnVarNameInTable="columnPorcentajeMortalidadPerinatal" msprop:Generator_ColumnPropNameInRow="PorcentajeMortalidadPerinatal" msprop:Generator_ColumnPropNameInTable="PorcentajeMortalidadPerinatalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaEdadDestete" msprop:Generator_UserColumnName="MediaEdadDestete" msprop:Generator_ColumnVarNameInTable="columnMediaEdadDestete" msprop:Generator_ColumnPropNameInRow="MediaEdadDestete" msprop:Generator_ColumnPropNameInTable="MediaEdadDesteteColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaGMD" msprop:Generator_UserColumnName="MediaGMD" msprop:Generator_ColumnVarNameInTable="columnMediaGMD" msprop:Generator_ColumnPropNameInRow="MediaGMD" msprop:Generator_ColumnPropNameInTable="MediaGMDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PorcentajeAbortos" msprop:Generator_UserColumnName="PorcentajeAbortos" msprop:Generator_ColumnVarNameInTable="columnPorcentajeAbortos" msprop:Generator_ColumnPropNameInRow="PorcentajeAbortos" msprop:Generator_ColumnPropNameInTable="PorcentajeAbortosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIntervaloEntrePartos" msprop:Generator_UserColumnName="MediaIntervaloEntrePartos" msprop:Generator_ColumnVarNameInTable="columnMediaIntervaloEntrePartos" msprop:Generator_ColumnPropNameInRow="MediaIntervaloEntrePartos" msprop:Generator_ColumnPropNameInTable="MediaIntervaloEntrePartosColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PorcentajePerdidasProductividad" msprop:Generator_UserColumnName="PorcentajePerdidasProductividad" msprop:Generator_ColumnVarNameInTable="columnPorcentajePerdidasProductividad" msprop:Generator_ColumnPropNameInRow="PorcentajePerdidasProductividad" msprop:Generator_ColumnPropNameInTable="PorcentajePerdidasProductividadColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaEdad1erParto" msprop:Generator_UserColumnName="MediaEdad1erParto" msprop:Generator_ColumnPropNameInRow="MediaEdad1erParto" msprop:Generator_ColumnVarNameInTable="columnMediaEdad1erParto" msprop:Generator_ColumnPropNameInTable="MediaEdad1erPartoColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIntervaloPartos12" msdata:Caption="MediaIntervaloPartos1-2" msprop:Generator_UserColumnName="MediaIntervaloPartos12" msprop:Generator_ColumnPropNameInRow="MediaIntervaloPartos12" msprop:Generator_ColumnVarNameInTable="columnMediaIntervaloPartos12" msprop:Generator_ColumnPropNameInTable="MediaIntervaloPartos12Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIntervaloPartos23" msprop:Generator_UserColumnName="MediaIntervaloPartos23" msprop:Generator_ColumnPropNameInRow="MediaIntervaloPartos23" msprop:Generator_ColumnVarNameInTable="columnMediaIntervaloPartos23" msprop:Generator_ColumnPropNameInTable="MediaIntervaloPartos23Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIntervaloPartos34" msprop:Generator_UserColumnName="MediaIntervaloPartos34" msprop:Generator_ColumnPropNameInRow="MediaIntervaloPartos34" msprop:Generator_ColumnVarNameInTable="columnMediaIntervaloPartos34" msprop:Generator_ColumnPropNameInTable="MediaIntervaloPartos34Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIntervaloPartos4Mas" msprop:Generator_UserColumnName="MediaIntervaloPartos4Mas" msprop:Generator_ColumnPropNameInRow="MediaIntervaloPartos4Mas" msprop:Generator_ColumnVarNameInTable="columnMediaIntervaloPartos4Mas" msprop:Generator_ColumnPropNameInTable="MediaIntervaloPartos4MasColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIndiceMaternalPrimiparas" msprop:Generator_UserColumnName="MediaIndiceMaternalPrimiparas" msprop:Generator_ColumnPropNameInRow="MediaIndiceMaternalPrimiparas" msprop:Generator_ColumnVarNameInTable="columnMediaIndiceMaternalPrimiparas" msprop:Generator_ColumnPropNameInTable="MediaIndiceMaternalPrimiparasColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MediaIndiceMaternalMultiparas" msprop:Generator_UserColumnName="MediaIndiceMaternalMultiparas" msprop:Generator_ColumnPropNameInRow="MediaIndiceMaternalMultiparas" msprop:Generator_ColumnVarNameInTable="columnMediaIndiceMaternalMultiparas" msprop:Generator_ColumnPropNameInTable="MediaIndiceMaternalMultiparasColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

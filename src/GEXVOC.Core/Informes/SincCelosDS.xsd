@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SincCelosDS" targetNamespace="http://tempuri.org/SincCelosDS.xsd" xmlns:mstns="http://tempuri.org/SincCelosDS.xsd" xmlns="http://tempuri.org/SincCelosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gexvocConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gexvocConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GEXVOC.Core.Properties.Settings.GlobalReference.Default.gexvocConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SincCelosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SincCelosDS" msprop:Generator_DataSetName="SincCelosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SincronizacionCelo" msprop:Generator_UserTableName="SincronizacionCelo" msprop:Generator_RowDeletedName="SincronizacionCeloRowDeleted" msprop:Generator_RowChangedName="SincronizacionCeloRowChanged" msprop:Generator_RowClassName="SincronizacionCeloRow" msprop:Generator_RowChangingName="SincronizacionCeloRowChanging" msprop:Generator_RowEvArgName="SincronizacionCeloRowChangeEvent" msprop:Generator_RowEvHandlerName="SincronizacionCeloRowChangeEventHandler" msprop:Generator_TableClassName="SincronizacionCeloDataTable" msprop:Generator_TableVarName="tableSincronizacionCelo" msprop:Generator_RowDeletingName="SincronizacionCeloRowDeleting" msprop:Generator_TablePropName="SincronizacionCelo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" />
+              <xs:element name="IdVeterinario" msprop:Generator_UserColumnName="IdVeterinario" msprop:Generator_ColumnVarNameInTable="columnIdVeterinario" msprop:Generator_ColumnPropNameInRow="IdVeterinario" msprop:Generator_ColumnPropNameInTable="IdVeterinarioColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FechaColocacion" msprop:Generator_UserColumnName="FechaColocacion" msprop:Generator_ColumnVarNameInTable="columnFechaColocacion" msprop:Generator_ColumnPropNameInRow="FechaColocacion" msprop:Generator_ColumnPropNameInTable="FechaColocacionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaRetirada" msprop:Generator_UserColumnName="FechaRetirada" msprop:Generator_ColumnVarNameInTable="columnFechaRetirada" msprop:Generator_ColumnPropNameInRow="FechaRetirada" msprop:Generator_ColumnPropNameInTable="FechaRetiradaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaInyeccion" msprop:Generator_UserColumnName="FechaInyeccion" msprop:Generator_ColumnVarNameInTable="columnFechaInyeccion" msprop:Generator_ColumnPropNameInRow="FechaInyeccion" msprop:Generator_ColumnPropNameInTable="FechaInyeccionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaPrevision" msprop:Generator_UserColumnName="FechaPrevision" msprop:Generator_ColumnVarNameInTable="columnFechaPrevision" msprop:Generator_ColumnPropNameInRow="FechaPrevision" msprop:Generator_ColumnPropNameInTable="FechaPrevisionColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DescPersonal" msprop:Generator_UserColumnName="DescPersonal" msprop:Generator_ColumnVarNameInTable="columnDescPersonal" msprop:Generator_ColumnPropNameInRow="DescPersonal" msprop:Generator_ColumnPropNameInTable="DescPersonalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DescTipo" msprop:Generator_UserColumnName="DescTipo" msprop:Generator_ColumnVarNameInTable="columnDescTipo" msprop:Generator_ColumnPropNameInRow="DescTipo" msprop:Generator_ColumnPropNameInTable="DescTipoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SincronizacionCelo" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

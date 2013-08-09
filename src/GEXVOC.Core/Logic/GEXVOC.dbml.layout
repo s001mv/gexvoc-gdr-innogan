@@ -1,0 +1,2002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 36, 108.125" name="GEXVOC">
+  <DataContextMoniker Name="/GEXVOCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c7a7728e-68d4-4910-be0e-5156708a27b9" absoluteBounds="20.5, 57.75, 2, 1.5891951497395667">
+      <DataClassMoniker Name="/GEXVOCDataContext/Abonado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dc1f40c-aed5-4b37-86fc-af0d4c5a8baa" absoluteBounds="20.515, 58.210000000000008, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb370584-a4cb-4eff-8ab2-c2f3cd55a20c" absoluteBounds="12, 48.75, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/AniLot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3a93a65-018a-4986-b37c-f378da2217e9" absoluteBounds="12.015, 49.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e00d8b3d-74ba-4d73-96bb-7669f5a11502" absoluteBounds="11.875, 65.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Categoria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22fa50fe-c0e2-4ff4-86e2-aaecb1e137a5" absoluteBounds="11.89, 66.085000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="261aae4d-b6d9-4c21-ad50-10097e9e7343" absoluteBounds="12.5, 34.875, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Cita" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b837831-11bd-412b-bcf4-f732718d66d5" absoluteBounds="12.515, 35.335, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="934766a1-e701-46b1-8dcb-d977069be108" absoluteBounds="9, 66.25, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Composicion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="112e85bc-7421-41cf-8a23-ac63c9a8ec6d" absoluteBounds="9.015, 66.710000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="243214e0-ecb1-485c-ad24-ac3f21af5c80" absoluteBounds="1.5, 51.375, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/CondicionJuridica" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df7d6bf4-aa1b-410e-9609-8e9132a8cebd" absoluteBounds="1.5150000000000001, 51.835, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0710ac5c-c101-4b36-b8f8-e1afbd79508a" absoluteBounds="6.5, 0.75, 2, 1.0961531575520835">
+      <DataClassMoniker Name="/GEXVOCDataContext/Configuracion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19979d2a-14d8-4f0c-8542-46e58c7b8ad5" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f922908-8728-445f-a404-e094ef2baff0" absoluteBounds="3.5, 57.875, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Conformacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2efb49fb-2355-4ebc-8d14-f8e8f21f3fb7" absoluteBounds="3.5150000005960464, 58.33500000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2250f19e-5251-40e8-8c14-5e4ba0163ab5" absoluteBounds="12.25, 67.75, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/ConformacionCanal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f2b3d35-c375-4819-bf89-1066da1fc093" absoluteBounds="12.265, 68.210000000000008, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11fdc0b4-1fd6-45c4-bcdf-d63a238e8702" absoluteBounds="17.75, 68.75, 2, 1.5891951497395951">
+      <DataClassMoniker Name="/GEXVOCDataContext/Cuenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="974b212a-5293-4056-83e2-f92bbde651ce" absoluteBounds="17.765, 69.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="204cfd02-79d0-403b-b2b8-82e1ca2b6c6a" absoluteBounds="0.75, 47, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Enfermedad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70243164-a558-4bd9-90cb-754fe17dc026" absoluteBounds="0.76500000000000012, 47.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cec6a15-1bcd-4c10-b6ed-253e10f25524" absoluteBounds="9, 39.75, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/EngrasamientoCanal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70f734e1-027d-4191-97af-a4c5e3339ff7" absoluteBounds="9.015, 40.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" absoluteBounds="0.75, 41.25, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Especie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7eed1f34-2b24-4440-88c0-311105e198b4" absoluteBounds="0.76500000059604645, 41.71000000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="700276f1-4a0e-4948-ad3f-69654874fb7b" absoluteBounds="18.5, 60.25, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/GEXVOCDataContext/ExpCli" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2353da36-981f-4ccd-95c2-cee1981450b6" absoluteBounds="18.515, 60.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0784914-2758-4102-8668-4ee368579604" absoluteBounds="3.5, 41.25, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/ExpEsp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0bbe3592-80c9-47a9-bac2-f902dc023422" absoluteBounds="3.5150000000000006, 41.71, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47078fac-6673-4c17-be64-fe6df58b735c" absoluteBounds="3.5, 24.125, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/ExpMod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e42a350d-c821-4f3a-afdf-40f32f0e44e6" absoluteBounds="3.5150000000000006, 24.585, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83712eaf-3fd1-4bcc-918c-3697f506d1bf" absoluteBounds="19, 62.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/GEXVOCDataContext/ExpPro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d019cb7f-8246-4fe8-8690-c10fb8762e56" absoluteBounds="19.015, 63.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbf60f0a-ea54-4705-a460-cc7023b0dcd4" absoluteBounds="24.75, 54, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/GEXVOCDataContext/ExpTit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24615b9e-b5bc-446b-a26e-e760a533fb34" absoluteBounds="24.765, 54.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89b6e3e7-3854-4a8e-ada3-d03458210b12" absoluteBounds="4.375, 98.875, 2, 3.5613631184895667">
+      <DataClassMoniker Name="/GEXVOCDataContext/Extendida" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5edca37a-5bee-4a63-be77-e21772772285" absoluteBounds="4.3900000005960464, 99.33500000089407, 1.9700000000000002, 3.001363118489583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="817c5036-7ae8-4976-803f-89797cb7dd4d" absoluteBounds="6.25, 44.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Facilidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57490aa1-7af0-421f-84b4-1aad067b49d8" absoluteBounds="6.2650000000000006, 45.085, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f61710d5-1552-4f01-869e-79d5ab94e301" absoluteBounds="3.5, 43.125, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/HistMedicamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef5e8c97-773f-4c3b-8eda-d44480601270" absoluteBounds="3.5150000000000006, 43.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9268ff8d-3c85-4d11-8634-ae5ef971409f" absoluteBounds="17.75, 43.375, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/InsPar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d11092c-8917-49ee-9301-89ad2e7caf8b" absoluteBounds="17.765, 43.835, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fbb68fa-b683-4105-895e-01a90643eae5" absoluteBounds="6.25, 60.75, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/Laboratorio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72396317-7137-4b77-8b14-8cc0b6da27cd" absoluteBounds="6.2650000000000006, 61.21, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8520138b-19ea-48d9-9ff2-6c7a57d9b71e" absoluteBounds="9, 96.125, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/LibroGenealogico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="456d64df-f59c-408d-909a-e6fbe76f1993" absoluteBounds="9.0150000005960464, 96.58500000089407, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" absoluteBounds="0.75, 3.5, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/GEXVOCDataContext/Modulo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="395d9764-c58a-4900-b6b0-75ecf80c1f91" absoluteBounds="0.76500000059604645, 3.9600000008940697, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e25dd10-779a-47e8-8bfd-dd75a5a0b8d2" absoluteBounds="6.25, 55.875, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/GEXVOCDataContext/Momento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5828bc12-0e00-433f-910e-5e2a4d6e2fc7" absoluteBounds="6.2650000000000006, 56.335000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8e83971-c33f-41da-a534-c90949957f92" absoluteBounds="12.25, 60.875, 2, 1.0961531575520951">
+      <DataClassMoniker Name="/GEXVOCDataContext/Motivo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ac9fbca-4796-4161-902a-b8bfb839e661" absoluteBounds="12.265, 61.335000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="454e25be-f89a-4fa1-9021-344b0a18b901" absoluteBounds="14.5, 99.625, 2, 3.3970157877604095">
+      <DataClassMoniker Name="/GEXVOCDataContext/MuestraControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cf9a005-9f0a-494a-97f4-be3b5beda428" absoluteBounds="14.515000000596046, 100.08500000089407, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed5df09a-34b5-4525-85f2-d531147ed238" absoluteBounds="1.5, 36.125, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/Municipio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23530099-a515-4b7f-91bd-115588a8de4d" absoluteBounds="1.5150000000000001, 36.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9aea854-6c12-4d3b-811d-c42fd961006e" absoluteBounds="20.5, 42.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Naturaleza" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8fc11d9-2851-43c1-b880-9a386696fb7e" absoluteBounds="20.515, 43.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10de1d77-57a9-4850-b7be-1a60a8b33061" absoluteBounds="17.75, 57.75, 2, 1.5891951497395951">
+      <DataClassMoniker Name="/GEXVOCDataContext/Parcela" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76f8ebd3-fff8-4173-9dd5-3c321f26e1b7" absoluteBounds="17.765, 58.209999999999994, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01069267-30b4-422e-abc3-51b46cb5c69f" absoluteBounds="9, 45.5, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Peso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1daa84a9-daa7-4dbc-9c29-2489a07bf923" absoluteBounds="9.015, 45.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26899633-923a-4a3b-a961-376140e1f3e6" absoluteBounds="17.75, 39.375, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Plaga" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b6b3cdd-8fdd-4931-bce9-34193ae4a0dc" absoluteBounds="17.765, 39.835, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c87ef818-2b6a-4521-bb89-7780cb6966db" absoluteBounds="0.75, 56.875, 2, 1.9178898111979095">
+      <DataClassMoniker Name="/GEXVOCDataContext/Producto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41d2c9d4-ac86-49c4-bfdd-87b506e61019" absoluteBounds="0.76500000000000012, 57.335, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81a4f817-0b2e-4b5a-86d1-da90754f60d7" absoluteBounds="1.75, 33.25, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Provincia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a86fe3d-c00b-4124-a23c-f670eb527938" absoluteBounds="1.7650000000000001, 33.71, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e53be77-496d-465b-bd4a-d9f6eb98ce49" absoluteBounds="6.25, 57.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Racion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a33a3572-8a61-4b23-88dd-f94e317c6429" absoluteBounds="6.2650000000000006, 58.209999999999994, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d235fae3-cbdb-48aa-bc99-4718497ac33c" absoluteBounds="3.5, 48.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Raza" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11822a96-a77f-482a-a8c3-a752f31e3826" absoluteBounds="3.5150000005960464, 49.21000000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="09e45ba4-58dd-4c81-bf97-bb29bf41e9ea" absoluteBounds="21.5, 55.25, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Recolecta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30145924-63a6-4244-8c15-d816743e452e" absoluteBounds="21.515, 55.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51b67695-c0e6-427b-9167-b1fe9d135ac9" absoluteBounds="9, 98.375, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/RendimientoCanal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76606233-e07d-4590-b12b-ce6cef5c0a15" absoluteBounds="9.0150000005960464, 98.83500000089407, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1eadc172-375c-400d-a4e9-0818fcba18da" absoluteBounds="15, 51.5, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Secado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4335916d-bbba-40be-99da-86b0f15ffc69" absoluteBounds="15.015000000596046, 51.96000000089407, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2aa6ca9c-238b-44fc-9875-d903b960ac4a" absoluteBounds="20.5, 51.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Siembra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d889fd72-981d-4667-a89a-641a7db2990f" absoluteBounds="20.515, 52.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f48a775d-5635-4edd-9ed1-2cf089485cc9" absoluteBounds="9, 106.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/StatusControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3262e4d-0762-49b5-8ecb-b778b9784805" absoluteBounds="9.0150000005960464, 107.08500000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="934694da-4368-4dc0-bbd3-29dff00b8d44" absoluteBounds="14, 105.25, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/GEXVOCDataContext/StatusOrdeno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f157806f-bac9-47cd-81f1-901df1b5943b" absoluteBounds="14.015000000596046, 105.71000000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b713d82-f212-415d-9fc0-7f6fdb1cd0e1" absoluteBounds="3.5, 64.75, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/GEXVOCDataContext/Talla" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0474397-fcce-4693-9327-1ddc49733faf" absoluteBounds="3.515, 65.210000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e58bf20-37f4-4c48-882d-c21fcab7ea54" absoluteBounds="3.5, 30.625, 2, 1.424847819010413">
+      <DataClassMoniker Name="/GEXVOCDataContext/Tarea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce39bc87-5821-4d98-a769-ac502a956134" absoluteBounds="3.5150000000000006, 31.085, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eee60715-14ff-4e7c-87fb-bfb03219f226" absoluteBounds="15, 54.625, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipificacionCanal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d56e495-fc69-4a2a-8374-a0d4485da1bd" absoluteBounds="15.015, 55.085, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a769eaf-deb8-4848-b9d9-b4d71f900ed9" absoluteBounds="9.25, 63.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoAborto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="056608c0-94fb-439e-a150-71a66c1d3ec9" absoluteBounds="9.2650000005960464, 64.21000000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c163301-71db-4674-b6de-c70887421a70" absoluteBounds="12.25, 37.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoBaja" />
+      <nestedChildShapes>
+        <elementListCompartment Id="943e9e1a-3ed3-4169-b996-f57c2fc9cddb" absoluteBounds="12.265, 38.210000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b03bfdc-ea87-4b5a-8b16-1dd0e27e108b" absoluteBounds="6.25, 66.25, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoCompra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6dd761a9-bd6c-4212-b36e-1c7340b00439" absoluteBounds="6.2650000000000006, 66.710000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0ed8a3f-96df-41b7-9456-ff620db8e1b0" absoluteBounds="15, 60.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoDiagnostico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8faee732-f265-45e0-bf31-34d4f0d50397" absoluteBounds="15.015, 61.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72800012-a1fd-484a-9354-0c3b0a0316b1" absoluteBounds="1.5, 54.125, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoEnfermedad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3556cd5-2130-4792-957e-2b7480f07be5" absoluteBounds="1.5150000000000001, 54.585, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23142e1a-cc9c-4761-b06a-ee6b95876501" absoluteBounds="6.25, 41.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoEngrasamiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67fc64bc-c15a-4afc-9688-3d4c8bdcb5fe" absoluteBounds="6.2650000000000006, 42.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69574a4b-c119-40ad-898b-40b6c3dc0a19" absoluteBounds="9.25, 60.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoInseminacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16444170-ed98-471c-8b25-34aae78a49ac" absoluteBounds="9.265, 61.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0da910a6-aa7c-4947-9617-b35f8406a7a0" absoluteBounds="1.5, 62.125, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoProducto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3aed10c7-0957-4547-8031-04dd48864eda" absoluteBounds="1.5150000000000001, 62.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe4c84ec-f905-485e-af41-1313e021ce5c" absoluteBounds="12.25, 62.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoSecado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8acaa0ee-72f6-4edf-8d75-7aa023ff7fe4" absoluteBounds="12.265, 63.210000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cad0a8d4-7502-477d-b104-2f1cfa4bf2bc" absoluteBounds="12.75, 70.25, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoVenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="342472f3-9546-40cb-aace-72b1d10002c4" absoluteBounds="12.765, 70.710000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1abb0cf4-6ec0-43b2-8ad6-e9d2320ff8de" absoluteBounds="20.5, 38.75, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TratParcela" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18563079-1f69-4f41-bcd3-054901077fc7" absoluteBounds="20.515, 39.21, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 41.798076578776); (2.79166666666667 : 41.798076578776 : JumpStart); (3.23958333333333 : 41.798076578776 : JumpEnd); (3.5 : 41.798076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Especie/Especie_ExpEsp" />
+      <nodes>
+        <classShapeMoniker Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" />
+        <classShapeMoniker Id="b0784914-2758-4102-8668-4ee368579604" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 47.8222341646635); (2.91257308833966 : 47.3036192719714 : JumpStart); (2.96242691166034 : 47.1445835084523 : JumpEnd); (3.125 : 46.6259686157602); (3.125 : 43.8374239095052); (3.19791666666667 : 43.8374239095052 : JumpStart); (3.42708333333333 : 43.8374239095052 : JumpEnd); (3.5 : 43.8374239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Enfermedad/Enfermedad_HistMedicamento" />
+      <nodes>
+        <classShapeMoniker Id="204cfd02-79d0-403b-b2b8-82e1ca2b6c6a" />
+        <classShapeMoniker Id="f61710d5-1552-4f01-869e-79d5ab94e301" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 42.3191699259816); (2.81607443490112 : 42.3852443608827 : JumpStart); (2.99642556509888 : 42.5655954910805 : JumpEnd); (3.00357443490112 : 42.5727443608827 : JumpStart); (3.12142556509888 : 42.6905954910805 : JumpEnd); (3.1875 : 42.7566699259816); (3.1875 : 43.4499599547526); (3.19791666666667 : 43.4499599547526 : JumpStart); (3.42708333333333 : 43.4499599547526 : JumpEnd); (3.5 : 43.4499599547526)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Especie/Especie_HistMedicamento" />
+      <nodes>
+        <classShapeMoniker Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" />
+        <classShapeMoniker Id="f61710d5-1552-4f01-869e-79d5ab94e301" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.76050048828125); (1.75 : 24.367785789388); (3.5 : 24.367785789388)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Modulo/Modulo_ExpMod" />
+      <nodes>
+        <classShapeMoniker Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" />
+        <classShapeMoniker Id="47078fac-6673-4c17-be64-fe6df58b735c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.44728500788762 : 3.5); (1.44728500788762 : 3.25); (2.06712999173678 : 3.25); (2.06712999173678 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Modulo/Modulo_Modulo" />
+      <nodes>
+        <classShapeMoniker Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" />
+        <classShapeMoniker Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 62.1239241536458); (8.32291666666667 : 62.1239241536458 : JumpStart); (8.64583333333333 : 62.1239241536458 : JumpEnd); (9.01041666666667 : 62.1239241536458 : JumpStart); (9.17708333333333 : 62.1239241536458 : JumpEnd); (11.4166666666667 : 62.1239241536458 : JumpStart); (11.7083333333333 : 62.1239241536458 : JumpEnd); (11.8229166666667 : 62.1239241536458 : JumpStart); (11.9895833333333 : 62.1239241536458 : JumpEnd); (14.6041666666667 : 62.1239241536458 : JumpStart); (14.7708333333333 : 62.1239241536458 : JumpEnd); (14.875 : 62.1239241536458); (14.875 : 99.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Laboratorio/Laboratorio_MuestraControl" />
+      <nodes>
+        <classShapeMoniker Id="0fbb68fa-b683-4105-895e-01a90643eae5" />
+        <classShapeMoniker Id="454e25be-f89a-4fa1-9021-344b0a18b901" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 58.5445975748698); (19.9166666666667 : 58.5445975748698 : JumpStart); (20.0833333333333 : 58.5445975748698 : JumpEnd); (20.2916666666667 : 58.5445975748698 : JumpStart); (20.4583333333333 : 58.5445975748698 : JumpEnd); (20.5 : 58.5445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_Abonado" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="c7a7728e-68d4-4910-be0e-5156708a27b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 56.5151188151042); (8.32291666666667 : 56.5151188151042 : JumpStart); (8.83333333333333 : 56.5151188151042 : JumpEnd); (11.0260426041667 : 56.5151188151042 : JumpStart); (11.1927092708333 : 56.5151188151042 : JumpEnd); (11.3125 : 56.5151188151042); (11.3125 : 46.3767712402344); (11.2864583333333 : 46.3767712402344 : JumpStart); (11.0026046354167 : 46.3767712402344 : JumpEnd); (11 : 46.3767712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Momento/Momento_Peso" />
+      <nodes>
+        <classShapeMoniker Id="9e25dd10-779a-47e8-8bfd-dd75a5a0b8d2" />
+        <classShapeMoniker Id="01069267-30b4-422e-abc3-51b46cb5c69f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 58.6000315847982); (3.25 : 58.6000315847982); (3.25 : 57.8230004882813); (5.50070657837537 : 57.8230004882813 : JumpStart); (5.86458333333333 : 57.8230004882813 : JumpEnd); (5.9375 : 57.8230004882813); (5.9375 : 57.375); (8.47916666666667 : 57.375 : JumpStart); (8.64583333333333 : 57.375 : JumpEnd); (11.0260426041667 : 57.375 : JumpStart); (11.1927092708333 : 57.375 : JumpEnd); (11.5416666666667 : 57.375 : JumpStart); (11.7083333333333 : 57.375 : JumpEnd); (11.8125 : 57.375); (11.8125 : 56.8391951497396); (11.8229166666667 : 56.8391951497396 : JumpStart); (11.9895833333333 : 56.8391951497396 : JumpEnd); (14.5416666666667 : 56.8391951497396 : JumpStart); (14.7708333333333 : 56.8391951497396 : JumpEnd); (18.6437141901042 : 56.8391951497396 : JumpStart); (18.8103808567708 : 56.8391951497396 : JumpEnd); (19.9166666666667 : 56.8391951497396 : JumpStart); (20.0833333333333 : 56.8391951497396 : JumpEnd); (21 : 56.8391951497396); (21 : 57.0891951497396); (21.2916666666667 : 57.0891951497396 : JumpStart); (21.4583333333333 : 57.0891951497396 : JumpEnd); (21.9374995 : 57.0891951497396); (21.9374995 : 57.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Abonado" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="c7a7728e-68d4-4910-be0e-5156708a27b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.43749975 : 58.7928898111979); (1.43749975 : 59.5); (1.66666666666667 : 59.5 : JumpStart); (1.83333333333333 : 59.5 : JumpEnd); (1.93229266666667 : 59.5 : JumpStart); (2.09895933333333 : 59.5 : JumpEnd); (2.19791866666667 : 59.5 : JumpStart); (2.36458533333333 : 59.5 : JumpEnd); (2.46354466666667 : 59.5 : JumpStart); (2.66145933333333 : 59.5 : JumpEnd); (5.54166666666667 : 59.5 : JumpStart); (5.86458333333333 : 59.5 : JumpEnd); (8.32291666666667 : 59.5 : JumpStart); (8.48958333333333 : 59.5 : JumpEnd); (8.5 : 59.5); (8.5 : 66.8802502441406); (8.66666666666667 : 66.8802502441406 : JumpStart); (8.83333333333333 : 66.8802502441406 : JumpEnd); (9 : 66.8802502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Composicion" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="934766a1-e701-46b1-8dcb-d977069be108" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.015626 : 56.875); (2.015626 : 55.4711531575521); (3.75 : 55.4711531575521); (3.75 : 50.2605004882813); (3.52083333333333 : 50.2605004882813 : JumpStart); (3.35416666666667 : 50.2605004882813 : JumpEnd); (3.28645833333333 : 50.2605004882813 : JumpStart); (3.11979166666667 : 50.2605004882813 : JumpEnd); (3.02083333333333 : 50.2605004882813 : JumpStart); (2.85416666666667 : 50.2605004882813 : JumpEnd); (2.8125 : 50.2605004882813); (2.8125 : 44.2248878642578); (3.04166666666667 : 44.2248878642578 : JumpStart); (3.42708333333333 : 44.2248878642578 : JumpEnd); (3.5 : 44.2248878642578)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_HistMedicamento" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="f61710d5-1552-4f01-869e-79d5ab94e301" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 34.5105004882813); (2.625 : 36.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Provincia/Provincia_Municipio" />
+      <nodes>
+        <classShapeMoniker Id="81a4f817-0b2e-4b5a-86d1-da90754f60d7" />
+        <classShapeMoniker Id="ed5df09a-34b5-4525-85f2-d531147ed238" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 58.3802502441406); (8.32291666666667 : 58.3802502441406 : JumpStart); (8.64583333333333 : 58.3802502441406 : JumpEnd); (9.09375 : 58.3802502441406); (9.09375 : 66.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Racion/Racion_Composicion" />
+      <nodes>
+        <classShapeMoniker Id="0e53be77-496d-465b-bd4a-d9f6eb98ce49" />
+        <classShapeMoniker Id="934766a1-e701-46b1-8dcb-d977069be108" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.72301776842949 : 42.3461531575521); (2.81607443490112 : 42.4392098240237 : JumpStart); (2.93392556509888 : 42.5570609542215 : JumpEnd); (3.00357443490112 : 42.6267098240237 : JumpStart); (3.21517556509888 : 42.8383109542215 : JumpEnd); (3.28125 : 42.9043853891226); (3.28125 : 48.5302813842398); (3.37857443490112 : 48.6276058191409 : JumpStart); (3.49642556509888 : 48.7454569493387 : JumpEnd); (3.50096861576022 : 48.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Especie/Especie_Raza" />
+      <nodes>
+        <classShapeMoniker Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" />
+        <classShapeMoniker Id="d235fae3-cbdb-48aa-bc99-4718497ac33c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.187498625 : 57.75); (19.187498625 : 56.0445975748698); (19.9166666666667 : 56.0445975748698 : JumpStart); (20.0833333333333 : 56.0445975748698 : JumpEnd); (21.2916666666667 : 56.0445975748698 : JumpStart); (21.4583333333333 : 56.0445975748698 : JumpEnd); (21.5 : 56.0445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_Recolecta" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="09e45ba4-58dd-4c81-bf97-bb29bf41e9ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.414065 : 56.875); (2.414065 : 55.625); (3.79166666666667 : 55.625 : JumpStart); (4.08333333333333 : 55.625 : JumpEnd); (5.82291666666667 : 55.625 : JumpStart); (6.08333333333333 : 55.625 : JumpEnd); (8.47916666666667 : 55.625 : JumpStart); (8.64583333333333 : 55.625 : JumpEnd); (8.6875 : 55.625); (8.6875 : 56.7141951497396); (11.0260426041667 : 56.7141951497396 : JumpStart); (11.1927092708333 : 56.7141951497396 : JumpEnd); (11.5416666666667 : 56.7141951497396 : JumpStart); (11.9895833333333 : 56.7141951497396 : JumpEnd); (14.5416666666667 : 56.7141951497396 : JumpStart); (14.7708333333333 : 56.7141951497396 : JumpEnd); (18.6437141901042 : 56.7141951497396 : JumpStart); (18.8103808567708 : 56.7141951497396 : JumpEnd); (19.9166666666667 : 56.7141951497396 : JumpStart); (20.0833333333333 : 56.7141951497396 : JumpEnd); (21.125 : 56.7141951497396); (21.125 : 56.0445975748698); (21.2916666666667 : 56.0445975748698 : JumpStart); (21.4583333333333 : 56.0445975748698 : JumpEnd); (21.5 : 56.0445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Recolecta" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="09e45ba4-58dd-4c81-bf97-bb29bf41e9ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 60.8758421947366); (14.625 : 60.5008421947366); (14.625 : 52.3767712402344); (15 : 52.3767712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Motivo/Motivo_Secado" />
+      <nodes>
+        <classShapeMoniker Id="f8e83971-c33f-41da-a534-c90949957f92" />
+        <classShapeMoniker Id="1eadc172-375c-400d-a4e9-0818fcba18da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 58.7588729685872); (19.9166666666667 : 58.7588729685872 : JumpStart); (20.0833333333333 : 58.7588729685872 : JumpEnd); (20.375 : 58.7588729685872); (20.375 : 57.3391951497396); (21.375 : 57.3391951497396); (21.375 : 54.8391951497396); (21.5 : 54.8391951497396); (21.5 : 53.3391951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_Siembra" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="2aa6ca9c-238b-44fc-9875-d903b960ac4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 57.5785826791992); (2.875 : 57.5785826791992); (2.875 : 57.7605004882813); (5.5625 : 57.7605004882813); (5.5625 : 57.3125); (5.60416666666667 : 57.3125 : JumpStart); (6.08333333333333 : 57.3125 : JumpEnd); (8.32291666666667 : 57.3125 : JumpStart); (8.64583333333333 : 57.3125 : JumpEnd); (8.66666666666667 : 57.3125 : JumpStart); (8.83333333333333 : 57.3125 : JumpEnd); (9.96354166666667 : 57.3125 : JumpStart); (10.1302083333333 : 57.3125 : JumpEnd); (11.0260426041667 : 57.3125 : JumpStart); (11.1927092708333 : 57.3125 : JumpEnd); (11.40625 : 57.3125); (11.40625 : 54.5); (11.4479166666667 : 54.5 : JumpStart); (11.6145833333333 : 54.5 : JumpEnd); (11.6666666666667 : 54.5 : JumpStart); (11.8333333333333 : 54.5 : JumpEnd); (14.0729166666667 : 54.5 : JumpStart); (14.2395833333333 : 54.5 : JumpEnd); (14.5416666666667 : 54.5 : JumpStart); (14.8645833333333 : 54.5 : JumpEnd); (15.9166666666667 : 54.5 : JumpStart); (16.0833333333333 : 54.5 : JumpEnd); (17.0885416666667 : 54.5 : JumpStart); (17.2552083333333 : 54.5 : JumpEnd); (18.6437141901042 : 54.5 : JumpStart); (18.8103808567708 : 54.5 : JumpEnd); (19.9166666666667 : 54.5 : JumpStart); (20.0833333333333 : 54.5 : JumpEnd); (21.5 : 54.5); (21.5 : 53.3391951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Siembra" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="2aa6ca9c-238b-44fc-9875-d903b960ac4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.90625 : 65.625); (11.90625 : 54.7812505); (14.0729166666667 : 54.7812505 : JumpStart); (14.2395833333333 : 54.7812505 : JumpEnd); (14.5416666666667 : 54.7812505 : JumpStart); (14.7083333333333 : 54.7812505 : JumpEnd); (15 : 54.7812505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Categoria/Categoria_TipificacionCanal" />
+      <nodes>
+        <classShapeMoniker Id="e00d8b3d-74ba-4d73-96bb-7669f5a11502" />
+        <classShapeMoniker Id="eee60715-14ff-4e7c-87fb-bfb03219f226" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 67.8135691334635); (14.6875 : 67.3760691334635); (14.6875 : 55.4195975748698); (15 : 55.4195975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/ConformacionCanal/ConformacionCanal_TipificacionCanal" />
+      <nodes>
+        <classShapeMoniker Id="2250f19e-5251-40e8-8c14-5e4ba0163ab5" />
+        <classShapeMoniker Id="eee60715-14ff-4e7c-87fb-bfb03219f226" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 54.673076578776); (1.1249995 : 54.673076578776); (1.1249995 : 48.2605004882813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoEnfermedad/TipoEnfermedad_Enfermedad" />
+      <nodes>
+        <classShapeMoniker Id="72800012-a1fd-484a-9354-0c3b0a0316b1" />
+        <classShapeMoniker Id="204cfd02-79d0-403b-b2b8-82e1ca2b6c6a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 42.0625); (8.26041666666667 : 42.0625 : JumpStart); (8.42708333333333 : 42.0625 : JumpEnd); (9.03125 : 42.0625); (9.03125 : 41.1748478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoEngrasamiento/TipoEngrasamiento_EngrasamientoCanal" />
+      <nodes>
+        <classShapeMoniker Id="23142e1a-cc9c-4761-b06a-ee6b95876501" />
+        <classShapeMoniker Id="0cec6a15-1bcd-4c10-b6ed-253e10f25524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 62.8374239095052); (1.1249995 : 62.8374239095052); (1.1249995 : 58.7928898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoProducto/TipoProducto_Producto" />
+      <nodes>
+        <classShapeMoniker Id="0da910a6-aa7c-4947-9617-b35f8406a7a0" />
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 62.7819963200871); (14.6285744349011 : 62.403421885186 : JumpStart); (14.7464255650989 : 62.2855707549882 : JumpEnd); (14.78125 : 62.2507463200871); (14.78125 : 52.8464088603516); (15 : 52.8464088603516)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoSecado/TipoSecado_Secado" />
+      <nodes>
+        <classShapeMoniker Id="fe4c84ec-f905-485e-af41-1313e021ce5c" />
+        <classShapeMoniker Id="1eadc172-375c-400d-a4e9-0818fcba18da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 58.1160467874349); (19.9166666666667 : 58.1160467874349 : JumpStart); (20.0833333333333 : 58.1160467874349 : JumpEnd); (20.25 : 58.1160467874349); (20.25 : 41.3715844726563); (20.8854146666667 : 41.3715844726563 : JumpStart); (21.0520813333333 : 41.3715844726563 : JumpEnd); (21.5 : 41.3715844726563); (21.5 : 40.9965844726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_TratParcela" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="1abb0cf4-6ec0-43b2-8ad6-e9d2320ff8de" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.75 : 40.2347226969401); (19.7604166666667 : 40.2347226969401 : JumpStart); (19.9270833333333 : 40.2347226969401 : JumpEnd); (20.5 : 40.2347226969401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plaga/Plaga_TratParcela" />
+      <nodes>
+        <classShapeMoniker Id="26899633-923a-4a3b-a961-376140e1f3e6" />
+        <classShapeMoniker Id="1abb0cf4-6ec0-43b2-8ad6-e9d2320ff8de" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 57.0678582263997); (3 : 57.0678582263997); (3 : 57.6042504882813); (5.60416666666667 : 57.6042504882813 : JumpStart); (6.02083333333333 : 57.6042504882813 : JumpEnd); (6.125 : 57.6042504882813); (6.125 : 57.5); (8.32291666666667 : 57.5 : JumpStart); (8.64583333333333 : 57.5 : JumpEnd); (11.0260426041667 : 57.5 : JumpStart); (11.1927092708333 : 57.5 : JumpEnd); (11.5416666666667 : 57.5 : JumpStart); (11.7083333333333 : 57.5 : JumpEnd); (11.75 : 57.5); (11.75 : 54.375); (14.0729166666667 : 54.375 : JumpStart); (14.2395833333333 : 54.375 : JumpEnd); (14.5416666666667 : 54.375 : JumpStart); (14.7083333333333 : 54.375 : JumpEnd); (15.9166666666667 : 54.375 : JumpStart); (16.0833333333333 : 54.375 : JumpEnd); (18.6437141901042 : 54.375 : JumpStart); (18.8103808567708 : 54.375 : JumpEnd); (19.9166666666667 : 54.375 : JumpStart); (20.0833333333333 : 54.375 : JumpEnd); (20.375 : 54.375); (20.375 : 41.6215844726563); (20.968748 : 41.6215844726563); (20.968748 : 40.9965844726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_TratParcela" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="1abb0cf4-6ec0-43b2-8ad6-e9d2320ff8de" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21fd8628-3857-4467-8dab-b3e6a9bec1ad" absoluteBounds="15.25, 36.75, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoAlta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="598217d2-20c9-4896-bf64-8e7675d2088a" absoluteBounds="15.265, 37.210000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32c94f5a-683f-4da9-965d-e9eeecdf6cb1" absoluteBounds="1.5, 60, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/GEXVOCDataContext/Familia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2f41cba-1f69-42f4-884c-618519336d1d" absoluteBounds="1.5149999999999997, 60.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.578126 : 60); (2.578126 : 58.7928898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Familia/Familia_Producto" />
+      <nodes>
+        <classShapeMoniker Id="32c94f5a-683f-4da9-965d-e9eeecdf6cb1" />
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 62.125); (2.5 : 61.4248478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoProducto/TipoProducto_Familia" />
+      <nodes>
+        <classShapeMoniker Id="0da910a6-aa7c-4947-9617-b35f8406a7a0" />
+        <classShapeMoniker Id="32c94f5a-683f-4da9-965d-e9eeecdf6cb1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="19c949c9-e0f8-4c01-9a36-192d5e658788" absoluteBounds="9, 54.5, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Asignacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de1ae3f6-3d64-457c-a0f5-b4b68753a9f9" absoluteBounds="9.015, 54.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 58.0338726220703); (8.32291666666667 : 58.0338726220703 : JumpStart); (8.64583333333333 : 58.0338726220703 : JumpEnd); (8.66666666666667 : 58.0338726220703 : JumpStart); (8.83333333333333 : 58.0338726220703 : JumpEnd); (10.046875 : 58.0338726220703); (10.046875 : 56.2535424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Racion/Racion_Asignacion" />
+      <nodes>
+        <classShapeMoniker Id="0e53be77-496d-465b-bd4a-d9f6eb98ce49" />
+        <classShapeMoniker Id="19c949c9-e0f8-4c01-9a36-192d5e658788" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="efc60bbc-7045-418a-8ca7-b4e92d16c297" absoluteBounds="9, 51.5, 2, 1.9178898111979095">
+      <DataClassMoniker Name="/GEXVOCDataContext/Analisis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6308a37d-0fbc-4459-9ee9-3655c0983849" absoluteBounds="9.015, 51.96, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb3ce724-2d0a-4e16-b296-c1549a88e3c4" absoluteBounds="0.75, 39.25, 2, 1.0961531575520951">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoAnalisis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b28c7cc1-ca09-478f-ab99-a5236aa7f3a4" absoluteBounds="0.76500000000000057, 39.709999999999994, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f094514-2787-4e68-bb8a-9e6809371aaa" absoluteBounds="6.25, 39, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/GEXVOCDataContext/Combinacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb32d79d-879a-4476-a213-e594bbc407ad" absoluteBounds="6.2650000000000006, 39.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f187d49b-df71-436d-8ccb-d6727b0a1120" absoluteBounds="3.5, 39.125, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/GEXVOCDataContext/Marcador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12327a4d-9311-4404-83c4-0a597faf2630" absoluteBounds="3.5150000000000006, 39.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="999e46fb-24cc-40b3-9934-724e7021478e" absoluteBounds="12, 57, 2, 2.7396264648437523">
+      <DataClassMoniker Name="/GEXVOCDataContext/Resena" />
+      <nestedChildShapes>
+        <elementListCompartment Id="953f4cb7-f4fa-4bf6-a5a3-aa184aa29971" absoluteBounds="12.015, 57.46, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 39.8374239095052); (5.79166666666667 : 39.8374239095052 : JumpStart); (5.95833333333333 : 39.8374239095052 : JumpEnd); (6.25 : 39.8374239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Marcador/Marcador_Combinacion" />
+      <nodes>
+        <classShapeMoniker Id="f187d49b-df71-436d-8ccb-d6727b0a1120" />
+        <classShapeMoniker Id="4f094514-2787-4e68-bb8a-9e6809371aaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 39.4187119547526); (5.79166666666667 : 39.4187119547526 : JumpStart); (5.95833333333333 : 39.4187119547526 : JumpEnd); (6.25 : 39.4187119547526)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Marcador/Marcador_Combinacion1" />
+      <nodes>
+        <classShapeMoniker Id="f187d49b-df71-436d-8ccb-d6727b0a1120" />
+        <classShapeMoniker Id="4f094514-2787-4e68-bb8a-9e6809371aaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 41.5552364946414); (3.01602600424916 : 41.1592891385128 : JumpStart); (3.10897399575084 : 41.0209473564887 : JumpEnd); (3.375 : 40.6250000003601); (3.375 : 40.6748478190104); (3.5 : 40.5498478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Especie/Especie_Marcador" />
+      <nodes>
+        <classShapeMoniker Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" />
+        <classShapeMoniker Id="f187d49b-df71-436d-8ccb-d6727b0a1120" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 60.75); (8.34732443490112 : 60.6526755650989 : JumpStart); (8.62142556509888 : 60.3785744349011 : JumpEnd); (8.625 : 60.375); (8.625 : 53.7943641110527); (8.72232443490112 : 53.6970396761516 : JumpStart); (8.84017556509888 : 53.5791885459538 : JumpEnd); (8.87857443490112 : 53.5407896761516 : JumpStart); (8.99642556509888 : 53.4229385459538 : JumpEnd); (9.00147429985477 : 53.4178898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Laboratorio/Laboratorio_Analisis" />
+      <nodes>
+        <classShapeMoniker Id="0fbb68fa-b683-4105-895e-01a90643eae5" />
+        <classShapeMoniker Id="efc60bbc-7045-418a-8ca7-b4e92d16c297" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 39.798076578776); (2.79166666666667 : 39.798076578776 : JumpStart); (3.23958333333333 : 39.798076578776 : JumpEnd); (3.25 : 39.798076578776); (3.25 : 40.8391951497396); (5.79166666666667 : 40.8391951497396 : JumpStart); (5.95833333333333 : 40.8391951497396 : JumpEnd); (8.6875 : 40.8391951497396); (8.6875 : 51.125); (10 : 51.125); (10 : 51.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoAnalisis/TipoAnalisis_Analisis" />
+      <nodes>
+        <classShapeMoniker Id="fb3ce724-2d0a-4e16-b296-c1549a88e3c4" />
+        <classShapeMoniker Id="efc60bbc-7045-418a-8ca7-b4e92d16c297" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 39.461538289388); (2.79166666666667 : 39.461538289388 : JumpStart); (3.23958333333333 : 39.461538289388 : JumpEnd); (3.5 : 39.461538289388)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoAnalisis/TipoAnalisis_Marcador" />
+      <nodes>
+        <classShapeMoniker Id="fb3ce724-2d0a-4e16-b296-c1549a88e3c4" />
+        <classShapeMoniker Id="f187d49b-df71-436d-8ccb-d6727b0a1120" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50d9e084-2ba0-4818-8514-819b9e09d1cd" absoluteBounds="3.5, 4.375, 2, 1.7535424804687505">
+      <DataClassMoniker Name="/GEXVOCDataContext/Menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcf4b512-1071-4fc3-bfff-c03f4f23f0c2" absoluteBounds="3.5150000005960464, 4.83500000089407, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.2052495323768 : 6.12854248046875); (4.2052495323768 : 6.37854248046875); (4.80878620417668 : 6.37854248046875); (4.80878620417668 : 6.12854248046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Menu/Menu_Menu" />
+      <nodes>
+        <classShapeMoniker Id="50d9e084-2ba0-4818-8514-819b9e09d1cd" />
+        <classShapeMoniker Id="50d9e084-2ba0-4818-8514-819b9e09d1cd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.56775024414063); (3.5 : 4.56775024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Modulo/Modulo_Menu" />
+      <nodes>
+        <classShapeMoniker Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" />
+        <classShapeMoniker Id="50d9e084-2ba0-4818-8514-819b9e09d1cd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e092b7b2-f6ec-4dbe-ae97-5ab5aceac2ed" absoluteBounds="3.75, 1.625, 2, 1.5891951497395827">
+      <DataClassMoniker Name="/GEXVOCDataContext/Proceso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="510269cc-c89b-494f-99d1-3870e10d0ee0" absoluteBounds="3.7650000005960464, 2.0850000008940697, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.90625); (5.65625 : 3.90625); (5.65625 : 3.21419514973958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GEXVOCDataContext/Modulo/Modulo_Proceso" />
+      <nodes>
+        <classShapeMoniker Id="b0e82deb-a521-49b9-9b39-5cf7219032c0" />
+        <classShapeMoniker Id="e092b7b2-f6ec-4dbe-ae97-5ab5aceac2ed" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1912335b-de4f-47b5-bfed-201d9b402f55" absoluteBounds="6.5, 35.875, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoPersonal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd0e2eb2-2f70-4c21-9f2b-5deba35b88f2" absoluteBounds="6.5150000000000006, 36.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20570c4e-7ca8-4acd-b087-207df1b6e9c8" absoluteBounds="9.5, 30.625, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoCubricion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8987062f-9060-42f7-84e5-80e2a8185480" absoluteBounds="9.515, 31.085, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1db34f6-8ab2-49fd-b176-54488464f14f" absoluteBounds="6.25, 53.875, 2, 1.4248478190104237">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoParto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9398b9bb-74da-4fb2-a5ed-adc69bdac944" absoluteBounds="6.2650000000000006, 54.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="485a253c-5fa4-43f9-a02c-b94834f01def" absoluteBounds="7.25, 31.875, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoContacto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99d929cb-7d00-4c67-a92c-85324a5b251c" absoluteBounds="7.265, 32.335, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d897d44-cc51-4bc0-b49d-bfa119a5a466" absoluteBounds="6.125, 63.5, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Proveedor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91955fae-51fe-4864-ba6b-c68a618d6fe1" absoluteBounds="6.14, 63.959999999999994, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.17187725 : 63.5); (7.17187725 : 63.25); (8.32291666666667 : 63.25 : JumpStart); (8.64583333333333 : 63.25 : JumpEnd); (8.66666666666667 : 63.25 : JumpStart); (8.83333333333333 : 63.25 : JumpEnd); (9.01041666666667 : 63.25 : JumpStart); (9.17708333333333 : 63.25 : JumpEnd); (11.4166666666667 : 63.25 : JumpStart); (11.9895833333333 : 63.25 : JumpEnd); (12.125 : 63.25); (12.125 : 64.2605004882813); (14.6041666666667 : 64.2605004882813 : JumpStart); (14.7708333333333 : 64.2605004882813 : JumpEnd); (14.7916666666667 : 64.2605004882813 : JumpStart); (14.9583333333333 : 64.2605004882813 : JumpEnd); (16.1666666666667 : 64.2605004882813 : JumpStart); (16.3333333333333 : 64.2605004882813 : JumpEnd); (16.5 : 64.2605004882813); (16.5 : 63.5874239095052); (19 : 63.5874239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Proveedor/Proveedor_ExpPro" />
+      <nodes>
+        <classShapeMoniker Id="4d897d44-cc51-4bc0-b49d-bfa119a5a466" />
+        <classShapeMoniker Id="83712eaf-3fd1-4bcc-918c-3697f506d1bf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="706ce065-633e-4216-b139-c7ea4dc24043" absoluteBounds="16.5, 73.375, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Cliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83e2df2e-6ea2-4f5f-8530-aab31d390e45" absoluteBounds="16.515, 73.835, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.8750005 : 73.375); (16.8750005 : 67.0127791341146); (18.8125 : 67.0127791341146); (18.8125 : 61.7373478190104); (18.4375 : 61.7373478190104); (18.4375 : 60.9624239095052); (18.5 : 60.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Cliente/Cliente_ExpCli" />
+      <nodes>
+        <classShapeMoniker Id="706ce065-633e-4216-b139-c7ea4dc24043" />
+        <classShapeMoniker Id="700276f1-4a0e-4948-ad3f-69654874fb7b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0c63426e-7136-465a-b0ec-1ae31623e3bd" absoluteBounds="4.375, 34.375, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Contacto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92a4f6a9-dc37-44cc-8051-14ca56324134" absoluteBounds="4.39, 34.835, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 35.396444905599); (12.5 : 35.396444905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Contacto/Contacto_Cita" />
+      <nodes>
+        <classShapeMoniker Id="0c63426e-7136-465a-b0ec-1ae31623e3bd" />
+        <classShapeMoniker Id="261aae4d-b6d9-4c21-ad50-10097e9e7343" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.875 : 33.1355004882813); (8.875 : 34.7031225); (6.375 : 34.7031225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoContacto/TipoContacto_Contacto" />
+      <nodes>
+        <classShapeMoniker Id="485a253c-5fa4-43f9-a02c-b94834f01def" />
+        <classShapeMoniker Id="0c63426e-7136-465a-b0ec-1ae31623e3bd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2218d2a8-4b74-4e01-b197-43ba5a51f5b0" absoluteBounds="26.5, 63.375, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/TratHigiene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b71bb78-553b-4237-a8d6-de3095dcbd08" absoluteBounds="26.515, 63.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d57cad1e-f651-48ef-be70-b4fb4be46270" absoluteBounds="24, 63.375, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/GEXVOCDataContext/PlanHigiene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca24036c-ef74-43f5-838a-39c4f9db03a7" absoluteBounds="24.015, 63.834999999999994, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26 : 63.923076578776); (26.5 : 63.923076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/PlanHigiene/PlanHigiene_TratHigiene" />
+      <nodes>
+        <classShapeMoniker Id="d57cad1e-f651-48ef-be70-b4fb4be46270" />
+        <classShapeMoniker Id="2218d2a8-4b74-4e01-b197-43ba5a51f5b0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5e508973-eaaf-4854-80e7-f5adf023437a" absoluteBounds="25.25, 61.625, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/ProHig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71d2bf14-1038-4b34-8e03-02b778eddede" absoluteBounds="25.265, 62.085, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.281252 : 58.7928898111979); (2.281252 : 59.875); (2.49479266666667 : 59.875 : JumpStart); (2.66145933333333 : 59.875 : JumpEnd); (5.60416666666667 : 59.875 : JumpStart); (5.95833333333333 : 59.875 : JumpEnd); (6 : 59.875); (6 : 62.4248478190104); (6.07291666666667 : 62.4248478190104 : JumpStart); (6.23958333333333 : 62.4248478190104 : JumpEnd); (8.32291666666667 : 62.4248478190104 : JumpStart); (8.64583333333333 : 62.4248478190104 : JumpEnd); (8.66666666666667 : 62.4248478190104 : JumpStart); (8.83333333333333 : 62.4248478190104 : JumpEnd); (9.01041666666667 : 62.4248478190104 : JumpStart); (9.17708333333333 : 62.4248478190104 : JumpEnd); (11.4166666666667 : 62.4248478190104 : JumpStart); (11.7083333333333 : 62.4248478190104 : JumpEnd); (11.8229166666667 : 62.4248478190104 : JumpStart); (11.9895833333333 : 62.4248478190104 : JumpEnd); (14.5238151677434 : 62.4248478190104 : JumpStart); (14.7708333333333 : 62.4248478190104 : JumpEnd); (14.7916666666667 : 62.4248478190104 : JumpStart); (14.9583333333333 : 62.4248478190104 : JumpEnd); (23.4166666666667 : 62.4248478190104 : JumpStart); (23.5833333333333 : 62.4248478190104 : JumpEnd); (24.875 : 62.4248478190104); (24.875 : 62.2552502441406); (25.25 : 62.2552502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_ProHig" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="5e508973-eaaf-4854-80e7-f5adf023437a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(26.875 : 63.375); (26.875 : 62.8855004882813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratHigiene/TratHigiene_ProHig" />
+      <nodes>
+        <classShapeMoniker Id="2218d2a8-4b74-4e01-b197-43ba5a51f5b0" />
+        <classShapeMoniker Id="5e508973-eaaf-4854-80e7-f5adf023437a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="20b13db1-2803-49ed-a74c-5f1060212763" absoluteBounds="22.75, 68.75, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/GEXVOCDataContext/AniPro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8657e75b-96c2-4193-9031-167dee29d541" absoluteBounds="22.765, 69.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43615ab9-1f7f-4b81-8bad-62f2f724cc42" absoluteBounds="28.5, 67.25, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/GEXVOCDataContext/Programa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8977250-7b2b-423a-995e-896150c400f1" absoluteBounds="28.515, 67.71, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5e6af8b-c440-46a5-8da8-622276183613" absoluteBounds="28.375, 70.125, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/ProPro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eec36ff8-37d5-49fb-9f03-51fa88e6accd" absoluteBounds="28.39, 70.585, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 58.7928898111979); (1.75 : 59.625); (1.93229266666667 : 59.625 : JumpStart); (2.09895933333333 : 59.625 : JumpEnd); (2.46354466666667 : 59.625 : JumpStart); (2.66145933333333 : 59.625 : JumpEnd); (5.60416666666667 : 59.625 : JumpStart); (5.86458333333333 : 59.625 : JumpEnd); (5.875 : 59.625); (5.875 : 70); (8.32291666666667 : 70 : JumpStart); (8.52083583333333 : 70 : JumpEnd); (8.66666666666667 : 70 : JumpStart); (8.83333333333333 : 70 : JumpEnd); (14.4166666666667 : 70 : JumpStart); (14.5833333333333 : 70 : JumpEnd); (14.7916666666667 : 70 : JumpStart); (14.9583333333333 : 70 : JumpEnd); (17.25 : 70); (17.25 : 70.8935973190104); (17.4479166666667 : 70.8935973190104 : JumpStart); (17.6145833333333 : 70.8935973190104 : JumpEnd); (28.375 : 70.8935973190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_ProPro" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="f5e6af8b-c440-46a5-8da8-622276183613" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" absoluteBounds="29.875, 52.125, 2, 3.8900577799479166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Gasto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e949625-abd0-4616-8ba7-94ac75a83864" absoluteBounds="29.89, 52.585, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.5 : 59.0903344726562); (25.4166666666667 : 59.0903344726562 : JumpStart); (25.5833333333333 : 59.0903344726562 : JumpEnd); (26.9479166666667 : 59.0903344726562 : JumpStart); (27.1145833333333 : 59.0903344726562 : JumpEnd); (27.2916666666667 : 59.0903344726562 : JumpStart); (27.4583333333333 : 59.0903344726562 : JumpEnd); (27.8541661666667 : 59.0903344726562 : JumpStart); (28.0208328333333 : 59.0903344726562 : JumpEnd); (30.51562275 : 59.0903344726562); (30.51562275 : 56.0150577799479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Abonado/Abonado_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="c7a7728e-68d4-4910-be0e-5156708a27b9" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 54.5); (10 : 54.195028889974); (11.0260426041667 : 54.195028889974 : JumpStart); (11.3958333333333 : 54.195028889974 : JumpEnd); (11.4479166666667 : 54.195028889974 : JumpStart); (11.6145833333333 : 54.195028889974 : JumpEnd); (11.875 : 54.195028889974); (11.875 : 54.4375); (14.0729166666667 : 54.4375 : JumpStart); (14.2395833333333 : 54.4375 : JumpEnd); (14.5416666666667 : 54.4375 : JumpStart); (14.8645833333333 : 54.4375 : JumpEnd); (15.9166666666667 : 54.4375 : JumpStart); (16.0833333333333 : 54.4375 : JumpEnd); (17.0885416666667 : 54.4375 : JumpStart); (17.2552083333333 : 54.4375 : JumpEnd); (18.6437141901042 : 54.4375 : JumpStart); (18.8103808567708 : 54.4375 : JumpEnd); (19.9166666666667 : 54.4375 : JumpStart); (20.0833333333333 : 54.4375 : JumpEnd); (20.1666666666667 : 54.4375 : JumpStart); (20.3333333333333 : 54.4375 : JumpEnd); (21.4166666666667 : 54.4375 : JumpStart); (21.5833333333333 : 54.4375 : JumpEnd); (24.4166666666667 : 54.4375 : JumpStart); (24.5833333333333 : 54.4375 : JumpEnd); (24.625 : 54.4375); (24.625 : 53.5); (25.5104169166667 : 53.5 : JumpStart); (25.6770835833333 : 53.5 : JumpEnd); (26.3541661666667 : 53.5 : JumpStart); (26.5208328333333 : 53.5 : JumpEnd); (27.2916666666667 : 53.5 : JumpStart); (27.4583333333333 : 53.5 : JumpEnd); (27.8541661666667 : 53.5 : JumpStart); (28.0208328333333 : 53.5 : JumpEnd); (29.5 : 53.5); (29.5 : 52.8660467874349); (29.875 : 52.8660467874349)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Asignacion/Asignacion_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="19c949c9-e0f8-4c01-9a36-192d5e658788" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.5 : 43.3802502441406); (31.273439 : 43.3802502441406); (31.273439 : 52.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Naturaleza/Naturaleza_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="f9aea854-6c12-4d3b-811d-c42fd961006e" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.7270475234375 : 57.75); (18.7270475234375 : 53.5535462874349); (26.3541661666667 : 53.5535462874349 : JumpStart); (26.5208328333333 : 53.5535462874349 : JumpEnd); (29.875 : 53.5535462874349)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(27.03125 : 61.625); (27.03125 : 54.8735796774089); (27.8541661666667 : 54.8735796774089 : JumpStart); (28.0208328333333 : 54.8735796774089 : JumpEnd); (29.875 : 54.8735796774089)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/ProHig/ProHig_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="5e508973-eaaf-4854-80e7-f5adf023437a" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.375 : 70.7552502441406); (31.2187495 : 70.7552502441406); (31.2187495 : 56.0150577799479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/ProPro/ProPro_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="f5e6af8b-c440-46a5-8da8-622276183613" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.5 : 52.4330233937174); (24.7916666666667 : 52.4330233937174 : JumpStart); (24.9583333333333 : 52.4330233937174 : JumpEnd); (26.3541661666667 : 52.4330233937174 : JumpStart); (26.5208328333333 : 52.4330233937174 : JumpEnd); (27.8541661666667 : 52.4330233937174 : JumpStart); (28.0208328333333 : 52.4330233937174 : JumpEnd); (29.875 : 52.4330233937174)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Siembra/Siembra_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="2aa6ca9c-238b-44fc-9875-d903b960ac4a" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(22.5 : 39.8732922363281); (22.9947891666667 : 39.8732922363281 : JumpStart); (23.1614558333333 : 39.8732922363281 : JumpEnd); (24.6666666666667 : 39.8732922363281 : JumpStart); (24.8333333333333 : 39.8732922363281 : JumpEnd); (30.9414065 : 39.8732922363281); (30.9414065 : 52.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratParcela/TratParcela_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="1abb0cf4-6ec0-43b2-8ad6-e9d2320ff8de" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fe84dce0-64a5-4e00-9200-09b0fd16155d" absoluteBounds="13.125, 22.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/PlaMaq" />
+      <nestedChildShapes>
+        <elementListCompartment Id="842f4d51-ef69-4dc1-9852-a730c1225737" absoluteBounds="13.14, 22.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efe5a04b-f4ad-4030-a8cc-bf1f00812afe" absoluteBounds="10.5, 24.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/PlaZon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd4b58e4-f018-4fe4-908a-7b52afbaafb4" absoluteBounds="10.515, 24.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ed163eb-ada5-4834-99bd-3fd10b6578b4" absoluteBounds="13.125, 24.25, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/Ejecucion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bed9d0c5-894b-4420-b33a-6c059e25594e" absoluteBounds="13.14, 24.71, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd442daa-9071-4dea-a3d5-18b3e589fed4" absoluteBounds="10.5, 19.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/Transformacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ba937e6-3ff8-41a0-a65b-844ce37c7170" absoluteBounds="10.515, 20.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 57.3232204527995); (2.91666666666667 : 57.3232204527995 : JumpStart); (3.08333333333333 : 57.3232204527995 : JumpEnd); (3.3125 : 57.3232204527995); (3.3125 : 57.7292504882813); (5.59445657837537 : 57.7292504882813 : JumpStart); (5.86458333333333 : 57.7292504882813 : JumpEnd); (6 : 57.7292504882813); (6 : 57.125); (8.32291666666667 : 57.125 : JumpStart); (8.64583333333333 : 57.125 : JumpEnd); (8.66666666666667 : 57.125 : JumpStart); (8.83333333333333 : 57.125 : JumpEnd); (9.96354166666667 : 57.125 : JumpStart); (10.1302083333333 : 57.125 : JumpEnd); (11.0260426041667 : 57.125 : JumpStart); (11.1927092708333 : 57.125 : JumpEnd); (11.53125 : 57.125); (11.53125 : 35.0428898111979); (11.4583333333333 : 35.0428898111979 : JumpStart); (11.2916666666667 : 35.0428898111979 : JumpEnd); (11 : 35.0428898111979); (11 : 31.9711531575521); (11.75 : 31.9711531575521); (11.75 : 27.7998478190104); (11.2083338333333 : 27.7998478190104 : JumpStart); (11.0416671666667 : 27.7998478190104 : JumpEnd); (10.25 : 27.7998478190104); (10.25 : 21.8785424804688); (11.5 : 21.8785424804688); (11.5 : 21.5035424804687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Transformacion" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="cd442daa-9071-4dea-a3d5-18b3e589fed4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="46a92cb0-fe95-44b4-9ac0-98cf14f1c9ee" absoluteBounds="7.875, 22.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/PlaVet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5b0a118-8f1e-4747-9512-8dd42de414ee" absoluteBounds="7.8900000000000006, 22.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5850ef4-7e05-449f-9567-cfe94c749812" absoluteBounds="24.5, 55.875, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Titular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9535fab3-67fb-42e8-b01d-b66d7eb81c47" absoluteBounds="24.515, 56.335, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(25.5 : 58.7789737955729); (25.5 : 61.375); (23.5 : 61.375); (23.5 : 67.625); (20.125 : 67.625); (20.125 : 69.5445975748698); (19.75 : 69.5445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Titular/Titular_Cuenta" />
+      <nodes>
+        <classShapeMoniker Id="f5850ef4-7e05-449f-9567-cfe94c749812" />
+        <classShapeMoniker Id="11fdc0b4-1fd6-45c4-bcdf-d63a238e8702" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(25.625 : 55.875); (25.625 : 55.4248478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Titular/Titular_ExpTit" />
+      <nodes>
+        <classShapeMoniker Id="f5850ef4-7e05-449f-9567-cfe94c749812" />
+        <classShapeMoniker Id="dbf60f0a-ea54-4705-a460-cc7023b0dcd4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24.5 : 57.2141951497396); (22.0208328333333 : 57.2141951497396 : JumpStart); (21.8541661666667 : 57.2141951497396 : JumpEnd); (21.4583333333333 : 57.2141951497396 : JumpStart); (21.2916666666667 : 57.2141951497396 : JumpEnd); (20.0833333333333 : 57.2141951497396 : JumpStart); (19.9166666666667 : 57.2141951497396 : JumpEnd); (19.56250225 : 57.2141951497396); (19.56250225 : 57.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Titular/Titular_Parcela" />
+      <nodes>
+        <classShapeMoniker Id="f5850ef4-7e05-449f-9567-cfe94c749812" />
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="998f5772-a740-4597-b1c1-98a10c79d152" absoluteBounds="14.75, 49, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/Celo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9094c493-ae6d-43dd-889c-961ecb4e7f0c" absoluteBounds="14.765, 49.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91c9de95-fbea-4065-9fe5-9282b811ad1e" absoluteBounds="12.75, 40.25, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/GEXVOCDataContext/SincronizacionCelo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76fdb620-27e8-463b-9d7a-cd0741cdd125" absoluteBounds="12.765, 40.71, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc656910-40ec-48ea-923c-a7c7806a147f" absoluteBounds="11.25, 32.625, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/GEXVOCDataContext/LoteAnimal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8227181-8038-445c-b21a-8dd0c8a2b000" absoluteBounds="11.265, 33.085, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.15625 : 34.5428898111979); (12.15625 : 48.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/LoteAnimal/LoteAnimal_AniLot" />
+      <nodes>
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+        <classShapeMoniker Id="cb370584-a4cb-4eff-8ab2-c2f3cd55a20c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.9579043738732 : 32.625); (11.9579043738732 : 32.375); (12.5560049416567 : 32.375); (12.5560049416567 : 32.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/LoteAnimal/LoteAnimal_LoteAnimal" />
+      <nodes>
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d92314b3-9f24-4d28-ba1e-e70c8bf9dca4" absoluteBounds="17.875, 46.125, 2, 2.24658447265625">
+      <DataClassMoniker Name="/GEXVOCDataContext/TratEnfermedad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7084b5c-d863-477b-bf2f-52d3eeb67c58" absoluteBounds="17.89, 46.585, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(18.329101421875 : 48.3715844726563); (18.329101421875 : 53.6695975748698); (18.6437141901042 : 53.6695975748698 : JumpStart); (18.8103808567708 : 53.6695975748698 : JumpEnd); (19.9166666666667 : 53.6695975748698 : JumpStart); (20.0833333333333 : 53.6695975748698 : JumpEnd); (20.2916666666667 : 53.6695975748698 : JumpStart); (20.4583333333333 : 53.6695975748698 : JumpEnd); (21.4166666666667 : 53.6695975748698 : JumpStart); (21.5833333333333 : 53.6695975748698 : JumpEnd); (25.5104169166667 : 53.6695975748698 : JumpStart); (25.6770835833333 : 53.6695975748698 : JumpEnd); (27.8541661666667 : 53.6695975748698 : JumpStart); (28.0208328333333 : 53.6695975748698 : JumpEnd); (29.875 : 53.6695975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratEnfermedad/TratEnfermedad_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="d92314b3-9f24-4d28-ba1e-e70c8bf9dca4" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4f4b40d9-7e98-4a9e-b215-c93fa12fc20d" absoluteBounds="6.5, 102.875, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/Lactacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a407b87-c812-4b73-bf67-a7876b6493df" absoluteBounds="6.5150000000000006, 103.335, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 102.875); (6.375 : 102.43636311849)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Lactacion/Lactacion_Extendida" />
+      <nodes>
+        <classShapeMoniker Id="4f4b40d9-7e98-4a9e-b215-c93fa12fc20d" />
+        <classShapeMoniker Id="89b6e3e7-3854-4a8e-ada3-d03458210b12" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b290a9ac-911f-48f9-b2b4-8a5da2a3daa5" absoluteBounds="10.875, 102.625, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/ControlLeche" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a853a26f-8574-4638-bf9c-db1e685433d9" absoluteBounds="10.89, 103.085, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5204095-26bf-4f85-824e-9eeff92f37ba" absoluteBounds="12, 51.75, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Inseminacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b012fc00-e4da-4bd5-b498-550efadc9735" absoluteBounds="12.015, 52.21, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 53.4347943839518); (14.0729166666667 : 53.4347943839518 : JumpStart); (14.2395833333333 : 53.4347943839518 : JumpEnd); (14.4166666666667 : 53.4347943839518 : JumpStart); (14.8645833333333 : 53.4347943839518 : JumpEnd); (17.0885416666667 : 53.4347943839518 : JumpStart); (17.2552083333333 : 53.4347943839518 : JumpEnd); (17.78125 : 53.4347943839518); (17.78125 : 44.4711531575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Inseminacion/Inseminacion_InsPar" />
+      <nodes>
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+        <classShapeMoniker Id="9268ff8d-3c85-4d11-8634-ae5ef971409f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 53.84375); (14.0729166666667 : 53.84375 : JumpStart); (14.2395833333333 : 53.84375 : JumpEnd); (14.4166666666667 : 53.84375 : JumpStart); (14.8645833333333 : 53.84375 : JumpEnd); (17.0885416666667 : 53.84375 : JumpStart); (17.2552083333333 : 53.84375 : JumpEnd); (18.6437141901042 : 53.84375 : JumpStart); (18.8103808567708 : 53.84375 : JumpEnd); (19.9166666666667 : 53.84375 : JumpStart); (20.0833333333333 : 53.84375 : JumpEnd); (20.2916666666667 : 53.84375 : JumpStart); (20.4583333333333 : 53.84375 : JumpEnd); (21.4166666666667 : 53.84375 : JumpStart); (21.5833333333333 : 53.84375 : JumpEnd); (24.4166666666667 : 53.84375 : JumpStart); (24.5833333333333 : 53.84375 : JumpEnd); (25.5104169166667 : 53.84375 : JumpStart); (25.6770835833333 : 53.84375 : JumpEnd); (27.8541661666667 : 53.84375 : JumpStart); (28.0208328333333 : 53.84375 : JumpEnd); (29.875 : 53.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Inseminacion/Inseminacion_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.1093759375 : 60.75); (11.1093759375 : 53.3559420986704); (12 : 53.3559420986704)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoInseminacion/TipoInseminacion_Inseminacion" />
+      <nodes>
+        <classShapeMoniker Id="69574a4b-c119-40ad-898b-40b6c3dc0a19" />
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.875 : 104.028974295573); (15.5 : 104.028974295573); (15.5 : 103.02201578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/ControlLeche/ControlLeche_MuestraControl" />
+      <nodes>
+        <classShapeMoniker Id="b290a9ac-911f-48f9-b2b4-8a5da2a3daa5" />
+        <classShapeMoniker Id="454e25be-f89a-4fa1-9021-344b0a18b901" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 103.783023740234); (10.875 : 103.783023740234)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Lactacion/Lactacion_ControlLeche" />
+      <nodes>
+        <classShapeMoniker Id="4f4b40d9-7e98-4a9e-b215-c93fa12fc20d" />
+        <classShapeMoniker Id="b290a9ac-911f-48f9-b2b4-8a5da2a3daa5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.9062475 : 106.625); (9.9062475 : 104.44073027181); (10.875 : 104.44073027181)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/StatusControl/StatusControl_ControlLeche" />
+      <nodes>
+        <classShapeMoniker Id="f48a775d-5635-4edd-9ed1-2cf089485cc9" />
+        <classShapeMoniker Id="b290a9ac-911f-48f9-b2b4-8a5da2a3daa5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 105.798076578776); (11.875 : 105.798076578776); (11.875 : 105.035931803385)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/StatusOrdeno/StatusOrdeno_ControlLeche" />
+      <nodes>
+        <classShapeMoniker Id="934694da-4368-4dc0-bbd3-29dff00b8d44" />
+        <classShapeMoniker Id="b290a9ac-911f-48f9-b2b4-8a5da2a3daa5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7157399e-0467-4600-9817-5b3676972faf" absoluteBounds="26.125, 44.125, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/GEXVOCDataContext/DiagInseminacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d669b9a0-c0da-4925-9d1e-7d0137bd5131" absoluteBounds="26.14, 44.585, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17 : 61.3802502441406); (18 : 61.3802502441406); (18 : 60); (19.4166666666667 : 60 : JumpStart); (19.5833333333333 : 60 : JumpEnd); (25.4166666666667 : 60 : JumpStart); (25.5833333333333 : 60 : JumpEnd); (26.9479166666667 : 60 : JumpStart); (27.1145833333333 : 60 : JumpEnd); (27.375 : 60); (27.375 : 46.4178898111979); (27.629396609375 : 46.4178898111979); (27.629396609375 : 46.0428898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoDiagnostico/TipoDiagnostico_DiagInseminacion" />
+      <nodes>
+        <classShapeMoniker Id="d0ed8a3f-96df-41b7-9456-ff620db8e1b0" />
+        <classShapeMoniker Id="7157399e-0467-4600-9817-5b3676972faf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2d7d91f9-224a-464b-91c9-f49ef8187d5d" absoluteBounds="15.5, 45.875, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Estancia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e31629b-6db0-43a3-a5e5-309fdb06380d" absoluteBounds="15.515, 46.335, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cca174e8-c823-48e1-bbe3-560384c6aee0" absoluteBounds="17.875, 33.875, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/Cubricion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d642748f-8e27-4094-a6dc-bf0a567ca1dd" absoluteBounds="17.89, 34.335, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.875 : 35.1950936458333); (17.46875 : 35.1950936458333); (17.46875 : 45.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Cubricion/Cubricion_Estancia" />
+      <nodes>
+        <classShapeMoniker Id="cca174e8-c823-48e1-bbe3-560384c6aee0" />
+        <classShapeMoniker Id="2d7d91f9-224a-464b-91c9-f49ef8187d5d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.25 : 34.208944905599); (17.875 : 34.208944905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/LoteAnimal/LoteAnimal_Cubricion" />
+      <nodes>
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+        <classShapeMoniker Id="cca174e8-c823-48e1-bbe3-560384c6aee0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 31.7211531575521); (10.25 : 34.6991398111979); (12.0729166666667 : 34.6991398111979 : JumpStart); (12.2395833333333 : 34.6991398111979 : JumpEnd); (17.875 : 34.6991398111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoCubricion/TipoCubricion_Cubricion" />
+      <nodes>
+        <classShapeMoniker Id="20570c4e-7ca8-4acd-b087-207df1b6e9c8" />
+        <classShapeMoniker Id="cca174e8-c823-48e1-bbe3-560384c6aee0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dcffd634-366b-4d79-8cf2-c7df848db422" absoluteBounds="20.875, 46.25, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Receta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36922794-a5f6-4c61-9901-f92e7dd787ce" absoluteBounds="20.89, 46.71, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(22.875 : 47.5544661458333); (30.210935 : 47.5544661458333); (30.210935 : 52.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Receta/Receta_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="dcffd634-366b-4d79-8cf2-c7df848db422" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 58.2624664474691); (3.1875 : 58.2624664474691); (3.1875 : 57.7917504882813); (5.53195657837537 : 57.7917504882813 : JumpStart); (5.86458333333333 : 57.7917504882813 : JumpEnd); (6.0625 : 57.7917504882813); (6.0625 : 57.4375); (8.32291666666667 : 57.4375 : JumpStart); (8.64583333333333 : 57.4375 : JumpEnd); (8.66666666666667 : 57.4375 : JumpStart); (8.83333333333333 : 57.4375 : JumpEnd); (8.85416666666667 : 57.4375 : JumpStart); (9.02083333333333 : 57.4375 : JumpEnd); (9.96354166666667 : 57.4375 : JumpStart); (10.1302083333333 : 57.4375 : JumpEnd); (11.0260426041667 : 57.4375 : JumpStart); (11.3020833333333 : 57.4375 : JumpEnd); (11.6875 : 57.4375); (11.6875 : 54.3125); (14.0729166666667 : 54.3125 : JumpStart); (14.2395833333333 : 54.3125 : JumpEnd); (14.5416666666667 : 54.3125 : JumpStart); (14.8645833333333 : 54.3125 : JumpEnd); (15.9166666666667 : 54.3125 : JumpStart); (16.0833333333333 : 54.3125 : JumpEnd); (17.0885416666667 : 54.3125 : JumpStart); (17.2552083333333 : 54.3125 : JumpEnd); (18.6437141901042 : 54.3125 : JumpStart); (18.8103808567708 : 54.3125 : JumpEnd); (19.9166666666667 : 54.3125 : JumpStart); (20.0833333333333 : 54.3125 : JumpEnd); (20.125 : 54.3125); (20.125 : 47.2911185709635); (20.2916666666667 : 47.2911185709635 : JumpStart); (20.4583333333333 : 47.2911185709635 : JumpEnd); (20.875 : 47.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Receta" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="dcffd634-366b-4d79-8cf2-c7df848db422" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19.875 : 47.2911185709635); (20.2916666666667 : 47.2911185709635 : JumpStart); (20.4583333333333 : 47.2911185709635 : JumpEnd); (20.875 : 47.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratEnfermedad/TratEnfermedad_Receta" />
+      <nodes>
+        <classShapeMoniker Id="d92314b3-9f24-4d28-ba1e-e70c8bf9dca4" />
+        <classShapeMoniker Id="dcffd634-366b-4d79-8cf2-c7df848db422" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1340147c-61ca-48ad-b764-2a56039619aa" absoluteBounds="12.25, 55, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Aborto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdd363e7-5b8d-475e-b2d3-cbe820de3d3d" absoluteBounds="12.265, 55.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 63.7509686157602); (11.4410744349011 : 63.5598941808591 : JumpStart); (11.5589255650989 : 63.4420430506613 : JumpEnd); (11.625 : 63.3759686157602); (11.625 : 55.7945975748698); (11.6979166666667 : 55.7945975748698 : JumpStart); (11.8645833333333 : 55.7945975748698 : JumpEnd); (12.25 : 55.7945975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoAborto/TipoAborto_Aborto" />
+      <nodes>
+        <classShapeMoniker Id="9a769eaf-deb8-4848-b9d9-b4d71f900ed9" />
+        <classShapeMoniker Id="1340147c-61ca-48ad-b764-2a56039619aa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0ecf7d45-dc95-4cb7-8e5b-bbab3746d703" absoluteBounds="3.5, 56.25, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/Estado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0aa2388-7a10-4449-b22b-9445db7590d9" absoluteBounds="3.515, 56.71, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14b43cfb-c9af-4479-bd5b-65aaaa1082b2" absoluteBounds="4, 46.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoCondicion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06262099-12c0-4728-a96b-dd3b36d0120c" absoluteBounds="4.015, 47.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 42.3149539522987); (2.81607443490112 : 42.3810283871998 : JumpStart); (2.93392556509888 : 42.4988795173976 : JumpEnd); (3.00357443490112 : 42.5685283871998 : JumpStart); (3.21517556509888 : 42.7801295173976 : JumpEnd); (3.34375 : 42.9087039522987); (3.34375 : 47.1901256220703); (3.35416666666667 : 47.1901256220703 : JumpStart); (3.52083333333333 : 47.1901256220703 : JumpEnd); (4 : 47.1901256220703)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Especie/Especie_TipoCondicion" />
+      <nodes>
+        <classShapeMoniker Id="906da0a8-d7fd-4dee-8e1e-d3c9e7b81200" />
+        <classShapeMoniker Id="14b43cfb-c9af-4479-bd5b-65aaaa1082b2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="92b63aa6-1468-4de1-b7c5-bb05724702ee" absoluteBounds="14.375, 32, 2, 1.26050048828125">
+      <DataClassMoniker Name="/GEXVOCDataContext/TipoLote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ee2c6d9-dfa8-4ee0-9acb-939e677311a1" absoluteBounds="14.39, 32.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.375 : 32.9427502441406); (13.25 : 32.9427502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoLote/TipoLote_LoteAnimal" />
+      <nodes>
+        <classShapeMoniker Id="92b63aa6-1468-4de1-b7c5-bb05724702ee" />
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="461748fc-def2-417a-aecf-fb9f4522b14e" absoluteBounds="15.75, 22.25, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/Maquinaria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d0aff22-5b6e-4e20-8365-affe62456352" absoluteBounds="15.765, 22.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.75 : 22.9624239095052); (15.125 : 22.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Maquinaria/Maquinaria_PlaMaq" />
+      <nodes>
+        <classShapeMoniker Id="461748fc-def2-417a-aecf-fb9f4522b14e" />
+        <classShapeMoniker Id="fe84dce0-64a5-4e00-9200-09b0fd16155d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7a5a1913-bdac-421f-8081-64489b04cac3" absoluteBounds="10.5, 26.125, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/GEXVOCDataContext/Zona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10cb221f-b038-480a-ab1f-83444ebc4138" absoluteBounds="10.515, 26.585, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.65625 : 26.125); (11.65625 : 25.6748478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Zona/Zona_PlaZon" />
+      <nodes>
+        <classShapeMoniker Id="7a5a1913-bdac-421f-8081-64489b04cac3" />
+        <classShapeMoniker Id="efe5a04b-f4ad-4030-a8cc-bf1f00812afe" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" absoluteBounds="10.5, 22.25, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Plantilla" />
+      <nestedChildShapes>
+        <elementListCompartment Id="841d7b12-6296-4de1-8a03-74205aac6f18" absoluteBounds="10.515, 22.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.5 : 22.9624239095052); (13.125 : 22.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_PlaMaq" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="fe84dce0-64a5-4e00-9200-09b0fd16155d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.4687475 : 23.8391951497396); (11.4687475 : 24.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_PlaZon" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="efe5a04b-f4ad-4030-a8cc-bf1f00812afe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.5 : 23.8391951497396); (13.125 : 24.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_Ejecucion" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="0ed163eb-ada5-4834-99bd-3fd10b6578b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.0625 : 22.25); (12.0625 : 21.5035424804687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_Transformacion" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="cd442daa-9071-4dea-a3d5-18b3e589fed4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.5 : 22.9624239095052); (9.875 : 22.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_PlaVet" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="46a92cb0-fe95-44b4-9ac0-98cf14f1c9ee" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="364c2e91-b004-4523-bae8-1e9ce9e79a10" absoluteBounds="7.875, 24.25, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/APPCC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60d14aa8-81bb-45b4-b61e-c382a27d7acf" absoluteBounds="7.8900000000000006, 24.71, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5 : 23.8391951497396); (9.875 : 24.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Plantilla/Plantilla_APPCC" />
+      <nodes>
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+        <classShapeMoniker Id="364c2e91-b004-4523-bae8-1e9ce9e79a10" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fc494385-3199-41c9-a802-4b7cc1c7b5b8" absoluteBounds="26, 67.875, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/GEXVOCDataContext/TratProfilaxis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d0134f8-dc7c-4de5-a8a9-a939725304fb" absoluteBounds="26.015, 68.335, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26 : 69.1070975748698); (24.75 : 69.1070975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratProfilaxis/TratProfilaxis_AniPro" />
+      <nodes>
+        <classShapeMoniker Id="fc494385-3199-41c9-a802-4b7cc1c7b5b8" />
+        <classShapeMoniker Id="20b13db1-2803-49ed-a74c-5f1060212763" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28 : 69.4641951497396); (28.375 : 70.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TratProfilaxis/TratProfilaxis_ProPro" />
+      <nodes>
+        <classShapeMoniker Id="fc494385-3199-41c9-a802-4b7cc1c7b5b8" />
+        <classShapeMoniker Id="f5e6af8b-c440-46a5-8da8-622276183613" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.5 : 68.110576578776); (28 : 68.110576578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Programa/Programa_TratProfilaxis" />
+      <nodes>
+        <classShapeMoniker Id="43615ab9-1f7f-4b81-8bad-62f2f724cc42" />
+        <classShapeMoniker Id="fc494385-3199-41c9-a802-4b7cc1c7b5b8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f00ee33b-ec21-49db-8aa6-091a1015e976" absoluteBounds="9.25, 36.5, 2, 2.73962646484375">
+      <DataClassMoniker Name="/GEXVOCDataContext/Veterinario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93acb506-6f24-43cb-aeb0-bd31d256974f" absoluteBounds="9.265, 36.96, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.21875 : 39.2396264648438); (11.21875 : 58.2874759299879); (11.5416666666667 : 58.2874759299879 : JumpStart); (11.7083333333333 : 58.2874759299879 : JumpEnd); (11.8229166666667 : 58.2874759299879 : JumpStart); (11.9895833333333 : 58.2874759299879 : JumpEnd); (12 : 58.2874759299879)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_Resena" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="999e46fb-24cc-40b3-9934-724e7021478e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.7500005 : 36.5); (9.7500005 : 31.7836531575521); (7.8125 : 31.7836531575521); (7.8125 : 22.9624239095052); (7.875 : 22.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_PlaVet" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="46a92cb0-fe95-44b4-9ac0-98cf14f1c9ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.203125 : 39.2396264648438); (11.203125 : 50.2914542526754); (14.75 : 50.2914542526754)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_Celo" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="998f5772-a740-4597-b1c1-98a10c79d152" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 37.3455212402344); (14.4166666666667 : 37.3455212402344 : JumpStart); (14.5833333333333 : 37.3455212402344 : JumpEnd); (14.65625 : 37.3455212402344); (14.65625 : 40.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_SincronizacionCelo" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="91c9de95-fbea-4065-9fe5-9282b811ad1e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 39.1563129765625); (14.4166666666667 : 39.1563129765625 : JumpStart); (14.5833333333333 : 39.1563129765625 : JumpEnd); (19.84375 : 39.1563129765625); (19.84375 : 46.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_TratEnfermedad" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="d92314b3-9f24-4d28-ba1e-e70c8bf9dca4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.234375 : 39.2396264648438); (11.234375 : 53.8827021280924); (12 : 53.8827021280924)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_Inseminacion" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 36.735576578776); (9.25 : 36.735576578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoPersonal/TipoPersonal_Veterinario" />
+      <nodes>
+        <classShapeMoniker Id="1912335b-de4f-47b5-bfed-201d9b402f55" />
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="99dcca1c-6610-4374-a885-0af48839fb82" absoluteBounds="23.75, 44.75, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Pastoreo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e533a906-08dd-4e91-bacc-f56741a4c2ed" absoluteBounds="23.765, 45.21, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.25 : 33.5677502441406); (24.75 : 33.5677502441406); (24.75 : 44.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/LoteAnimal/LoteAnimal_Pastoreo" />
+      <nodes>
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+        <classShapeMoniker Id="99dcca1c-6610-4374-a885-0af48839fb82" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.796875 : 57.75); (17.796875 : 45.375); (19.7604166666667 : 45.375 : JumpStart); (19.9270833333333 : 45.375 : JumpEnd); (20.1666666666667 : 45.375 : JumpStart); (20.4583333333333 : 45.375 : JumpEnd); (22.9947891666667 : 45.375 : JumpStart); (23.1614558333333 : 45.375 : JumpEnd); (23.75 : 45.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parcela/Parcela_Pastoreo" />
+      <nodes>
+        <classShapeMoniker Id="10de1d77-57a9-4850-b7be-1a60a8b33061" />
+        <classShapeMoniker Id="99dcca1c-6610-4374-a885-0af48839fb82" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ede55039-53b6-4aa8-8d2d-c04a5215d3ec" absoluteBounds="4.125, 50.375, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/GEXVOCDataContext/Fotografia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90b8ae80-aaf2-4608-9baf-e12a87e85d3c" absoluteBounds="4.14, 50.835, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa4a8d86-783d-4222-9c7d-f1cf0206372b" absoluteBounds="9.125, 42.625, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Parto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec70a20f-5f28-4aad-ac1c-269bcf90dd3f" absoluteBounds="9.14, 43.085, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.125 : 42.78125); (11.1510416666667 : 42.78125 : JumpStart); (11.3177083333333 : 42.78125 : JumpEnd); (12.0729166666667 : 42.78125 : JumpStart); (12.2395833333333 : 42.78125 : JumpEnd); (12.4791666666667 : 42.78125 : JumpStart); (12.6458333333333 : 42.78125 : JumpEnd); (18.75 : 42.78125); (18.75 : 43.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Parto/Parto_InsPar" />
+      <nodes>
+        <classShapeMoniker Id="aa4a8d86-783d-4222-9c7d-f1cf0206372b" />
+        <classShapeMoniker Id="9268ff8d-3c85-4d11-8634-ae5ef971409f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 44.8304659016927); (8.26041666666667 : 44.8304659016927 : JumpStart); (8.56770833333333 : 44.8304659016927 : JumpEnd); (8.85416666666667 : 44.8304659016927 : JumpStart); (9.02083333333333 : 44.8304659016927 : JumpEnd); (9.125 : 44.8304659016927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Facilidad/Facilidad_Parto" />
+      <nodes>
+        <classShapeMoniker Id="817c5036-7ae8-4976-803f-89797cb7dd4d" />
+        <classShapeMoniker Id="aa4a8d86-783d-4222-9c7d-f1cf0206372b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 54.035014444987); (11.08593796875 : 54.035014444987); (11.08593796875 : 45.0359318033854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoParto/TipoParto_Parto" />
+      <nodes>
+        <classShapeMoniker Id="c1db34f6-8ab2-49fd-b176-54488464f14f" />
+        <classShapeMoniker Id="aa4a8d86-783d-4222-9c7d-f1cf0206372b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e704547f-f2ed-4909-aa5b-5db790b927f7" absoluteBounds="0.75, 44, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Explotacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1168bc4f-ba14-4c38-9700-c229e23ac460" absoluteBounds="0.76500000000000012, 44.46, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 45.0290277164307); (5.79166666666667 : 45.0290277164307 : JumpStart); (5.95833333333333 : 45.0290277164307 : JumpEnd); (6 : 45.0290277164307); (6 : 44.125); (8.26041666666667 : 44.125 : JumpStart); (8.42708333333333 : 44.125 : JumpEnd); (8.5 : 44.125); (8.5 : 42.375); (11.1197916666667 : 42.375 : JumpStart); (11.2864583333333 : 42.375 : JumpEnd); (12.5 : 42.375); (12.5 : 39.7605004882813); (14.5 : 39.7605004882813); (14.5 : 37.0035424804688); (13.5 : 37.0035424804688); (13.5 : 36.6285424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Cita" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="261aae4d-b6d9-4c21-ad50-10097e9e7343" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 45.7594547876536); (5.75 : 45.7594547876536); (5.75 : 46.3855004882813); (8.26041666666667 : 46.3855004882813 : JumpStart); (8.42708333333333 : 46.3855004882813 : JumpEnd); (8.875 : 46.3855004882813); (8.875 : 48.6215844726563); (20 : 48.6215844726563); (20 : 59.625); (19.5 : 59.625); (19.5 : 60.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_ExpCli" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="700276f1-4a0e-4948-ad3f-69654874fb7b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 44.8483153796074); (3.29590712739103 : 44.0697683215311 : JumpStart); (3.39159287260897 : 43.9333058140799 : JumpEnd); (3.78125 : 43.3775951538462); (3.78125 : 41.798076578776); (3.5 : 41.798076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_ExpEsp" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="b0784914-2758-4102-8668-4ee368579604" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 44); (1.75 : 42.5961531575521); (2.46354466666667 : 42.5961531575521 : JumpStart); (2.63021133333333 : 42.5961531575521 : JumpEnd); (2.79166666666667 : 42.5961531575521 : JumpStart); (2.95833333333333 : 42.5961531575521 : JumpEnd); (3 : 42.5961531575521); (3 : 37.7998478190104); (3.79166666666667 : 37.7998478190104 : JumpStart); (3.95833333333333 : 37.7998478190104 : JumpEnd); (4 : 37.7998478190104); (4 : 32.2998478190104); (3.25 : 32.2998478190104); (3.25 : 24.673076578776); (3.5 : 24.673076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_ExpMod" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="47078fac-6673-4c17-be64-fe6df58b735c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 45.1734685251261); (3.04166666666667 : 45.1734685251261 : JumpStart); (3.52083333333333 : 45.1734685251261 : JumpEnd); (5.13541666666667 : 45.1734685251261 : JumpStart); (5.30208333333333 : 45.1734685251261 : JumpEnd); (5.625 : 45.1734685251261); (5.625 : 46.5105004882813); (8.24479166666667 : 46.5105004882813 : JumpStart); (8.86458333333333 : 46.5105004882813 : JumpEnd); (8.9375 : 46.5105004882813); (8.9375 : 62.625); (9.01041666666667 : 62.625 : JumpStart); (9.17708333333333 : 62.625 : JumpEnd); (11.4166666666667 : 62.625 : JumpStart); (11.7083333333333 : 62.625 : JumpEnd); (11.8229166666667 : 62.625 : JumpStart); (11.9895833333333 : 62.625 : JumpEnd); (14.3236629867538 : 62.625 : JumpStart); (14.4903296534204 : 62.625 : JumpEnd); (14.6041666666667 : 62.625 : JumpStart); (14.7708333333333 : 62.625 : JumpEnd); (14.7916666666667 : 62.625 : JumpStart); (14.9583333333333 : 62.625 : JumpEnd); (20 : 62.625); (20 : 62.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_ExpPro" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="83712eaf-3fd1-4bcc-918c-3697f506d1bf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 45.4623501425171); (5.79166666666667 : 45.4623501425171 : JumpStart); (5.95833333333333 : 45.4623501425171 : JumpEnd); (6 : 45.4623501425171); (6 : 46.0730004882813); (8.26041666666667 : 46.0730004882813 : JumpStart); (8.42708333333333 : 46.0730004882813 : JumpEnd); (8.625 : 46.0730004882813); (8.625 : 48.6215844726563); (11.1197916666667 : 48.6215844726563 : JumpStart); (11.2864583333333 : 48.6215844726563 : JumpEnd); (24.875 : 48.6215844726563); (24.875 : 53.375); (25.59375025 : 53.375); (25.59375025 : 54)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_ExpTit" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="dbf60f0a-ea54-4705-a460-cc7023b0dcd4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 44.4512644816487); (2.875 : 44.4512644816487); (2.875 : 38.0498478190104); (2.97916666666667 : 38.0498478190104 : JumpStart); (3.14583333333333 : 38.0498478190104 : JumpEnd); (4.125 : 38.0498478190104); (4.125 : 32.6748478190104); (4.7499995 : 32.6748478190104); (4.7499995 : 32.0498478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Tarea" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="8e58bf20-37f4-4c48-882d-c21fcab7ea54" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 45.6067909512126); (5.875 : 45.6067909512126); (5.875 : 36.7859318033854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Contacto" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="0c63426e-7136-465a-b0ec-1ae31623e3bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 44.8845869077352); (3.35416666666667 : 44.8845869077352 : JumpStart); (3.52083333333333 : 44.8845869077352 : JumpEnd); (5.79166666666667 : 44.8845869077352 : JumpStart); (5.95833333333333 : 44.8845869077352 : JumpEnd); (6.0625 : 44.8845869077352); (6.0625 : 46.0105004882813); (8.26041666666667 : 46.0105004882813 : JumpStart); (8.42708333333333 : 46.0105004882813 : JumpEnd); (8.75 : 46.0105004882813); (8.75 : 48.4965844726563); (8.79166666666667 : 48.4965844726563 : JumpStart); (8.95833333333333 : 48.4965844726563 : JumpEnd); (11.0026046354167 : 48.4965844726563 : JumpStart); (11.2864583333333 : 48.4965844726563 : JumpEnd); (14.2447916666667 : 48.4965844726563 : JumpStart); (14.4114583333333 : 48.4965844726563 : JumpEnd); (27.9374995 : 48.4965844726563); (27.9374995 : 63.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_TratHigiene" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="2218d2a8-4b74-4e01-b197-43ba5a51f5b0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 46.023812056188); (3.35416666666667 : 46.023812056188 : JumpStart); (3.52083333333333 : 46.023812056188 : JumpEnd); (5.66666666666667 : 46.023812056188 : JumpStart); (5.83333333333333 : 46.023812056188 : JumpEnd); (5.875 : 46.023812056188); (5.875 : 46.3230004882813); (8.26041666666667 : 46.3230004882813 : JumpStart); (8.42708333333333 : 46.3230004882813 : JumpEnd); (8.54166666666667 : 46.3230004882813 : JumpStart); (8.70833333333333 : 46.3230004882813 : JumpEnd); (8.71875 : 46.3230004882813); (8.71875 : 48.6215844726563); (11.1197916666667 : 48.6215844726563 : JumpStart); (11.2864583333333 : 48.6215844726563 : JumpEnd); (30.57617075 : 48.6215844726563); (30.57617075 : 52.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.281252 : 44); (2.281252 : 42.8461531575521); (3.0625 : 42.8461531575521); (3.0625 : 37.9248478190104); (3.875 : 37.9248478190104); (3.875 : 33.7552502441406); (11.25 : 33.7552502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_LoteAnimal" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="dc656910-40ec-48ea-923c-a7c7806a147f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 45.9121186240946); (3.04166666666667 : 45.9121186240946 : JumpStart); (3.52083333333333 : 45.9121186240946 : JumpEnd); (5.13541666666667 : 45.9121186240946 : JumpStart); (5.30208333333333 : 45.9121186240946 : JumpEnd); (5.66666666666667 : 45.9121186240946 : JumpStart); (5.83333333333333 : 45.9121186240946 : JumpEnd); (5.85416666666667 : 45.9121186240946 : JumpStart); (6.08333333333333 : 45.9121186240946 : JumpEnd); (6.125 : 45.9121186240946); (6.125 : 44.375); (8.26041666666667 : 44.375 : JumpStart); (8.56770833333333 : 44.375 : JumpEnd); (8.60416666666667 : 44.375 : JumpStart); (8.77083333333333 : 44.375 : JumpEnd); (8.875 : 44.375); (8.875 : 42.5); (11.1197916666667 : 42.5 : JumpStart); (11.3177083333333 : 42.5 : JumpEnd); (12.0729166666667 : 42.5 : JumpStart); (12.2395833333333 : 42.5 : JumpEnd); (12.625 : 42.5); (12.625 : 40); (14.5729166666667 : 40 : JumpStart); (14.7395833333333 : 40 : JumpEnd); (17.5 : 40); (17.5 : 24.0498478190104); (16.75 : 24.0498478190104); (16.75 : 23.6748478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Maquinaria" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="461748fc-def2-417a-aecf-fb9f4522b14e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 46.1845541859945); (3.04166666666667 : 46.1845541859945 : JumpStart); (3.52083333333333 : 46.1845541859945 : JumpEnd); (5.13541666666667 : 46.1845541859945 : JumpStart); (5.30208333333333 : 46.1845541859945 : JumpEnd); (5.66666666666667 : 46.1845541859945 : JumpStart); (5.83333333333333 : 46.1845541859945 : JumpEnd); (5.9375 : 46.1845541859945); (5.9375 : 44.25); (8.26041666666667 : 44.25 : JumpStart); (8.56770833333333 : 44.25 : JumpEnd); (8.8125 : 44.25); (8.8125 : 42.25); (11.1197916666667 : 42.25 : JumpStart); (11.2864583333333 : 42.25 : JumpEnd); (11.375 : 42.25); (11.375 : 34.9178898111979); (10.75 : 34.9178898111979); (10.75 : 32.0961531575521); (12 : 32.0961531575521); (12 : 28.1748478190104); (11.1250005 : 28.1748478190104); (11.1250005 : 27.5498478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Zona" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="7a5a1913-bdac-421f-8081-64489b04cac3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.218748 : 44); (1.218748 : 42.7211531575521); (2.9375 : 42.7211531575521); (2.9375 : 37.6748478190104); (3.79166666666667 : 37.6748478190104 : JumpStart); (3.95833333333333 : 37.6748478190104 : JumpEnd); (4.04166666666667 : 37.6748478190104 : JumpStart); (4.20833333333333 : 37.6748478190104 : JumpEnd); (4.25 : 37.6748478190104); (4.25 : 32.2998478190104); (4.66666616666667 : 32.2998478190104 : JumpStart); (4.83333283333333 : 32.2998478190104 : JumpEnd); (5.75 : 32.2998478190104); (5.75 : 23.9248478190104); (10.125 : 23.9248478190104); (10.125 : 23.0133455748698); (10.5 : 23.0133455748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Plantilla" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="d92ba475-3d5d-4265-9250-0a8fe9cc75ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.546878 : 44); (2.546878 : 42.4711531575521); (2.76468443509616 : 42.4711531575521 : JumpStart); (3.02083333333333 : 42.4711531575521 : JumpEnd); (3.125 : 42.4711531575521); (3.125 : 38.1748478190104); (4.0625 : 38.1748478190104); (4.0625 : 32.4248478190104); (4.16666666666667 : 32.4248478190104 : JumpStart); (4.33333333333333 : 32.4248478190104 : JumpEnd); (4.66666616666667 : 32.4248478190104 : JumpStart); (4.83333283333333 : 32.4248478190104 : JumpEnd); (6 : 32.4248478190104); (6 : 25.4554659016927); (7.875 : 25.4554659016927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_APPCC" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="364c2e91-b004-4523-bae8-1e9ce9e79a10" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 46.4109318033854); (1.75 : 46.625); (2.9375 : 46.625); (2.9375 : 51.25); (3.79166666666667 : 51.25 : JumpStart); (3.95833333333333 : 51.25 : JumpEnd); (4 : 51.25); (4 : 55.875); (5.78125 : 55.875); (5.78125 : 69.4248478190104); (17.25 : 69.4248478190104); (17.25 : 68.5); (17.4479166666667 : 68.5 : JumpStart); (17.6145833333333 : 68.5 : JumpEnd); (25.625 : 68.5); (25.625 : 68.6695975748698); (26 : 68.6695975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_TratProfilaxis" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="fc494385-3199-41c9-a802-4b7cc1c7b5b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.74846153846154 : 44); (2.81607443490112 : 43.9323871035604 : JumpStart); (2.93392556509888 : 43.8145359733627 : JumpEnd); (3.15625 : 43.5922115384615); (3.15625 : 38.3582029371995); (5.79166666666667 : 38.3582029371995 : JumpStart); (5.95833333333333 : 38.3582029371995 : JumpEnd); (9.25 : 38.3582029371995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Veterinario" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.203125 : 51.375); (3.203125 : 45.3179093338216); (2.75 : 45.3179093338216)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/CondicionJuridica/CondicionJuridica_Explotacion" />
+      <nodes>
+        <classShapeMoniker Id="243214e0-ecb1-485c-ad24-ac3f21af5c80" />
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.03125 : 37.5498478190104); (3.03125 : 44.7401460990397); (2.75 : 44.7401460990397)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Municipio/Municipio_Explotacion" />
+      <nodes>
+        <classShapeMoniker Id="ed5df09a-34b5-4525-85f2-d531147ed238" />
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="200569e7-f061-413e-9792-306f98ee594e" absoluteBounds="6.25, 2.5, 2, 1.7535424804687496">
+      <DataClassMoniker Name="/GEXVOCDataContext/AlertarEnfermas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a02ad941-9807-4165-95aa-951dc972ebea" absoluteBounds="6.265, 2.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b398f623-15b0-4fa0-8bb5-26e9e4b84379" absoluteBounds="6.625, 4.625, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/GEXVOCDataContext/AlertarSecadas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5a50226-e183-4d4e-b3ad-5ae042baf9fd" absoluteBounds="6.64, 5.085, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef1a3164-d4d7-4a44-81df-e012dd82da3e" absoluteBounds="6.875, 6.625, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/GEXVOCDataContext/AlertarParidas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68ead6e2-3b31-49fc-aef2-656a9867b5a9" absoluteBounds="6.89, 7.085, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c8c7e3d-ca2a-4fbe-86bc-6c0ec7ec2cca" absoluteBounds="4.625, 6.75, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/GEXVOCDataContext/AlertarDiagnosticos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa2a7449-52e3-4717-b8fb-89758dfc7bfd" absoluteBounds="4.64, 7.21, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c56c019-8d30-4518-9bf7-5b78c5e92aab" absoluteBounds="12.875, 46, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/GEXVOCDataContext/DiagAnimal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a2fa0e6-c27d-4056-9d08-e8f018dfa0e7" absoluteBounds="12.89, 46.46, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.875 : 47.7222924804687); (17.875 : 47.7222924804687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/DiagAnimal/DiagAnimal_TratEnfermedad" />
+      <nodes>
+        <classShapeMoniker Id="3c56c019-8d30-4518-9bf7-5b78c5e92aab" />
+        <classShapeMoniker Id="d92314b3-9f24-4d28-ba1e-e70c8bf9dca4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 47.7253125551758); (2.85416666666667 : 47.7253125551758 : JumpStart); (3.02083333333333 : 47.7253125551758 : JumpEnd); (3.11979166666667 : 47.7253125551758 : JumpStart); (3.52083333333333 : 47.7253125551758 : JumpEnd); (3.75 : 47.7253125551758); (3.75 : 46.6875); (8.24479166666667 : 46.6875 : JumpStart); (8.55208333333333 : 46.6875 : JumpEnd); (8.5625 : 46.6875); (8.5625 : 45.4109318033854); (8.60416666666667 : 45.4109318033854 : JumpStart); (8.77083333333333 : 45.4109318033854 : JumpEnd); (11.0026046354167 : 45.4109318033854 : JumpStart); (11.3177083333333 : 45.4109318033854 : JumpEnd); (11.4479166666667 : 45.4109318033854 : JumpStart); (11.6145833333333 : 45.4109318033854 : JumpEnd); (12.0729166666667 : 45.4109318033854 : JumpStart); (12.2395833333333 : 45.4109318033854 : JumpEnd); (12.5416666666667 : 45.4109318033854 : JumpStart); (12.7083333333333 : 45.4109318033854 : JumpEnd); (13.8125005 : 45.4109318033854); (13.8125005 : 46)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Enfermedad/Enfermedad_DiagAnimal" />
+      <nodes>
+        <classShapeMoniker Id="204cfd02-79d0-403b-b2b8-82e1ca2b6c6a" />
+        <classShapeMoniker Id="3c56c019-8d30-4518-9bf7-5b78c5e92aab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 39.2380870033053); (11.3160744349011 : 39.3041614382064 : JumpStart); (11.4339255650989 : 39.4220125684042 : JumpEnd); (11.4723244349011 : 39.4604114382064 : JumpStart); (11.5901755650989 : 39.5782625684042 : JumpEnd); (11.875 : 39.8630870033053); (11.875 : 46.8495075489998); (12.0729166666667 : 46.8495075489998 : JumpStart); (12.2395833333333 : 46.8495075489998 : JumpEnd); (12.5416666666667 : 46.8495075489998 : JumpStart); (12.7083333333333 : 46.8495075489998 : JumpEnd); (12.875 : 46.8495075489998)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Veterinario/Veterinario_DiagAnimal" />
+      <nodes>
+        <classShapeMoniker Id="f00ee33b-ec21-49db-8aa6-091a1015e976" />
+        <classShapeMoniker Id="3c56c019-8d30-4518-9bf7-5b78c5e92aab" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dcb69729-bcc4-46bf-bfea-d92c47b9f6fc" absoluteBounds="12.75, 43.25, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/GEXVOCDataContext/CondicionCorporal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b487877e-a6bc-47ff-96f1-cc0212d92021" absoluteBounds="12.765, 43.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.21875 : 46.75); (5.21875 : 44.6748478190104); (5.75 : 44.6748478190104); (5.75 : 43.7945975748698); (5.79166666666667 : 43.7945975748698 : JumpStart); (5.95833333333333 : 43.7945975748698 : JumpEnd); (8.26041666666667 : 43.7945975748698 : JumpStart); (8.58333333333333 : 43.7945975748698 : JumpEnd); (8.9375 : 43.7945975748698); (8.9375 : 45.3171818033854); (11.0026046354167 : 45.3171818033854 : JumpStart); (11.2864583333333 : 45.3171818033854 : JumpEnd); (12.375 : 45.3171818033854); (12.375 : 44.0445975748698); (12.75 : 44.0445975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoCondicion/TipoCondicion_CondicionCorporal" />
+      <nodes>
+        <classShapeMoniker Id="14b43cfb-c9af-4479-bd5b-65aaaa1082b2" />
+        <classShapeMoniker Id="dcb69729-bcc4-46bf-bfea-d92c47b9f6fc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="104287bf-f243-4686-9a60-568d752142d6" absoluteBounds="16.75, 64.375, 2, 2.5752791341145831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Venta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7b0ae98-5b60-4063-ac92-17edd4b2b8ec" absoluteBounds="16.765, 64.835, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.53125 : 73.375); (17.53125 : 66.9502791341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Cliente/Cliente_Venta" />
+      <nodes>
+        <classShapeMoniker Id="706ce065-633e-4216-b139-c7ea4dc24043" />
+        <classShapeMoniker Id="104287bf-f243-4686-9a60-568d752142d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 44.1124444321289); (3.4375 : 44.1124444321289); (3.4375 : 50.875); (3.875 : 50.875); (3.875 : 56); (5.6875 : 56); (5.6875 : 63); (11.4166666666667 : 63 : JumpStart); (11.7083333333333 : 63 : JumpEnd); (11.75 : 63); (11.75 : 64.5105004882813); (16.25 : 64.5105004882813); (16.25 : 63.875); (17.48437425 : 63.875); (17.48437425 : 64.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Venta" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="104287bf-f243-4686-9a60-568d752142d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.546878 : 58.7928898111979); (2.546878 : 59.75); (11.5 : 59.75); (11.5 : 65.375); (16.375 : 65.375); (16.375 : 65.9907665670573); (16.75 : 65.9907665670573)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Venta" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="104287bf-f243-4686-9a60-568d752142d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 62.5561739095052); (5.54166666666667 : 62.5561739095052 : JumpStart); (5.95833333333333 : 62.5561739095052 : JumpEnd); (6.07291666666667 : 62.5561739095052 : JumpStart); (6.23958333333333 : 62.5561739095052 : JumpEnd); (8.32291666666667 : 62.5561739095052 : JumpStart); (8.64583333333333 : 62.5561739095052 : JumpEnd); (8.66666666666667 : 62.5561739095052 : JumpStart); (8.83333333333333 : 62.5561739095052 : JumpEnd); (9.01041666666667 : 62.5561739095052 : JumpStart); (9.17708333333333 : 62.5561739095052 : JumpEnd); (11.4166666666667 : 62.5561739095052 : JumpStart); (11.7083333333333 : 62.5561739095052 : JumpEnd); (11.8229166666667 : 62.5561739095052 : JumpStart); (11.9895833333333 : 62.5561739095052 : JumpEnd); (14.3924890772486 : 62.5561739095052 : JumpStart); (14.5591557439152 : 62.5561739095052 : JumpEnd); (14.6041666666667 : 62.5561739095052 : JumpStart); (14.7708333333333 : 62.5561739095052 : JumpEnd); (14.7916666666667 : 62.5561739095052 : JumpStart); (14.9583333333333 : 62.5561739095052 : JumpEnd); (18.2812525 : 62.5561739095052); (18.2812525 : 64.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoProducto/TipoProducto_Venta" />
+      <nodes>
+        <classShapeMoniker Id="0da910a6-aa7c-4947-9617-b35f8406a7a0" />
+        <classShapeMoniker Id="104287bf-f243-4686-9a60-568d752142d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 70.25); (14.5 : 64.96875); (14.6041666666667 : 64.96875 : JumpStart); (14.7708333333333 : 64.96875 : JumpEnd); (16.75 : 64.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoVenta/TipoVenta_Venta" />
+      <nodes>
+        <classShapeMoniker Id="cad0a8d4-7502-477d-b104-2f1cfa4bf2bc" />
+        <classShapeMoniker Id="104287bf-f243-4686-9a60-568d752142d6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" absoluteBounds="15.375, 57.125, 2, 2.73962646484375">
+      <DataClassMoniker Name="/GEXVOCDataContext/Compra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9056ba63-1b41-4d35-8487-1da71844000b" absoluteBounds="15.39, 57.585, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 46.2605029882813); (3.04166666666667 : 46.2605029882813 : JumpStart); (3.52083333333333 : 46.2605029882813 : JumpEnd); (5.13541666666667 : 46.2605029882813 : JumpStart); (5.30208333333333 : 46.2605029882813 : JumpEnd); (5.66666666666667 : 46.2605029882813 : JumpStart); (5.83333333333333 : 46.2605029882813 : JumpEnd); (6.25 : 46.2605029882813); (6.25 : 46.1355004882813); (8.26041666666667 : 46.1355004882813 : JumpStart); (8.56770833333333 : 46.1355004882813 : JumpEnd); (8.60416666666667 : 46.1355004882813 : JumpStart); (8.77083333333333 : 46.1355004882813 : JumpEnd); (8.78125 : 46.1355004882813); (8.78125 : 56.9375); (9.96354166666667 : 56.9375 : JumpStart); (10.1302083333333 : 56.9375 : JumpEnd); (11.0260426041667 : 56.9375 : JumpStart); (11.1927092708333 : 56.9375 : JumpEnd); (11.4479166666667 : 56.9375 : JumpStart); (11.9895833333333 : 56.9375 : JumpEnd); (14.5416666666667 : 56.9375 : JumpStart); (14.8645833333333 : 56.9375 : JumpEnd); (16.2421855 : 56.9375); (16.2421855 : 57.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Compra" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.015626 : 58.7928898111979); (2.015626 : 59.8333764648438); (2.49479266666667 : 59.8333764648438 : JumpStart); (2.66145933333333 : 59.8333764648438 : JumpEnd); (5.60416666666667 : 59.8333764648438 : JumpStart); (5.86458333333333 : 59.8333764648438 : JumpEnd); (8.47916666666667 : 59.8333764648438 : JumpStart); (8.64583333333333 : 59.8333764648438 : JumpEnd); (11.0260426041667 : 59.8333764648438 : JumpStart); (11.1927092708333 : 59.8333764648438 : JumpEnd); (11.4166666666667 : 59.8333764648438 : JumpStart); (11.7083333333333 : 59.8333764648438 : JumpEnd); (11.8229166666667 : 59.8333764648438 : JumpStart); (11.9895833333333 : 59.8333764648438 : JumpEnd); (14.5416666666667 : 59.8333764648438 : JumpStart); (14.7708333333333 : 59.8333764648438 : JumpEnd); (15.375 : 59.8333764648438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Compra" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.15625 : 63.5); (6.15625 : 59.8490014648438); (8.32291666666667 : 59.8490014648438 : JumpStart); (8.64583333333333 : 59.8490014648438 : JumpEnd); (9.01041666666667 : 59.8490014648438 : JumpStart); (9.17708333333333 : 59.8490014648438 : JumpEnd); (11.0260426041667 : 59.8490014648438 : JumpStart); (11.1927092708333 : 59.8490014648438 : JumpEnd); (11.4166666666667 : 59.8490014648438 : JumpStart); (11.7083333333333 : 59.8490014648438 : JumpEnd); (11.8229166666667 : 59.8490014648438 : JumpStart); (11.9895833333333 : 59.8490014648438 : JumpEnd); (14.5416666666667 : 59.8490014648438 : JumpStart); (14.7708333333333 : 59.8490014648438 : JumpEnd); (15.375 : 59.8490014648438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Proveedor/Proveedor_Compra" />
+      <nodes>
+        <classShapeMoniker Id="4d897d44-cc51-4bc0-b49d-bfa119a5a466" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 66.2811972052534); (8.34732443490112 : 66.1838727703523 : JumpStart); (8.62142556509888 : 65.9097716401545 : JumpEnd); (8.69107443490112 : 65.8401227703523 : JumpStart); (8.80892556509888 : 65.7222716401545 : JumpEnd); (8.84375 : 65.6874472052534); (8.84375 : 60.2396264648438); (8.85416666666667 : 60.2396264648438 : JumpStart); (9.17708333333333 : 60.2396264648438 : JumpEnd); (11.0260426041667 : 60.2396264648438 : JumpStart); (11.1927092708333 : 60.2396264648438 : JumpEnd); (11.4166666666667 : 60.2396264648438 : JumpStart); (11.7083333333333 : 60.2396264648438 : JumpEnd); (11.8229166666667 : 60.2396264648438 : JumpStart); (11.9895833333333 : 60.2396264648438 : JumpEnd); (14.5416666666667 : 60.2396264648438 : JumpStart); (14.8645833333333 : 60.2396264648438 : JumpEnd); (15 : 60.2396264648438); (15.375 : 59.8646264648438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoCompra/TipoCompra_Compra" />
+      <nodes>
+        <classShapeMoniker Id="4b03bfdc-ea87-4b5a-8b16-1dd0e27e108b" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 62.3374239095052); (5.54166666666667 : 62.3374239095052 : JumpStart); (6.23958333333333 : 62.3374239095052 : JumpEnd); (8.32291666666667 : 62.3374239095052 : JumpStart); (8.64583333333333 : 62.3374239095052 : JumpEnd); (8.66666666666667 : 62.3374239095052 : JumpStart); (8.83333333333333 : 62.3374239095052 : JumpEnd); (8.85416666666667 : 62.3374239095052 : JumpStart); (9.17708333333333 : 62.3374239095052 : JumpEnd); (11.4166666666667 : 62.3374239095052 : JumpStart); (11.7083333333333 : 62.3374239095052 : JumpEnd); (11.8229166666667 : 62.3374239095052 : JumpStart); (11.9895833333333 : 62.3374239095052 : JumpEnd); (14.6041666666667 : 62.3374239095052 : JumpStart); (14.7779057439152 : 62.3374239095052 : JumpEnd); (14.7916666666667 : 62.3374239095052 : JumpStart); (14.9583333333333 : 62.3374239095052 : JumpEnd); (17.21875 : 62.3374239095052); (17.21875 : 59.8646264648438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoProducto/TipoProducto_Compra" />
+      <nodes>
+        <classShapeMoniker Id="0da910a6-aa7c-4947-9617-b35f8406a7a0" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7ff273a6-dc63-4736-8af0-9b40c2d69ed4" absoluteBounds="33.75, 49.625, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Movimiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc3781b7-120c-4e37-86ea-eb63c58a6af9" absoluteBounds="33.765, 50.085, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 46.1533016859945); (3.04166666666667 : 46.1533016859945 : JumpStart); (3.52083333333333 : 46.1533016859945 : JumpEnd); (5.13541666666667 : 46.1533016859945 : JumpStart); (5.30208333333333 : 46.1533016859945 : JumpEnd); (5.54166666666667 : 46.1533016859945 : JumpStart); (5.95833333333333 : 46.1533016859945 : JumpEnd); (6.375 : 46.1533016859945); (6.375 : 45.9480004882813); (8.26041666666667 : 45.9480004882813 : JumpStart); (8.56770833333333 : 45.9480004882813 : JumpEnd); (8.60416666666667 : 45.9480004882813 : JumpStart); (8.77083333333333 : 45.9480004882813 : JumpEnd); (8.8125 : 45.9480004882813); (8.8125 : 48.6840844726563); (8.85416666666667 : 48.6840844726563 : JumpStart); (9.02083333333333 : 48.6840844726563 : JumpEnd); (11.0026046354167 : 48.6840844726563 : JumpStart); (11.3958333333333 : 48.6840844726563 : JumpEnd); (11.4479166666667 : 48.6840844726563 : JumpStart); (11.6145833333333 : 48.6840844726563 : JumpEnd); (14.2447916666667 : 48.6840844726563 : JumpStart); (14.4114583333333 : 48.6840844726563 : JumpEnd); (16.8229166666667 : 48.6840844726563 : JumpStart); (16.9895833333333 : 48.6840844726563 : JumpEnd); (17.6979166666667 : 48.6840844726563 : JumpStart); (17.8645833333333 : 48.6840844726563 : JumpEnd); (18.2457680885417 : 48.6840844726563 : JumpStart); (18.4124347552083 : 48.6840844726563 : JumpEnd); (20.0416666666667 : 48.6840844726563 : JumpStart); (20.4583333333333 : 48.6840844726563 : JumpEnd); (22.9947891666667 : 48.6840844726563 : JumpStart); (23.1614558333333 : 48.6840844726563 : JumpEnd); (23.1979166666667 : 48.6840844726563 : JumpStart); (23.3645833333333 : 48.6840844726563 : JumpEnd); (26.0416666666667 : 48.6840844726563 : JumpStart); (26.2083333333333 : 48.6840844726563 : JumpEnd); (27.2916666666667 : 48.6840844726563 : JumpStart); (27.4583333333333 : 48.6840844726563 : JumpEnd); (27.8541661666667 : 48.6840844726563 : JumpStart); (28.0208328333333 : 48.6840844726563 : JumpEnd); (30.1276016666667 : 48.6840844726563 : JumpStart); (30.2942683333333 : 48.6840844726563 : JumpEnd); (30.8580731666667 : 48.6840844726563 : JumpStart); (31.0247398333333 : 48.6840844726563 : JumpEnd); (31.1901056666667 : 48.6840844726563 : JumpStart); (31.3567723333333 : 48.6840844726563 : JumpEnd); (34.1354141666667 : 48.6840844726563 : JumpStart); (34.3020808333333 : 48.6840844726563 : JumpEnd); (34.75 : 48.6840844726563); (34.75 : 49.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Movimiento" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="7ff273a6-dc63-4736-8af0-9b40c2d69ed4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 58.0936838788045); (3.10416666666667 : 58.0936838788045 : JumpStart); (3.33333333333333 : 58.0936838788045 : JumpEnd); (3.375 : 58.0936838788045); (3.375 : 57.6667504882813); (5.47916666666667 : 57.6667504882813 : JumpStart); (6.14583333333333 : 57.6667504882813 : JumpEnd); (6.1875 : 57.6667504882813); (6.1875 : 57.25); (8.32291666666667 : 57.25 : JumpStart); (8.64583333333333 : 57.25 : JumpEnd); (8.66666666666667 : 57.25 : JumpStart); (8.83333333333333 : 57.25 : JumpEnd); (8.85416666666667 : 57.25 : JumpStart); (9.02083333333333 : 57.25 : JumpEnd); (9.96354166666667 : 57.25 : JumpStart); (10.1302083333333 : 57.25 : JumpEnd); (11.0260426041667 : 57.25 : JumpStart); (11.3020833333333 : 57.25 : JumpEnd); (11.5416666666667 : 57.25 : JumpStart); (11.7083333333333 : 57.25 : JumpEnd); (11.71875 : 57.25); (11.71875 : 54.40625); (14.0729166666667 : 54.40625 : JumpStart); (14.2395833333333 : 54.40625 : JumpEnd); (14.5416666666667 : 54.40625 : JumpStart); (14.8645833333333 : 54.40625 : JumpEnd); (15.9166666666667 : 54.40625 : JumpStart); (16.0833333333333 : 54.40625 : JumpEnd); (17.0885416666667 : 54.40625 : JumpStart); (17.2552083333333 : 54.40625 : JumpEnd); (18.6437141901042 : 54.40625 : JumpStart); (18.8103808567708 : 54.40625 : JumpEnd); (19.9166666666667 : 54.40625 : JumpStart); (20.0833333333333 : 54.40625 : JumpEnd); (20.1666666666667 : 54.40625 : JumpStart); (20.3333333333333 : 54.40625 : JumpEnd); (21.4166666666667 : 54.40625 : JumpStart); (21.5833333333333 : 54.40625 : JumpEnd); (24.25 : 54.40625); (24.25 : 51.875); (24.7916666666667 : 51.875 : JumpStart); (24.9583333333333 : 51.875 : JumpEnd); (26.3541661666667 : 51.875 : JumpStart); (26.5208328333333 : 51.875 : JumpEnd); (27.2916666666667 : 51.875 : JumpStart); (27.4583333333333 : 51.875 : JumpEnd); (27.8541661666667 : 51.875 : JumpStart); (28.0208328333333 : 51.875 : JumpEnd); (30.1276016666667 : 51.875 : JumpStart); (30.2942683333333 : 51.875 : JumpEnd); (30.4928374166667 : 51.875 : JumpStart); (30.6595040833333 : 51.875 : JumpEnd); (30.8580731666667 : 51.875 : JumpStart); (31.0247398333333 : 51.875 : JumpEnd); (31.1901056666667 : 51.875 : JumpStart); (31.3567723333333 : 51.875 : JumpEnd); (31.5221386666667 : 51.875 : JumpStart); (31.6888053333333 : 51.875 : JumpEnd); (33.5 : 51.875); (33.5 : 52.2859318033854); (34.75 : 52.2859318033854); (34.75 : 52.0359318033854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Movimiento" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="7ff273a6-dc63-4736-8af0-9b40c2d69ed4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7fdea5eb-a08a-41ec-afb9-623b49fbbfcc" absoluteBounds="25.125, 49.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/GEXVOCDataContext/Stock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef0bda50-fbe0-4635-a480-980253d5d9bb" absoluteBounds="25.14, 50.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 46.1220491859945); (3.35416666666667 : 46.1220491859945 : JumpStart); (3.52083333333333 : 46.1220491859945 : JumpEnd); (5.66666666666667 : 46.1220491859945 : JumpStart); (5.95833333333333 : 46.1220491859945 : JumpEnd); (6.1875 : 46.1220491859945); (6.1875 : 46.4480004882813); (8.26041666666667 : 46.4480004882813 : JumpStart); (8.42708333333333 : 46.4480004882813 : JumpEnd); (8.54166666666667 : 46.4480004882813 : JumpStart); (8.80208333333333 : 46.4480004882813 : JumpEnd); (8.84375 : 46.4480004882813); (8.84375 : 48.5590844726563); (11.0026046354167 : 48.5590844726563 : JumpStart); (11.2864583333333 : 48.5590844726563 : JumpEnd); (14.2447916666667 : 48.5590844726563 : JumpStart); (14.4114583333333 : 48.5590844726563 : JumpEnd); (26.125 : 48.5590844726563); (26.125 : 49.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Stock" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="7fdea5eb-a08a-41ec-afb9-623b49fbbfcc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 57.92490131014); (3.125 : 57.92490131014); (3.125 : 57.6980004882813); (5.875 : 57.6980004882813); (5.875 : 57.1875); (11.78125 : 57.1875); (11.78125 : 54.5625); (14.5416666666667 : 54.5625 : JumpStart); (14.7083333333333 : 54.5625 : JumpEnd); (24.5 : 54.5625); (24.5 : 53.75); (26.4374995 : 53.75); (26.4374995 : 51.5035424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Producto/Producto_Stock" />
+      <nodes>
+        <classShapeMoniker Id="c87ef818-2b6a-4521-bb89-7780cb6966db" />
+        <classShapeMoniker Id="7fdea5eb-a08a-41ec-afb9-623b49fbbfcc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" absoluteBounds="6.5, 48, 2, 4.3830997721354166">
+      <DataClassMoniker Name="/GEXVOCDataContext/Animal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5bd2cec-d527-422c-8804-435956e491fb" absoluteBounds="6.515, 48.46, 1.9700000000000002, 3.823099772135417" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 49.4624239095052); (11.1197916666667 : 49.4624239095052 : JumpStart); (11.2864583333333 : 49.4624239095052 : JumpEnd); (12 : 49.4624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_AniLot" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="cb370584-a4cb-4eff-8ab2-c2f3cd55a20c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.46875 : 48); (8.46875 : 41.007021484375); (8.60416666666667 : 41.007021484375 : JumpStart); (8.77083333333333 : 41.007021484375 : JumpEnd); (9 : 41.007021484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_EngrasamientoCanal" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="0cec6a15-1bcd-4c10-b6ed-253e10f25524" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 52.3830997721354); (8.40625 : 96.8374239095052); (9 : 96.8374239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_LibroGenealogico" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="8520138b-19ea-48d9-9ff2-6c7a57d9b71e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 48); (8.40625 : 46.9705212402344); (8.54166666666667 : 46.9705212402344 : JumpStart); (8.95833333333333 : 46.9705212402344 : JumpEnd); (9 : 46.9705212402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Peso" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="01069267-30b4-422e-abc3-51b46cb5c69f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.4375025 : 52.3830997721354); (8.4375025 : 99.0874239095052); (9 : 99.0874239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_RendimientoCanal" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="51b67695-c0e6-427b-9167-b1fe9d135ac9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.34375); (8.54166666666667 : 48.34375 : JumpStart); (9.02083333333333 : 48.34375 : JumpEnd); (11.0026046354167 : 48.34375 : JumpStart); (11.3958333333333 : 48.34375 : JumpEnd); (11.4479166666667 : 48.34375 : JumpStart); (11.6145833333333 : 48.34375 : JumpEnd); (12.0729166666667 : 48.34375 : JumpStart); (12.2395833333333 : 48.34375 : JumpEnd); (14.2447916666667 : 48.34375 : JumpStart); (14.4114583333333 : 48.34375 : JumpEnd); (16.90625 : 48.34375); (16.90625 : 51.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Secado" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="1eadc172-375c-400d-a4e9-0818fcba18da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.9030869547526); (11.0026046354167 : 48.9030869547526 : JumpStart); (11.2864583333333 : 48.9030869547526 : JumpEnd); (11.75 : 48.9030869547526); (11.75 : 51.5); (14.0729166666667 : 51.5 : JumpStart); (14.2395833333333 : 51.5 : JumpEnd); (14.5 : 51.5); (14.5 : 54.125); (14.5416666666667 : 54.125 : JumpStart); (14.7083333333333 : 54.125 : JumpEnd); (16 : 54.125); (16 : 54.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_TipificacionCanal" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="eee60715-14ff-4e7c-87fb-bfb03219f226" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.3749975 : 52.3830997721354); (8.3749975 : 55.4936739095052); (8.47916666666667 : 55.4936739095052 : JumpStart); (8.64583333333333 : 55.4936739095052 : JumpEnd); (8.66666666666667 : 55.4936739095052 : JumpStart); (8.83333333333333 : 55.4936739095052 : JumpEnd); (9 : 55.4936739095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Asignacion" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="19c949c9-e0f8-4c01-9a36-192d5e658788" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 51.9415498860677); (8.69791666666667 : 51.9415498860677 : JumpStart); (8.86458333333333 : 51.9415498860677 : JumpEnd); (9 : 51.9415498860677)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Analisis" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="efc60bbc-7045-418a-8ca7-b4e92d16c297" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.46875125 : 52.3830997721354); (8.46875125 : 59.2865002441406); (8.47916666666667 : 59.2865002441406 : JumpStart); (8.64583333333333 : 59.2865002441406 : JumpEnd); (8.66666666666667 : 59.2865002441406 : JumpStart); (8.83333333333333 : 59.2865002441406 : JumpEnd); (8.85416666666667 : 59.2865002441406 : JumpStart); (9.17708333333333 : 59.2865002441406 : JumpEnd); (11.0260426041667 : 59.2865002441406 : JumpStart); (11.1927092708333 : 59.2865002441406 : JumpEnd); (11.5416666666667 : 59.2865002441406 : JumpStart); (11.7083333333333 : 59.2865002441406 : JumpEnd); (11.8229166666667 : 59.2865002441406 : JumpStart); (11.9895833333333 : 59.2865002441406 : JumpEnd); (12 : 59.2865002441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Resena" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="999e46fb-24cc-40b3-9934-724e7021478e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.97004595192308 : 52.3830997721354); (6.97004595192308 : 53.375); (8.26041541666667 : 53.375 : JumpStart); (8.42708208333333 : 53.375 : JumpEnd); (8.5625 : 53.375); (8.5625 : 69.6748478190104); (17.375 : 69.6748478190104); (17.375 : 68.25); (17.4479166666667 : 68.25 : JumpStart); (17.6145833333333 : 68.25 : JumpEnd); (22.375 : 68.25); (22.375 : 69.298076578776); (22.75 : 69.298076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_AniPro" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="20b13db1-2803-49ed-a74c-5f1060212763" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.6528344726563); (11.1197916666667 : 48.6528344726563 : JumpStart); (11.2864583333333 : 48.6528344726563 : JumpEnd); (31.605472 : 48.6528344726563); (31.605472 : 52.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Gasto" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="9b766f4a-0b15-4f88-bcce-f9e562f9a832" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 50.7651193151042); (8.60416666666667 : 50.7651193151042 : JumpStart); (8.77083333333333 : 50.7651193151042 : JumpEnd); (11.0026046354167 : 50.7651193151042 : JumpStart); (11.3958333333333 : 50.7651193151042 : JumpEnd); (11.4479166666667 : 50.7651193151042 : JumpStart); (11.6145833333333 : 50.7651193151042 : JumpEnd); (11.6666666666667 : 50.7651193151042 : JumpStart); (11.8333333333333 : 50.7651193151042 : JumpEnd); (14.0729166666667 : 50.7651193151042 : JumpStart); (14.2395833333333 : 50.7651193151042 : JumpEnd); (14.2447916666667 : 50.7651193151042 : JumpStart); (14.4114583333333 : 50.7651193151042 : JumpEnd); (14.84375 : 50.7651193151042); (14.84375 : 50.4248478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Celo" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="998f5772-a740-4597-b1c1-98a10c79d152" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.34375 : 48); (8.34375 : 41.4624239095052); (12.75 : 41.4624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_SincronizacionCelo" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="91c9de95-fbea-4065-9fe5-9282b811ad1e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.40624675 : 52.3830997721354); (7.40624675 : 53.625); (8.26041541666667 : 53.625 : JumpStart); (8.64583333333333 : 53.625 : JumpEnd); (8.75 : 53.625); (8.75 : 103.751771240234); (8.5 : 103.751771240234)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Lactacion" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="4f4b40d9-7e98-4a9e-b215-c93fa12fc20d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.34374875 : 52.3830997721354); (8.34374875 : 53.71875); (12 : 53.71875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Inseminacion" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.42187625 : 52.3830997721354); (8.42187625 : 53.552694905599); (8.47916666666667 : 53.552694905599 : JumpStart); (8.64583333333333 : 53.552694905599 : JumpEnd); (11.0026046354167 : 53.552694905599 : JumpStart); (11.1927092708333 : 53.552694905599 : JumpEnd); (11.2291666666667 : 53.552694905599 : JumpStart); (11.3958333333333 : 53.552694905599 : JumpEnd); (12 : 53.552694905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Inseminacion1" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.39062375 : 52.3830997721354); (8.39062375 : 53.521442405599); (8.47916666666667 : 53.521442405599 : JumpStart); (8.64583333333333 : 53.521442405599 : JumpEnd); (11.0026046354167 : 53.521442405599 : JumpStart); (11.1927092708333 : 53.521442405599 : JumpEnd); (12 : 53.521442405599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Inseminacion2" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="f5204095-26bf-4f85-824e-9eeff92f37ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.4653344726563); (8.54166666666667 : 48.4653344726563 : JumpStart); (9.02083333333333 : 48.4653344726563 : JumpEnd); (11.0026046354167 : 48.4653344726563 : JumpStart); (11.3958333333333 : 48.4653344726563 : JumpEnd); (11.4479166666667 : 48.4653344726563 : JumpStart); (11.6145833333333 : 48.4653344726563 : JumpEnd); (12.0729166666667 : 48.4653344726563 : JumpStart); (12.2395833333333 : 48.4653344726563 : JumpEnd); (14.2447916666667 : 48.4653344726563 : JumpStart); (14.4114583333333 : 48.4653344726563 : JumpEnd); (16.8229166666667 : 48.4653344726563 : JumpStart); (16.9895833333333 : 48.4653344726563 : JumpEnd); (17.6979166666667 : 48.4653344726563 : JumpStart); (17.8645833333333 : 48.4653344726563 : JumpEnd); (18.2457680885417 : 48.4653344726563 : JumpStart); (18.4124347552083 : 48.4653344726563 : JumpEnd); (20.0416666666667 : 48.4653344726563 : JumpStart); (20.4583333333333 : 48.4653344726563 : JumpEnd); (22.9947891666667 : 48.4653344726563 : JumpStart); (23.1614558333333 : 48.4653344726563 : JumpEnd); (27.2916666666667 : 48.4653344726563 : JumpStart); (27.4583333333333 : 48.4653344726563 : JumpEnd); (27.8147005546875 : 48.4653344726563); (27.8147005546875 : 46.0428898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_DiagInseminacion" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="7157399e-0467-4600-9817-5b3676972faf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.1406225); (8.54166666666667 : 48.1406225 : JumpStart); (8.95833333333333 : 48.1406225 : JumpEnd); (11.0026046354167 : 48.1406225 : JumpStart); (11.2864583333333 : 48.1406225 : JumpEnd); (14.2447916666667 : 48.1406225 : JumpStart); (14.4114583333333 : 48.1406225 : JumpEnd); (17.28125 : 48.1406225); (17.28125 : 47.4641951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Estancia" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="2d7d91f9-224a-464b-91c9-f49ef8187d5d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 50.4970342838898); (14.15625 : 50.4970342838898); (14.15625 : 55)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Aborto" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="1340147c-61ca-48ad-b764-2a56039619aa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.484375 : 48); (8.484375 : 43.4337990315755); (9.125 : 43.4337990315755)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Parto" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="aa4a8d86-783d-4222-9c7d-f1cf0206372b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 50.966507063151); (11.0026046354167 : 50.966507063151 : JumpStart); (11.1692713020833 : 50.966507063151 : JumpEnd); (14.0729166666667 : 50.966507063151 : JumpStart); (14.2395833333333 : 50.966507063151 : JumpEnd); (14.328125 : 50.966507063151); (14.328125 : 47.9178898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_DiagAnimal" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="3c56c019-8d30-4518-9bf7-5b78c5e92aab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48); (8.56607443490112 : 47.9339255650989 : JumpStart); (8.80892556509888 : 47.6910744349011 : JumpEnd); (8.875 : 47.625); (11.0026046354167 : 47.625 : JumpStart); (11.3958333333333 : 47.625 : JumpEnd); (12.0729166666667 : 47.625 : JumpStart); (12.2395833333333 : 47.625 : JumpEnd); (12.625 : 47.625); (12.625 : 44.9641951497396); (12.75 : 44.8391951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_CondicionCorporal" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="dcb69729-bcc4-46bf-bfea-d92c47b9f6fc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 50.631076799497); (8.60416666666667 : 50.631076799497 : JumpStart); (8.77083333333333 : 50.631076799497 : JumpEnd); (11.0026046354167 : 50.631076799497 : JumpStart); (11.3958333333333 : 50.631076799497 : JumpEnd); (11.6666666666667 : 50.631076799497 : JumpStart); (11.8333333333333 : 50.631076799497 : JumpEnd); (14.0729166666667 : 50.631076799497 : JumpStart); (14.2395833333333 : 50.631076799497 : JumpEnd); (14.2447916666667 : 50.631076799497 : JumpStart); (14.4114583333333 : 50.631076799497 : JumpEnd); (17.171875 : 50.631076799497); (17.171875 : 57.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Compra" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="465dc3e4-1741-4bc4-8dff-d7c9ef222c44" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.5903344726563); (8.60416666666667 : 48.5903344726563 : JumpStart); (8.86458333333333 : 48.5903344726563 : JumpEnd); (11.0026046354167 : 48.5903344726563 : JumpStart); (11.3958333333333 : 48.5903344726563 : JumpEnd); (11.4479166666667 : 48.5903344726563 : JumpStart); (11.6145833333333 : 48.5903344726563 : JumpEnd); (12.0729166666667 : 48.5903344726563 : JumpStart); (12.2395833333333 : 48.5903344726563 : JumpEnd); (14.2447916666667 : 48.5903344726563 : JumpStart); (14.4114583333333 : 48.5903344726563 : JumpEnd); (17.6979166666667 : 48.5903344726563 : JumpStart); (17.8645833333333 : 48.5903344726563 : JumpEnd); (20.2916666666667 : 48.5903344726563 : JumpStart); (20.4583333333333 : 48.5903344726563 : JumpEnd); (22.9947891666667 : 48.5903344726563 : JumpStart); (23.1614558333333 : 48.5903344726563 : JumpEnd); (27.8541661666667 : 48.5903344726563 : JumpStart); (28.0208328333333 : 48.5903344726563 : JumpEnd); (30.1276016666667 : 48.5903344726563 : JumpStart); (30.2942683333333 : 48.5903344726563 : JumpEnd); (31.1901056666667 : 48.5903344726563 : JumpStart); (31.3567723333333 : 48.5903344726563 : JumpEnd); (34.2187475 : 48.5903344726563); (34.2187475 : 49.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Movimiento" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="7ff273a6-dc63-4736-8af0-9b40c2d69ed4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 51.3223685709635); (9.91666666666667 : 51.3223685709635 : JumpStart); (10.0833333333333 : 51.3223685709635 : JumpEnd); (11.0026046354167 : 51.3223685709635 : JumpStart); (11.3958333333333 : 51.3223685709635 : JumpEnd); (11.6666666666667 : 51.3223685709635 : JumpStart); (11.8333333333333 : 51.3223685709635 : JumpEnd); (14.0729166666667 : 51.3223685709635 : JumpStart); (14.2395833333333 : 51.3223685709635 : JumpEnd); (17.0885416666667 : 51.3223685709635 : JumpStart); (17.2552083333333 : 51.3223685709635 : JumpEnd); (19.9166666666667 : 51.3223685709635 : JumpStart); (20.0833333333333 : 51.3223685709635 : JumpEnd); (20.2916666666667 : 51.3223685709635 : JumpStart); (20.4583333333333 : 51.3223685709635 : JumpEnd); (24.7916666666667 : 51.3223685709635 : JumpStart); (24.9583333333333 : 51.3223685709635 : JumpEnd); (25.125 : 51.3223685709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Stock" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="7fdea5eb-a08a-41ec-afb9-623b49fbbfcc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 57.90704039999); (5.90625 : 57.50079039999); (5.90625 : 53.0080997721354); (5.90884515384615 : 53.0080997721354); (5.94107443490112 : 52.9758704910804 : JumpStart); (6.05892556509888 : 52.8580193608827 : JumpEnd); (6.53384515384615 : 52.3830997721354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Conformacion/Conformacion_Animal" />
+      <nodes>
+        <classShapeMoniker Id="2f922908-8728-445f-a404-e094ef2baff0" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 56.2509686157602); (6 : 55.7509686157602); (6 : 52.7580997721354); (6.0926923076923 : 52.7580997721354); (6.5 : 52.3507920798277)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Estado/Estado_Animal" />
+      <nodes>
+        <classShapeMoniker Id="0ecf7d45-dc95-4cb7-8e5b-bbab3746d703" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 46.2292504882813); (3.04166666666667 : 46.2292504882813 : JumpStart); (3.52083333333333 : 46.2292504882813 : JumpEnd); (5.13541666666667 : 46.2292504882813 : JumpStart); (5.30208333333333 : 46.2292504882813 : JumpEnd); (5.66666666666667 : 46.2292504882813 : JumpStart); (5.95833333333333 : 46.2292504882813 : JumpEnd); (6.10416666666667 : 46.2292504882813 : JumpStart); (6.27083333333333 : 46.2292504882813 : JumpEnd); (8.328125 : 46.2292504882813); (8.328125 : 48)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Explotacion/Explotacion_Animal" />
+      <nodes>
+        <classShapeMoniker Id="e704547f-f2ed-4909-aa5b-5db790b927f7" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.125 : 50.923076578776); (6.5 : 50.923076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Fotografia/Fotografia_Animal" />
+      <nodes>
+        <classShapeMoniker Id="ede55039-53b6-4aa8-8d2d-c04a5215d3ec" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.3802502441406); (6.5 : 49.3802502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Raza/Raza_Animal" />
+      <nodes>
+        <classShapeMoniker Id="d235fae3-cbdb-48aa-bc99-4718497ac33c" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 65.298076578776); (5.625 : 65.298076578776); (5.625 : 52.8830997721354); (5.91666666666667 : 52.8830997721354 : JumpStart); (6.11717848717948 : 52.8830997721354 : JumpEnd); (6.88671261858975 : 52.8830997721354 : JumpStart); (7.05337928525641 : 52.8830997721354 : JumpEnd); (7.32291341666667 : 52.8830997721354 : JumpStart); (7.48958008333333 : 52.8830997721354 : JumpEnd); (7.87499775 : 52.8830997721354); (7.87499775 : 52.3830997721354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Talla/Talla_Animal" />
+      <nodes>
+        <classShapeMoniker Id="0b713d82-f212-415d-9fc0-7f6fdb1cd0e1" />
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ed574efc-146b-4e51-9588-d76ea5e2819f" absoluteBounds="15.375, 43, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Baja" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6015444-3bed-4968-8994-1b7089e47602" absoluteBounds="15.39, 43.46, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 49.9081915810903); (8.60416666666667 : 49.9081915810903 : JumpStart); (9.02083333333333 : 49.9081915810903 : JumpEnd); (11.0026046354167 : 49.9081915810903 : JumpStart); (11.3958333333333 : 49.9081915810903 : JumpEnd); (11.4479166666667 : 49.9081915810903 : JumpStart); (11.6145833333333 : 49.9081915810903 : JumpEnd); (11.8125 : 49.9081915810903); (11.8125 : 45.5822371419271); (12.0729166666667 : 45.5822371419271 : JumpStart); (12.2395833333333 : 45.5822371419271 : JumpEnd); (12.5416666666667 : 45.5822371419271 : JumpStart); (12.7083333333333 : 45.5822371419271 : JumpEnd); (16.375 : 45.5822371419271); (16.375 : 45.0822371419271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Baja" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="ed574efc-146b-4e51-9588-d76ea5e2819f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.5625 : 39.0105004882813); (12.5625 : 43.09375); (15.375 : 43.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoBaja/TipoBaja_Baja" />
+      <nodes>
+        <classShapeMoniker Id="3c163301-71db-4674-b6de-c70887421a70" />
+        <classShapeMoniker Id="ed574efc-146b-4e51-9588-d76ea5e2819f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9e0338c8-4b46-466a-a5f8-45c502f487fb" absoluteBounds="21.625, 49.125, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/GEXVOCDataContext/Alta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d0bb6de-a0b4-4de9-b906-c39a06c7334f" absoluteBounds="21.64, 49.585, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 48.5278344726563); (8.54166666666667 : 48.5278344726563 : JumpStart); (8.95833333333333 : 48.5278344726563 : JumpEnd); (11.0026046354167 : 48.5278344726563 : JumpStart); (11.2864583333333 : 48.5278344726563 : JumpEnd); (14.2447916666667 : 48.5278344726563 : JumpStart); (14.4114583333333 : 48.5278344726563 : JumpEnd); (23.28125 : 48.5278344726563); (23.28125 : 49.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/Animal/Animal_Alta" />
+      <nodes>
+        <classShapeMoniker Id="eb7ccebd-5133-4720-a7c6-3ce23ab2ce01" />
+        <classShapeMoniker Id="9e0338c8-4b46-466a-a5f8-45c502f487fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 37.3802502441406); (17.4166666666667 : 37.3802502441406 : JumpStart); (17.5833333333333 : 37.3802502441406 : JumpEnd); (23.0781225 : 37.3802502441406); (23.0781225 : 49.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GEXVOCDataContext/TipoAlta/TipoAlta_Alta" />
+      <nodes>
+        <classShapeMoniker Id="21fd8628-3857-4467-8dab-b3e6a9bec1ad" />
+        <classShapeMoniker Id="9e0338c8-4b46-466a-a5f8-45c502f487fb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

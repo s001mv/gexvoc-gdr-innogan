@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ElementoVersion
+  Version="1.0.14.0"
+  Fecha="13/10/2008"
+  Descripcion="   
+  - Formulario Importador de Animales (Ovino-Caprino), compatible con fichero xls definido por la aplicación.
+  - Video '22 - Importar Animales (Ovino-Caprino)' que explica el proceso para importar animales a partir de un fichero excel con formato definido por la aplicación.
+  - Modificación del error provocado por el período de gestación, pasa a ser una notificación y la conclusión del proceso queda a decisión del usuario.
+  - Modificación del tratamiento del rango período de gestación con respeto a las cubriciones, se validará todo el rango comprendido entre fecha inicio de la cubrición y fecha fin.
+    (En caso de no existir dicha fecha fin se tomará como tal, la fecha del sistema).
+  - Formulario Importador de Animales (Bovino) Web-Pigan
+  - Video '23 - Importar Animales (Bovino) Web-Pigan."
+  Script="  
+---------------------------------------------------------------
+--ADICION AL PERFIL BÁSICO LOS NUEVOS MENÚS DE IMPORTACION-----
+---------------------------------------------------------------
+declare @IdModulo int;
+declare @IdMenuSuperior int;
+
+SELECT @IdModulo=Id FROM Modulo WHERE Descripcion='_BÁSICO';----OBTENGO EL IDENTIFICADOR DEL MÓDULO: SUBSISTEMA _BÁSICO
+SELECT @IdMenuSuperior=Id FROM Menu WHERE [IdModulo]=@IdModulo AND [Texto]='MImportacion';----OBTENGO EL IDENTIFICADOR DEL  MImportacion
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmImportarAnimalesOC',0)
+INSERT INTO [Menu]([IdModulo],[IdMenuSuperior],[Orden],[Texto],[Visible]) VALUES (@IdModulo,@IdMenuSuperior,0,'tsmImportarAnimalesBWeb',0)
+GO
+"
+/>

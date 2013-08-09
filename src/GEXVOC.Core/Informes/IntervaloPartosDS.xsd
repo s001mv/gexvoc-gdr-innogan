@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IntervaloPartosDS" targetNamespace="http://tempuri.org/IntervaloPartosDS.xsd" xmlns:mstns="http://tempuri.org/IntervaloPartosDS.xsd" xmlns="http://tempuri.org/IntervaloPartosDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IntervaloPartosDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="IntervaloPartosDS" msprop:Generator_UserDSName="IntervaloPartosDS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Animal" msprop:Generator_UserTableName="Animal" msprop:Generator_RowDeletedName="AnimalRowDeleted" msprop:Generator_TableClassName="AnimalDataTable" msprop:Generator_RowChangedName="AnimalRowChanged" msprop:Generator_RowClassName="AnimalRow" msprop:Generator_RowChangingName="AnimalRowChanging" msprop:Generator_RowEvArgName="AnimalRowChangeEvent" msprop:Generator_RowEvHandlerName="AnimalRowChangeEventHandler" msprop:Generator_TablePropName="Animal" msprop:Generator_TableVarName="tableAnimal" msprop:Generator_RowDeletingName="AnimalRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Edad" msprop:Generator_UserColumnName="Edad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInTable="EdadColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parto" msprop:Generator_UserTableName="Parto" msprop:Generator_RowDeletedName="PartoRowDeleted" msprop:Generator_TableClassName="PartoDataTable" msprop:Generator_RowChangedName="PartoRowChanged" msprop:Generator_RowClassName="PartoRow" msprop:Generator_RowChangingName="PartoRowChanging" msprop:Generator_RowEvArgName="PartoRowChangeEvent" msprop:Generator_RowEvHandlerName="PartoRowChangeEventHandler" msprop:Generator_TablePropName="Parto" msprop:Generator_TableVarName="tableParto" msprop:Generator_RowDeletingName="PartoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdHembra" msprop:Generator_UserColumnName="IdHembra" msprop:Generator_ColumnPropNameInRow="IdHembra" msprop:Generator_ColumnVarNameInTable="columnIdHembra" msprop:Generator_ColumnPropNameInTable="IdHembraColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Intervalo" msprop:Generator_UserColumnName="Intervalo" msprop:Generator_ColumnPropNameInRow="Intervalo" msprop:Generator_ColumnVarNameInTable="columnIntervalo" msprop:Generator_ColumnPropNameInTable="IntervaloColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Id" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Animal" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:keyref name="FK_Animal_Parto" refer="Id" msprop:rel_Generator_UserRelationName="FK_Animal_Parto" msprop:rel_Generator_RelationVarName="relationFK_Animal_Parto" msprop:rel_Generator_UserChildTable="Parto" msprop:rel_Generator_UserParentTable="Animal" msprop:rel_Generator_ParentPropName="AnimalRow" msprop:rel_Generator_ChildPropName="GetPartoRows" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:Parto" />
+      <xs:field xpath="mstns:IdHembra" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
